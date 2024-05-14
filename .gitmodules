@@ -1,3 +1,9 @@
 [submodule "lib/src/libserialport"]
 	path = lib/src/libserialport
 	url = https://github.com/sigrokproject/libserialport
+[submodule "lib/utils/win/inih"]
+	path = lib/utils/win/inih
+	url = https://github.com/benhoyt/inih
+[submodule "lib/utils/win/libserialport"]
+	path = lib/utils/win/libserialport
+	url = https://github.com/sigrokproject/libserialport
