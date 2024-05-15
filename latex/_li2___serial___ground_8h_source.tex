@@ -1,0 +1,42 @@
+\doxysection{Li2\+\_\+\+Serial\+\_\+\+Ground.\+h}
+\hypertarget{_li2___serial___ground_8h_source}{}\label{_li2___serial___ground_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/li2/Li2\_Serial\_Ground.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/li2/Li2\_Serial\_Ground.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LI2\_SERIAL\_GROUND\_H\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LI2\_SERIAL\_GROUND\_H\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}../../utils/win/libserialport/libserialport.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{timer_8h}{../../utils/win/timer/timer.h}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SERIAL\_BAUDRATE\ \ \ \ \ \ \ \ \ 9600}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ SERIAL\_READ\_TIMEOUT\ \ \ \ \ 5000\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ SERIAL\_WRITE\_TIMEOUT\ \ \ \ 5000\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ SP\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ -\/5}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsp__port}{sp\_port}}\ \mbox{\hyperlink{structsp__port}{Serial\_Port}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ sp\_return\ SERIAL\_RTNS;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ SERIAL\_RTNS\ Serial\_Init(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ **\mbox{\hyperlink{struct_port}{Port}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *portName,\ uint32\_t\ baudRate\ );}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ SERIAL\_RTNS\ Serial\_WaitTXReady(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}}\ );}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ SERIAL\_RTNS\ Serial\_WaitRXReady(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}}\ );}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ SERIAL\_RTNS\ Serial\_Write(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}},\ uint8\_t\ *dataTX,\ uint16\_t\ len\ );}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ SERIAL\_RTNS\ Serial\_Read(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}},\ uint8\_t\ *dataRX,\ uint16\_t\ len\ );}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ SERIAL\_RTNS\ Serial\_Drain(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}}\ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ SERIAL\_RTNS\ Serial\_TXWaiting(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}}\ );}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ SERIAL\_RTNS\ Serial\_RXWaiting(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}}\ );}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00082\ uint8\_t\ Serial\_Rtn(\ SERIAL\_RTNS\ returnCode,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *func,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *caller\ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LI2\_SERIAL\_GROUND\_H\_INCLUDED}}
+
+\end{DoxyCode}

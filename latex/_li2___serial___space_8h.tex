@@ -1,0 +1,206 @@
+\doxysection{E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/ttc/li2/\+Li2\+\_\+\+Serial\+\_\+\+Space.h File Reference}
+\hypertarget{_li2___serial___space_8h}{}\label{_li2___serial___space_8h}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/li2/Li2\_Serial\_Space.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/li2/Li2\_Serial\_Space.h}}
+
+
+~\newline
+  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}../../utils/win/libserialport/libserialport.\+h"{}}\newline
+{\ttfamily \#include "{}../../utils/win/timer/timer.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_li2___serial___space_8h_a89f82a9d44beaa52b00c7245a50a105c}{SERIAL\+\_\+\+BAUDRATE}}~9600
+\item 
+\#define \mbox{\hyperlink{_li2___serial___space_8h_a2aae5e93611c4cd856fbeaa11ae3062a}{SERIAL\+\_\+\+READ\+\_\+\+TIMEOUT}}~10000
+\item 
+\#define \mbox{\hyperlink{_li2___serial___space_8h_a6ba4cad371592c5bf3e03d3a17833dac}{SERIAL\+\_\+\+WRITE\+\_\+\+TIMEOUT}}~10000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \mbox{\hyperlink{_li2___serial___space_8h_a9b003ed7acf4c6028cccc44075e9c820}{Serial\+\_\+\+Port}}
+\item 
+typedef struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \mbox{\hyperlink{_li2___serial___space_8h_ad6d06778966a004f6ad3bde3ee23f5c5}{Serial\+\_\+\+Event}}
+\item 
+typedef enum sp\+\_\+return \mbox{\hyperlink{_li2___serial___space_8h_ae636fba26ef36534fbcca502e98ea416}{SERIAL\+\_\+\+RTNS}}
+\item 
+typedef enum sp\+\_\+event \mbox{\hyperlink{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}{SERIAL\+\_\+\+EVENT\+\_\+\+TYPE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_li2___serial___space_8h_a0788dec118bcc7536badfcf022f19852}\label{_li2___serial___space_8h_a0788dec118bcc7536badfcf022f19852} 
+{\bfseries sp\+\_\+wait} ()
+\item 
+SERIAL\+\_\+\+RTNS \mbox{\hyperlink{_li2___serial___space_8h_a9fd789d22fd441917da326668c37e611}{Serial\+\_\+\+Init}} (\mbox{\hyperlink{structsp__port}{Serial\+\_\+\+Port}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{struct_port}{Port}}, const char \texorpdfstring{$\ast$}{*}port\+Name, uint32\+\_\+t baud\+Rate)
+\begin{DoxyCompactList}\small\item\em Initiates the serial port. \end{DoxyCompactList}\item 
+SERIAL\+\_\+\+RTNS \mbox{\hyperlink{_li2___serial___space_8h_ae6da694edd59c9042f4084ee1c828e4d}{Serial\+\_\+\+Add\+Event}} (\mbox{\hyperlink{structsp__port}{Serial\+\_\+\+Port}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{struct_port}{Port}}, \mbox{\hyperlink{_li2___serial___space_8h_ad6d06778966a004f6ad3bde3ee23f5c5}{Serial\+\_\+\+Event}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}event, \mbox{\hyperlink{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}{SERIAL\+\_\+\+EVENT\+\_\+\+TYPE}} event\+Type)
+\begin{DoxyCompactList}\small\item\em Assigns an Event type to a given Event object for a Serial \doxylink{struct_port}{Port}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_li2___serial___space_8h_a2a7b263d2e39377dd6359181505d2eb6}{Serial\+\_\+\+Rtn}} (SERIAL\+\_\+\+RTNS return\+Code, const char \texorpdfstring{$\ast$}{*}func, const char \texorpdfstring{$\ast$}{*}caller)
+\begin{DoxyCompactList}\small\item\em Helper function for error handling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+~\newline
+ 
+
+\begin{DoxyAuthor}{Author}
+N. Lok 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/\+March/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_li2___serial___space_8h_a89f82a9d44beaa52b00c7245a50a105c}\label{_li2___serial___space_8h_a89f82a9d44beaa52b00c7245a50a105c} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!SERIAL\_BAUDRATE@{SERIAL\_BAUDRATE}}
+\index{SERIAL\_BAUDRATE@{SERIAL\_BAUDRATE}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_BAUDRATE}{SERIAL\_BAUDRATE}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+BAUDRATE~9600}
+
+Std Libs Serial \& Time Libs Serial \doxylink{struct_config}{Config} Compiler Directives for Lithium \Hypertarget{_li2___serial___space_8h_a2aae5e93611c4cd856fbeaa11ae3062a}\label{_li2___serial___space_8h_a2aae5e93611c4cd856fbeaa11ae3062a} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!SERIAL\_READ\_TIMEOUT@{SERIAL\_READ\_TIMEOUT}}
+\index{SERIAL\_READ\_TIMEOUT@{SERIAL\_READ\_TIMEOUT}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_READ\_TIMEOUT}{SERIAL\_READ\_TIMEOUT}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+READ\+\_\+\+TIMEOUT~10000}
+
+1 Second \Hypertarget{_li2___serial___space_8h_a6ba4cad371592c5bf3e03d3a17833dac}\label{_li2___serial___space_8h_a6ba4cad371592c5bf3e03d3a17833dac} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!SERIAL\_WRITE\_TIMEOUT@{SERIAL\_WRITE\_TIMEOUT}}
+\index{SERIAL\_WRITE\_TIMEOUT@{SERIAL\_WRITE\_TIMEOUT}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_WRITE\_TIMEOUT}{SERIAL\_WRITE\_TIMEOUT}}
+{\footnotesize\ttfamily \#define SERIAL\+\_\+\+WRITE\+\_\+\+TIMEOUT~10000}
+
+1 Second 
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{_li2___serial___space_8h_ad6d06778966a004f6ad3bde3ee23f5c5}\label{_li2___serial___space_8h_ad6d06778966a004f6ad3bde3ee23f5c5} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!Serial\_Event@{Serial\_Event}}
+\index{Serial\_Event@{Serial\_Event}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_Event}{Serial\_Event}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \mbox{\hyperlink{_li2___serial___space_8h_ad6d06778966a004f6ad3bde3ee23f5c5}{Serial\+\_\+\+Event}}}
+
+Serial Event Object \Hypertarget{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}\label{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!SERIAL\_EVENT\_TYPE@{SERIAL\_EVENT\_TYPE}}
+\index{SERIAL\_EVENT\_TYPE@{SERIAL\_EVENT\_TYPE}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_EVENT\_TYPE}{SERIAL\_EVENT\_TYPE}}
+{\footnotesize\ttfamily typedef enum sp\+\_\+event \mbox{\hyperlink{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}{SERIAL\+\_\+\+EVENT\+\_\+\+TYPE}}}
+
+Serial Event Type Enum \Hypertarget{_li2___serial___space_8h_a9b003ed7acf4c6028cccc44075e9c820}\label{_li2___serial___space_8h_a9b003ed7acf4c6028cccc44075e9c820} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!Serial\_Port@{Serial\_Port}}
+\index{Serial\_Port@{Serial\_Port}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_Port}{Serial\_Port}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \mbox{\hyperlink{structsp__port}{Serial\+\_\+\+Port}}}
+
+Typedef Imports
+
+Imported from libserialport, needs changing according to lib being used. Serial \doxylink{struct_port}{Port} Object \Hypertarget{_li2___serial___space_8h_ae636fba26ef36534fbcca502e98ea416}\label{_li2___serial___space_8h_ae636fba26ef36534fbcca502e98ea416} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!SERIAL\_RTNS@{SERIAL\_RTNS}}
+\index{SERIAL\_RTNS@{SERIAL\_RTNS}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_RTNS}{SERIAL\_RTNS}}
+{\footnotesize\ttfamily typedef enum sp\+\_\+return SERIAL\+\_\+\+RTNS}
+
+Serial Returns Enum 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_li2___serial___space_8h_ae6da694edd59c9042f4084ee1c828e4d}\label{_li2___serial___space_8h_ae6da694edd59c9042f4084ee1c828e4d} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!Serial\_AddEvent@{Serial\_AddEvent}}
+\index{Serial\_AddEvent@{Serial\_AddEvent}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_AddEvent()}{Serial\_AddEvent()}}
+{\footnotesize\ttfamily SERIAL\+\_\+\+RTNS Serial\+\_\+\+Add\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsp__port}{Serial\+\_\+\+Port}} \texorpdfstring{$\ast$}{*}}]{Port,  }\item[{\mbox{\hyperlink{_li2___serial___space_8h_ad6d06778966a004f6ad3bde3ee23f5c5}{Serial\+\_\+\+Event}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{event,  }\item[{\mbox{\hyperlink{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}{SERIAL\+\_\+\+EVENT\+\_\+\+TYPE}}}]{event\+Type }\end{DoxyParamCaption})}
+
+
+
+Assigns an Event type to a given Event object for a Serial \doxylink{struct_port}{Port}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+Port} & Serial \doxylink{struct_port}{Port} object \\
+\hline
+{\em \+\_\+event} & Event object \\
+\hline
+{\em \+\_\+event\+Type} & Event type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LI2\+\_\+\+OK on success, or Error Code (Negative) on failure. 
+\end{DoxyReturn}
+Allocate new event
+
+Defines the event type
+
+All Good\Hypertarget{_li2___serial___space_8h_a9fd789d22fd441917da326668c37e611}\label{_li2___serial___space_8h_a9fd789d22fd441917da326668c37e611} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!Serial\_Init@{Serial\_Init}}
+\index{Serial\_Init@{Serial\_Init}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_Init()}{Serial\_Init()}}
+{\footnotesize\ttfamily SERIAL\+\_\+\+RTNS Serial\+\_\+\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsp__port}{Serial\+\_\+\+Port}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{Port,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{port\+Name,  }\item[{uint32\+\_\+t}]{baud\+Rate }\end{DoxyParamCaption})}
+
+
+
+Initiates the serial port. 
+
+Opens the specified serial port, configures its settings, sets its baud rate and flushs both buffers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+Port} & Pointer to where the serial object is to be stored. \\
+\hline
+{\em \+\_\+port\+Name} & Name of the com port the serial port is assigned to. \\
+\hline
+{\em \+\_\+baud\+Rate} & Baud rate of the serial port. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+LI2\+\_\+\+OK on success, or Error Code (Negative) on failure. 
+\end{DoxyReturn}
+Find and Open Serial \doxylink{struct_port}{Port}
+
+Default Settings for Most Serial \doxylink{struct_port}{Port} Setups
+
+Flush both buffers
+
+All Good
+
+Free serial port and return error code
+
+Find and Open Serial \doxylink{struct_port}{Port}
+
+Default Settings for Most Serial \doxylink{struct_port}{Port} Setups
+
+Flush both buffers
+
+All Good
+
+Free serial port and return error code\Hypertarget{_li2___serial___space_8h_a2a7b263d2e39377dd6359181505d2eb6}\label{_li2___serial___space_8h_a2a7b263d2e39377dd6359181505d2eb6} 
+\index{Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}!Serial\_Rtn@{Serial\_Rtn}}
+\index{Serial\_Rtn@{Serial\_Rtn}!Li2\_Serial\_Space.h@{Li2\_Serial\_Space.h}}
+\doxysubsubsection{\texorpdfstring{Serial\_Rtn()}{Serial\_Rtn()}}
+{\footnotesize\ttfamily uint8\+\_\+t Serial\+\_\+\+Rtn (\begin{DoxyParamCaption}\item[{SERIAL\+\_\+\+RTNS}]{return\+Code,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{func,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{caller }\end{DoxyParamCaption})}
+
+
+
+Helper function for error handling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+result} & \\
+\hline
+{\em \+\_\+func\+Name} & \\
+\hline
+{\em \+\_\+caller\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The plain integer error code or in some cases the number of bytes read or written 
+\end{DoxyReturn}
+Prints different error message depending on the type of error
+
+Return error results
+
+Prints different error message depending on the type of error
+
+Return error results

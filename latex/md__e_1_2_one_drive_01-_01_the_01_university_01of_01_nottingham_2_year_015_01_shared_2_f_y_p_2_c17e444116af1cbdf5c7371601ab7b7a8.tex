@@ -1,0 +1,48 @@
+\chapter{Customization Points}
+\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8}{}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8}\index{Customization Points@{Customization Points}}
+\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md28}%
+\Hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md28}%
+ The custom directory is an injection point for custom user configurations.\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md29}{}\doxysection{\texorpdfstring{Header {\ttfamily gtest.\+h}}{Header {\ttfamily gtest.\+h}}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md29}
+\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md30}{}\doxysubsection{\texorpdfstring{The following macros can be defined\+:}{The following macros can be defined\+:}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md30}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+OS\+\_\+\+STACK\+\_\+\+TRACE\+\_\+\+GETTER\+\_\+} -\/ The name of an implementation of {\ttfamily Os\+Stack\+Trace\+Getter\+Interface}.
+\item {\ttfamily GTEST\+\_\+\+CUSTOM\+\_\+\+TEMPDIR\+\_\+\+FUNCTION\+\_\+} -\/ An override for {\ttfamily testing\+::\+Temp\+Dir()}. See {\ttfamily testing\+::\+Temp\+Dir} for semantics and signature.
+\end{DoxyItemize}\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md31}{}\doxysection{\texorpdfstring{Header {\ttfamily gtest-\/port.\+h}}{Header {\ttfamily gtest-\/port.\+h}}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md31}
+The following macros can be defined\+:\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md32}{}\doxysubsection{\texorpdfstring{Flag related macros\+:}{Flag related macros\+:}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md32}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+FLAG(flag\+\_\+name)}
+\item {\ttfamily GTEST\+\_\+\+USE\+\_\+\+OWN\+\_\+\+FLAGFILE\+\_\+\+FLAG\+\_\+} -\/ Define to 0 when the system provides its own flagfile flag parsing.
+\item {\ttfamily GTEST\+\_\+\+DECLARE\+\_\+bool\+\_\+(name)}
+\item {\ttfamily GTEST\+\_\+\+DECLARE\+\_\+int32\+\_\+(name)}
+\item {\ttfamily GTEST\+\_\+\+DECLARE\+\_\+string\+\_\+(name)}
+\item {\ttfamily GTEST\+\_\+\+DEFINE\+\_\+bool\+\_\+(name, default\+\_\+val, doc)}
+\item {\ttfamily GTEST\+\_\+\+DEFINE\+\_\+int32\+\_\+(name, default\+\_\+val, doc)}
+\item {\ttfamily GTEST\+\_\+\+DEFINE\+\_\+string\+\_\+(name, default\+\_\+val, doc)}
+\end{DoxyItemize}\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md33}{}\doxysubsection{\texorpdfstring{Logging\+:}{Logging\+:}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md33}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+LOG\+\_\+(severity)}
+\item {\ttfamily GTEST\+\_\+\+CHECK\+\_\+(condition)}
+\item Functions {\ttfamily Log\+To\+Stderr()} and {\ttfamily Flush\+Info\+Log()} have to be provided too.
+\end{DoxyItemize}\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md34}{}\doxysubsection{\texorpdfstring{Threading\+:}{Threading\+:}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md34}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+HAS\+\_\+\+NOTIFICATION\+\_\+} -\/ Enabled if Notification is already provided.
+\item {\ttfamily GTEST\+\_\+\+HAS\+\_\+\+MUTEX\+\_\+\+AND\+\_\+\+THREAD\+\_\+\+LOCAL\+\_\+} -\/ Enabled if {\ttfamily Mutex} and {\ttfamily Thread\+Local} are already provided. Must also provide {\ttfamily GTEST\+\_\+\+DECLARE\+\_\+\+STATIC\+\_\+\+MUTEX\+\_\+(mutex)} and {\ttfamily GTEST\+\_\+\+DEFINE\+\_\+\+STATIC\+\_\+\+MUTEX\+\_\+(mutex)}
+\item {\ttfamily GTEST\+\_\+\+EXCLUSIVE\+\_\+\+LOCK\+\_\+\+REQUIRED\+\_\+(locks)}
+\item {\ttfamily GTEST\+\_\+\+LOCK\+\_\+\+EXCLUDED\+\_\+(locks)}
+\end{DoxyItemize}\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md35}{}\doxysubsection{\texorpdfstring{Underlying library support features}{Underlying library support features}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md35}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+HAS\+\_\+\+CXXABI\+\_\+\+H\+\_\+}
+\end{DoxyItemize}\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md36}{}\doxysubsection{\texorpdfstring{Exporting API symbols\+:}{Exporting API symbols\+:}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md36}
+
+\begin{DoxyItemize}
+\item {\ttfamily GTEST\+\_\+\+API\+\_\+} -\/ Specifier for exported symbols.
+\end{DoxyItemize}\hypertarget{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md37}{}\doxysection{\texorpdfstring{Header {\ttfamily gtest-\/printers.\+h}}{Header {\ttfamily gtest-\/printers.\+h}}}\label{md__e_1_2_one_drive_01-_01_the_01_university_01of_01_nottingham_2_year_015_01_shared_2_f_y_p_2_c17e444116af1cbdf5c7371601ab7b7a8_autotoc_md37}
+
+\begin{DoxyItemize}
+\item See documentation at {\ttfamily \doxylink{gtest-printers_8h_source}{gtest/gtest-\/printers.\+h}} for details on how to define a custom printer. 
+\end{DoxyItemize}

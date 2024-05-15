@@ -1,0 +1,28 @@
+\doxysection{abacus\+\_\+utils.\+h}
+\hypertarget{abacus__utils_8h_source}{}\label{abacus__utils_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/abacus\_utils.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/abacus\_utils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ abacus\_utils.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_UTILS\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ABACUS\_UTILS\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <msp430.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ char2int(uint8\_t\ *input,\ \textcolor{keywordtype}{int}\ *output);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ char2uint(uint8\_t\ *input,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *output);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ char2ulong(uint8\_t\ *input,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ *output);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ ulong2char(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ *input,\ uint8\_t\ *output);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ uint2char(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *input,\ uint8\_t\ *output);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ int2char(\textcolor{keywordtype}{int}\ *input,\ uint8\_t\ *output);}
+\DoxyCodeLine{00017\ uint16\_t\ calculate\_crc8(uint8\_t\ *p,\ uint8\_t\ len,\ uint16\_t\ *crc);}
+\DoxyCodeLine{00018\ int16\_t\ calculate\_crc16(uint16\_t\ *p,\ uint16\_t\ len,\ uint16\_t\ *crc,\ uint8\_t\ init);}
+\DoxyCodeLine{00019\ int16\_t\ calculate\_crc16\_8bit(uint8\_t\ *p,\ uint16\_t\ len,\ uint16\_t\ *crc,\ uint8\_t\ init);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_UTILS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

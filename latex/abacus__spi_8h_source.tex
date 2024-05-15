@@ -1,0 +1,51 @@
+\doxysection{abacus\+\_\+spi.\+h}
+\hypertarget{abacus__spi_8h_source}{}\label{abacus__spi_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/communications/abacus\_spi.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/communications/abacus\_spi.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ abacus\_spi.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ 06/mar/2014}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ PC12}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_SPI\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ABACUS\_SPI\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}msp430x54xa.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{abacus_8h}{../abacus.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../abacus\_utils.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SPIBUFFERLENGHT\ 256}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_p_i_port}{SPIPort}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ uint8\_t\ spi\_name;}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ lastAddress;}
+\DoxyCodeLine{00023\ \ \ \ \ uint8\_t\ isOnError;}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_p_i_port}{SPIPort}}\ spi00;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_p_i_port}{SPIPort}}\ spi01;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ abacus\_spi\_init();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ int8\_t\ abacus\_spi\_write\_instruction(uint8\_t\ busSelect,\ uint8\_t\ instruction);}
+\DoxyCodeLine{00033\ int8\_t\ abacus\_spi\_write\_read(uint8\_t\ busSelect,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *bufferOut,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bufferOutLenght,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *bufferIn,\ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bufferInLenght);}
+\DoxyCodeLine{00036\ uint16\_t\ abacus\_spi\_write\_read\_calculateCRC16(uint8\_t\ busSelect,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *bufferOut,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bufferOutLenght,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ *crc16,\ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ bufferInLenght);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ uint16\_t\ abacus\_spi\_write\_read\_calculateCRC16\_kickwdt(uint8\_t\ busSelect,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *bufferOut,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ bufferOutLenght,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ *crc16,\ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ bufferInLenght,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ wdt\_command);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_SPI\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

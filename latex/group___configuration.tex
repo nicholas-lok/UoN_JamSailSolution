@@ -1,0 +1,821 @@
+\doxysection{Configuration}
+\hypertarget{group___configuration}{}\label{group___configuration}\index{Configuration@{Configuration}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaf294f646810d9dc8b29b3d39b778afa0}{sp\+\_\+new\+\_\+config}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}config\+\_\+ptr)
+\item 
+SP\+\_\+\+API void \mbox{\hyperlink{group___configuration_ga2b48ea0772650666b9d2346c319d88a2}{sp\+\_\+free\+\_\+config}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}})
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaa508d4258f8bd5b0c79c8c87d28ec3f5}{sp\+\_\+get\+\_\+config}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}})
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga386651d3bc8c4e2821973d4e021711ac}{sp\+\_\+set\+\_\+config}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}})
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga58ede476a227c8d4db98020da34bb8d0}{sp\+\_\+set\+\_\+baudrate}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, int baudrate)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gade751d4337c345c7a0408857774478bc}{sp\+\_\+get\+\_\+config\+\_\+baudrate}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, int \texorpdfstring{$\ast$}{*}baudrate\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga003ec5a37149263feb444b9e4cd6c259}{sp\+\_\+set\+\_\+config\+\_\+baudrate}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, int baudrate)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga3e81ea416e87202214072a4f21619e2e}{sp\+\_\+set\+\_\+bits}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, int bits)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gae36087963c2e6007f6372b81e23ab6cb}{sp\+\_\+get\+\_\+config\+\_\+bits}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, int \texorpdfstring{$\ast$}{*}bits\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gafa0e993883b28de94621f2ae4fc1d49e}{sp\+\_\+set\+\_\+config\+\_\+bits}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, int bits)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga82a73f4dd935c3ccb314c1a83157e33c}{sp\+\_\+set\+\_\+parity}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+parity parity)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaeb19cec14fa25743085ff307e59d4cf7}{sp\+\_\+get\+\_\+config\+\_\+parity}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+parity \texorpdfstring{$\ast$}{*}parity\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaf5f4dd108c851a21817983888b41c0d0}{sp\+\_\+set\+\_\+config\+\_\+parity}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+parity parity)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaafececaac933d45c22bc7601bb292207}{sp\+\_\+set\+\_\+stopbits}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, int stopbits)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaff10121619fa35a39dddb0634b535c66}{sp\+\_\+get\+\_\+config\+\_\+stopbits}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, int \texorpdfstring{$\ast$}{*}stopbits\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga548e3a18eb5bc9107a83a91670347767}{sp\+\_\+set\+\_\+config\+\_\+stopbits}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, int stopbits)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga0be875e539892e4df50d0e76fc200215}{sp\+\_\+set\+\_\+rts}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+rts rts)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga9fa526878dfafe0b7977c87845cfc5a8}{sp\+\_\+get\+\_\+config\+\_\+rts}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+rts \texorpdfstring{$\ast$}{*}rts\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gac952c4d6c4d3795ef9f1cd3af0dbcef8}{sp\+\_\+set\+\_\+config\+\_\+rts}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+rts rts)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gacb8c0b90eba868d3d11f6a3949eece3e}{sp\+\_\+set\+\_\+cts}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+cts cts)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaa1be09604b521f0e611e1cd2080a1d10}{sp\+\_\+get\+\_\+config\+\_\+cts}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+cts \texorpdfstring{$\ast$}{*}cts\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gaae91a4efcdec3cb97e49e319bc57d0ee}{sp\+\_\+set\+\_\+config\+\_\+cts}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+cts cts)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga2c15d91bf93e7892e31ddfa1fcf14341}{sp\+\_\+set\+\_\+dtr}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+dtr dtr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga487db4afc207b7dbe77353ca247e6814}{sp\+\_\+get\+\_\+config\+\_\+dtr}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+dtr \texorpdfstring{$\ast$}{*}dtr\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga4b1fcd3018af3f8c57d83687d39a9f5f}{sp\+\_\+set\+\_\+config\+\_\+dtr}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+dtr dtr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga37267f17ec095ac9684936b57dd4c78b}{sp\+\_\+set\+\_\+dsr}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+dsr dsr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gae080f45da9959dba56ea98241e4706b2}{sp\+\_\+get\+\_\+config\+\_\+dsr}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+dsr \texorpdfstring{$\ast$}{*}dsr\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga5faab7c0bdacd5db8061bad3ccb0685a}{sp\+\_\+set\+\_\+config\+\_\+dsr}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+dsr dsr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga6fc8baa415c388b5563ff135d54dc8c2}{sp\+\_\+set\+\_\+xon\+\_\+xoff}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+xonxoff xon\+\_\+xoff)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga45ce02755fecc6c97cb348130c178357}{sp\+\_\+get\+\_\+config\+\_\+xon\+\_\+xoff}} (const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+xonxoff \texorpdfstring{$\ast$}{*}xon\+\_\+xoff\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gabfa6ed02d2c32f52b2e2bd880b88b43a}{sp\+\_\+set\+\_\+config\+\_\+xon\+\_\+xoff}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+xonxoff xon\+\_\+xoff)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_ga7bbb731037e2981ef9859f1ebd7978e3}{sp\+\_\+set\+\_\+config\+\_\+flowcontrol}} (struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structconfig}{config}}, enum sp\+\_\+flowcontrol flowcontrol)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___configuration_gad055bc163037becad06b32fcad7f4c84}{sp\+\_\+set\+\_\+flowcontrol}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+flowcontrol flowcontrol)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Setting and querying serial port parameters.
+
+See \doxylink{port_config_8c-example}{port\+\_\+config.\+c} for a working example of port configuration.
+
+You should always configure all settings before using a port. There are no default settings applied by libserialport. When you open a port it may have default settings from the OS or driver, or the settings left over by the last program to use it.
+
+You should always set baud rate, data bits, parity and stop bits.
+
+You should normally also set one of the preset sp\+\_\+flowcontrol flow control modes, which will set up the RTS, CTS, DTR and DSR pin behaviours and enable or disable XON/\+XOFF. If you need an unusual configuration not covered by the preset flow control modes, you will need to configure these settings individually, and avoid calling \doxylink{group___configuration_gad055bc163037becad06b32fcad7f4c84}{sp\+\_\+set\+\_\+flowcontrol()} or \doxylink{group___configuration_ga7bbb731037e2981ef9859f1ebd7978e3}{sp\+\_\+set\+\_\+config\+\_\+flowcontrol()} which will overwrite these settings.
+
+A port must be opened before you can change its settings.
+
+There are two ways of accessing port settings\+:\hypertarget{group___configuration_autotoc_md26}{}\doxysubsubsection{\texorpdfstring{Configuration structures}{Configuration structures}}\label{group___configuration_autotoc_md26}
+You can read and write a whole configuration (all settings at once) using \doxylink{group___configuration_gaa508d4258f8bd5b0c79c8c87d28ec3f5}{sp\+\_\+get\+\_\+config()} and \doxylink{group___configuration_ga386651d3bc8c4e2821973d4e021711ac}{sp\+\_\+set\+\_\+config()}. This is handy if you want to change between some preset combinations, or save and restore an existing configuration. It also ensures the changes are made together, via an efficient set of calls into the OS -\/ in some cases a single system call can be used.
+
+Use accessor functions like \doxylink{group___configuration_gade751d4337c345c7a0408857774478bc}{sp\+\_\+get\+\_\+config\+\_\+baudrate()} and \doxylink{group___configuration_ga003ec5a37149263feb444b9e4cd6c259}{sp\+\_\+set\+\_\+config\+\_\+baudrate()} to get and set individual settings from a configuration.
+
+For each setting in a port configuration, a special value of -\/1 can be used, which will cause that setting to be left alone when the configuration is applied by \doxylink{group___configuration_ga386651d3bc8c4e2821973d4e021711ac}{sp\+\_\+set\+\_\+config()}.
+
+This value is also be used by \doxylink{group___configuration_gaa508d4258f8bd5b0c79c8c87d28ec3f5}{sp\+\_\+get\+\_\+config()} for any settings which are unconfigured at the OS level, or in a state that is not representable within the libserialport API.
+
+Configurations are allocated using \doxylink{group___configuration_gaf294f646810d9dc8b29b3d39b778afa0}{sp\+\_\+new\+\_\+config()} and freed with \doxylink{group___configuration_ga2b48ea0772650666b9d2346c319d88a2}{sp\+\_\+free\+\_\+config()}. You need to manage them yourself. When a new configuration is allocated by \doxylink{group___configuration_gaf294f646810d9dc8b29b3d39b778afa0}{sp\+\_\+new\+\_\+config()}, all of its settings are initially set to the special -\/1 value.\hypertarget{group___configuration_autotoc_md27}{}\doxysubsubsection{\texorpdfstring{Direct functions for changing port settings}{Direct functions for changing port settings}}\label{group___configuration_autotoc_md27}
+As a shortcut, you can set individual settings on a port directly by calling functions like \doxylink{group___configuration_ga58ede476a227c8d4db98020da34bb8d0}{sp\+\_\+set\+\_\+baudrate()} and \doxylink{group___configuration_ga82a73f4dd935c3ccb314c1a83157e33c}{sp\+\_\+set\+\_\+parity()}. This saves you the work of allocating a temporary config, setting it up, applying it to a port and then freeing it. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___configuration_ga2b48ea0772650666b9d2346c319d88a2}\label{group___configuration_ga2b48ea0772650666b9d2346c319d88a2} 
+\index{Configuration@{Configuration}!sp\_free\_config@{sp\_free\_config}}
+\index{sp\_free\_config@{sp\_free\_config}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_free\_config()}{sp\_free\_config()}}
+{\footnotesize\ttfamily SP\+\_\+\+API void sp\+\_\+free\+\_\+config (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+Free a port configuration structure.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaa508d4258f8bd5b0c79c8c87d28ec3f5}\label{group___configuration_gaa508d4258f8bd5b0c79c8c87d28ec3f5} 
+\index{Configuration@{Configuration}!sp\_get\_config@{sp\_get\_config}}
+\index{sp\_get\_config@{sp\_get\_config}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config()}{sp\_get\_config()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+Get the current configuration of the specified serial port.
+
+The user should allocate a configuration structure using \doxylink{group___configuration_gaf294f646810d9dc8b29b3d39b778afa0}{sp\+\_\+new\+\_\+config()} and pass this as the config parameter. The configuration structure will be updated with the port configuration.
+
+Any parameters that are configured with settings not recognised or supported by libserialport, will be set to special values that are ignored by \doxylink{group___configuration_ga386651d3bc8c4e2821973d4e021711ac}{sp\+\_\+set\+\_\+config()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em config} & Pointer to a configuration structure that will hold the result. Upon errors the contents of the config struct will not be changed. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gade751d4337c345c7a0408857774478bc}\label{group___configuration_gade751d4337c345c7a0408857774478bc} 
+\index{Configuration@{Configuration}!sp\_get\_config\_baudrate@{sp\_get\_config\_baudrate}}
+\index{sp\_get\_config\_baudrate@{sp\_get\_config\_baudrate}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_baudrate()}{sp\_get\_config\_baudrate()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+baudrate (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{int \texorpdfstring{$\ast$}{*}}]{baudrate\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the baud rate from a port configuration.
+
+The user should allocate a variable of type int and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em baudrate\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gae36087963c2e6007f6372b81e23ab6cb}\label{group___configuration_gae36087963c2e6007f6372b81e23ab6cb} 
+\index{Configuration@{Configuration}!sp\_get\_config\_bits@{sp\_get\_config\_bits}}
+\index{sp\_get\_config\_bits@{sp\_get\_config\_bits}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_bits()}{sp\_get\_config\_bits()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+bits (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{int \texorpdfstring{$\ast$}{*}}]{bits\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the data bits from a port configuration.
+
+The user should allocate a variable of type int and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em bits\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaa1be09604b521f0e611e1cd2080a1d10}\label{group___configuration_gaa1be09604b521f0e611e1cd2080a1d10} 
+\index{Configuration@{Configuration}!sp\_get\_config\_cts@{sp\_get\_config\_cts}}
+\index{sp\_get\_config\_cts@{sp\_get\_config\_cts}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_cts()}{sp\_get\_config\_cts()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+cts (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+cts \texorpdfstring{$\ast$}{*}}]{cts\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the CTS pin behaviour from a port configuration.
+
+The user should allocate a variable of type enum sp\+\_\+cts and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em cts\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gae080f45da9959dba56ea98241e4706b2}\label{group___configuration_gae080f45da9959dba56ea98241e4706b2} 
+\index{Configuration@{Configuration}!sp\_get\_config\_dsr@{sp\_get\_config\_dsr}}
+\index{sp\_get\_config\_dsr@{sp\_get\_config\_dsr}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_dsr()}{sp\_get\_config\_dsr()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+dsr (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+dsr \texorpdfstring{$\ast$}{*}}]{dsr\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the DSR pin behaviour from a port configuration.
+
+The user should allocate a variable of type enum sp\+\_\+dsr and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em dsr\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga487db4afc207b7dbe77353ca247e6814}\label{group___configuration_ga487db4afc207b7dbe77353ca247e6814} 
+\index{Configuration@{Configuration}!sp\_get\_config\_dtr@{sp\_get\_config\_dtr}}
+\index{sp\_get\_config\_dtr@{sp\_get\_config\_dtr}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_dtr()}{sp\_get\_config\_dtr()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+dtr (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+dtr \texorpdfstring{$\ast$}{*}}]{dtr\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the DTR pin behaviour from a port configuration.
+
+The user should allocate a variable of type enum sp\+\_\+dtr and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em dtr\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaeb19cec14fa25743085ff307e59d4cf7}\label{group___configuration_gaeb19cec14fa25743085ff307e59d4cf7} 
+\index{Configuration@{Configuration}!sp\_get\_config\_parity@{sp\_get\_config\_parity}}
+\index{sp\_get\_config\_parity@{sp\_get\_config\_parity}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_parity()}{sp\_get\_config\_parity()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+parity (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+parity \texorpdfstring{$\ast$}{*}}]{parity\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the parity setting from a port configuration.
+
+The user should allocate a variable of type enum sp\+\_\+parity and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em parity\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga9fa526878dfafe0b7977c87845cfc5a8}\label{group___configuration_ga9fa526878dfafe0b7977c87845cfc5a8} 
+\index{Configuration@{Configuration}!sp\_get\_config\_rts@{sp\_get\_config\_rts}}
+\index{sp\_get\_config\_rts@{sp\_get\_config\_rts}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_rts()}{sp\_get\_config\_rts()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+rts (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+rts \texorpdfstring{$\ast$}{*}}]{rts\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the RTS pin behaviour from a port configuration.
+
+The user should allocate a variable of type enum sp\+\_\+rts and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em rts\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaff10121619fa35a39dddb0634b535c66}\label{group___configuration_gaff10121619fa35a39dddb0634b535c66} 
+\index{Configuration@{Configuration}!sp\_get\_config\_stopbits@{sp\_get\_config\_stopbits}}
+\index{sp\_get\_config\_stopbits@{sp\_get\_config\_stopbits}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_stopbits()}{sp\_get\_config\_stopbits()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+stopbits (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{int \texorpdfstring{$\ast$}{*}}]{stopbits\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the stop bits from a port configuration.
+
+The user should allocate a variable of type int and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em stopbits\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga45ce02755fecc6c97cb348130c178357}\label{group___configuration_ga45ce02755fecc6c97cb348130c178357} 
+\index{Configuration@{Configuration}!sp\_get\_config\_xon\_xoff@{sp\_get\_config\_xon\_xoff}}
+\index{sp\_get\_config\_xon\_xoff@{sp\_get\_config\_xon\_xoff}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_config\_xon\_xoff()}{sp\_get\_config\_xon\_xoff()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+config\+\_\+xon\+\_\+xoff (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+xonxoff \texorpdfstring{$\ast$}{*}}]{xon\+\_\+xoff\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the XON/\+XOFF configuration from a port configuration.
+
+The user should allocate a variable of type enum sp\+\_\+xonxoff and pass a pointer to this to receive the result.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em xon\+\_\+xoff\+\_\+ptr} & Pointer to a variable to store the result. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaf294f646810d9dc8b29b3d39b778afa0}\label{group___configuration_gaf294f646810d9dc8b29b3d39b778afa0} 
+\index{Configuration@{Configuration}!sp\_new\_config@{sp\_new\_config}}
+\index{sp\_new\_config@{sp\_new\_config}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_new\_config()}{sp\_new\_config()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+new\+\_\+config (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{config\+\_\+ptr }\end{DoxyParamCaption})}
+
+Allocate a port configuration structure.
+
+The user should allocate a variable of type "{}struct sp\+\_\+port\+\_\+config \texorpdfstring{$\ast$}{*}"{} and pass a pointer to this to receive the result. The variable will be updated to point to the new configuration structure. The structure is opaque and must be accessed via the functions provided.
+
+All parameters in the structure will be initialised to special values which are ignored by \doxylink{group___configuration_ga386651d3bc8c4e2821973d4e021711ac}{sp\+\_\+set\+\_\+config()}.
+
+The structure should be freed after use by calling \doxylink{group___configuration_ga2b48ea0772650666b9d2346c319d88a2}{sp\+\_\+free\+\_\+config()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em config\+\_\+ptr} & If any error is returned, the variable pointed to by config\+\_\+ptr will be set to NULL. Otherwise, it will be set to point to the allocated config structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga58ede476a227c8d4db98020da34bb8d0}\label{group___configuration_ga58ede476a227c8d4db98020da34bb8d0} 
+\index{Configuration@{Configuration}!sp\_set\_baudrate@{sp\_set\_baudrate}}
+\index{sp\_set\_baudrate@{sp\_set\_baudrate}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_baudrate()}{sp\_set\_baudrate()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+baudrate (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{int}]{baudrate }\end{DoxyParamCaption})}
+
+Set the baud rate for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baud rate in bits per second.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga3e81ea416e87202214072a4f21619e2e}\label{group___configuration_ga3e81ea416e87202214072a4f21619e2e} 
+\index{Configuration@{Configuration}!sp\_set\_bits@{sp\_set\_bits}}
+\index{sp\_set\_bits@{sp\_set\_bits}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_bits()}{sp\_set\_bits()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+bits (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+Set the data bits for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em bits} & Number of data bits.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga386651d3bc8c4e2821973d4e021711ac}\label{group___configuration_ga386651d3bc8c4e2821973d4e021711ac} 
+\index{Configuration@{Configuration}!sp\_set\_config@{sp\_set\_config}}
+\index{sp\_set\_config@{sp\_set\_config}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config()}{sp\_set\_config()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{const struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config }\end{DoxyParamCaption})}
+
+Set the configuration for the specified serial port.
+
+For each parameter in the configuration, there is a special value (usually -\/1, but see the documentation for each field). These values will be ignored and the corresponding setting left unchanged on the port.
+
+Upon errors, the configuration of the serial port is unknown since partial/incomplete config updates may have happened.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga003ec5a37149263feb444b9e4cd6c259}\label{group___configuration_ga003ec5a37149263feb444b9e4cd6c259} 
+\index{Configuration@{Configuration}!sp\_set\_config\_baudrate@{sp\_set\_config\_baudrate}}
+\index{sp\_set\_config\_baudrate@{sp\_set\_config\_baudrate}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_baudrate()}{sp\_set\_config\_baudrate()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+baudrate (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{int}]{baudrate }\end{DoxyParamCaption})}
+
+Set the baud rate in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em baudrate} & Baud rate in bits per second, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gafa0e993883b28de94621f2ae4fc1d49e}\label{group___configuration_gafa0e993883b28de94621f2ae4fc1d49e} 
+\index{Configuration@{Configuration}!sp\_set\_config\_bits@{sp\_set\_config\_bits}}
+\index{sp\_set\_config\_bits@{sp\_set\_config\_bits}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_bits()}{sp\_set\_config\_bits()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+bits (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{int}]{bits }\end{DoxyParamCaption})}
+
+Set the data bits in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em bits} & Number of data bits, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaae91a4efcdec3cb97e49e319bc57d0ee}\label{group___configuration_gaae91a4efcdec3cb97e49e319bc57d0ee} 
+\index{Configuration@{Configuration}!sp\_set\_config\_cts@{sp\_set\_config\_cts}}
+\index{sp\_set\_config\_cts@{sp\_set\_config\_cts}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_cts()}{sp\_set\_config\_cts()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+cts (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+cts}]{cts }\end{DoxyParamCaption})}
+
+Set the CTS pin behaviour in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cts} & CTS pin mode, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga5faab7c0bdacd5db8061bad3ccb0685a}\label{group___configuration_ga5faab7c0bdacd5db8061bad3ccb0685a} 
+\index{Configuration@{Configuration}!sp\_set\_config\_dsr@{sp\_set\_config\_dsr}}
+\index{sp\_set\_config\_dsr@{sp\_set\_config\_dsr}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_dsr()}{sp\_set\_config\_dsr()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+dsr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+dsr}]{dsr }\end{DoxyParamCaption})}
+
+Set the DSR pin behaviour in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsr} & DSR pin mode, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga4b1fcd3018af3f8c57d83687d39a9f5f}\label{group___configuration_ga4b1fcd3018af3f8c57d83687d39a9f5f} 
+\index{Configuration@{Configuration}!sp\_set\_config\_dtr@{sp\_set\_config\_dtr}}
+\index{sp\_set\_config\_dtr@{sp\_set\_config\_dtr}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_dtr()}{sp\_set\_config\_dtr()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+dtr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+dtr}]{dtr }\end{DoxyParamCaption})}
+
+Set the DTR pin behaviour in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dtr} & DTR pin mode, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga7bbb731037e2981ef9859f1ebd7978e3}\label{group___configuration_ga7bbb731037e2981ef9859f1ebd7978e3} 
+\index{Configuration@{Configuration}!sp\_set\_config\_flowcontrol@{sp\_set\_config\_flowcontrol}}
+\index{sp\_set\_config\_flowcontrol@{sp\_set\_config\_flowcontrol}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_flowcontrol()}{sp\_set\_config\_flowcontrol()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+flowcontrol (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+flowcontrol}]{flowcontrol }\end{DoxyParamCaption})}
+
+Set the flow control type in a port configuration.
+
+This function is a wrapper that sets the RTS, CTS, DTR, DSR and XON/\+XOFF settings as necessary for the specified flow control type. For more fine-\/grained control of these settings, use their individual configuration functions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em flowcontrol} & Flow control setting to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaf5f4dd108c851a21817983888b41c0d0}\label{group___configuration_gaf5f4dd108c851a21817983888b41c0d0} 
+\index{Configuration@{Configuration}!sp\_set\_config\_parity@{sp\_set\_config\_parity}}
+\index{sp\_set\_config\_parity@{sp\_set\_config\_parity}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_parity()}{sp\_set\_config\_parity()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+parity (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+parity}]{parity }\end{DoxyParamCaption})}
+
+Set the parity setting in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em parity} & Parity setting, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gac952c4d6c4d3795ef9f1cd3af0dbcef8}\label{group___configuration_gac952c4d6c4d3795ef9f1cd3af0dbcef8} 
+\index{Configuration@{Configuration}!sp\_set\_config\_rts@{sp\_set\_config\_rts}}
+\index{sp\_set\_config\_rts@{sp\_set\_config\_rts}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_rts()}{sp\_set\_config\_rts()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+rts (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+rts}]{rts }\end{DoxyParamCaption})}
+
+Set the RTS pin behaviour in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rts} & RTS pin mode, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga548e3a18eb5bc9107a83a91670347767}\label{group___configuration_ga548e3a18eb5bc9107a83a91670347767} 
+\index{Configuration@{Configuration}!sp\_set\_config\_stopbits@{sp\_set\_config\_stopbits}}
+\index{sp\_set\_config\_stopbits@{sp\_set\_config\_stopbits}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_stopbits()}{sp\_set\_config\_stopbits()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+stopbits (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{int}]{stopbits }\end{DoxyParamCaption})}
+
+Set the stop bits in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em stopbits} & Number of stop bits, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gabfa6ed02d2c32f52b2e2bd880b88b43a}\label{group___configuration_gabfa6ed02d2c32f52b2e2bd880b88b43a} 
+\index{Configuration@{Configuration}!sp\_set\_config\_xon\_xoff@{sp\_set\_config\_xon\_xoff}}
+\index{sp\_set\_config\_xon\_xoff@{sp\_set\_config\_xon\_xoff}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_config\_xon\_xoff()}{sp\_set\_config\_xon\_xoff()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+config\+\_\+xon\+\_\+xoff (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port__config}{sp\+\_\+port\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config,  }\item[{enum sp\+\_\+xonxoff}]{xon\+\_\+xoff }\end{DoxyParamCaption})}
+
+Set the XON/\+XOFF configuration in a port configuration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & Pointer to a configuration structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em xon\+\_\+xoff} & XON/\+XOFF mode, or -\/1 to retain the current setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gacb8c0b90eba868d3d11f6a3949eece3e}\label{group___configuration_gacb8c0b90eba868d3d11f6a3949eece3e} 
+\index{Configuration@{Configuration}!sp\_set\_cts@{sp\_set\_cts}}
+\index{sp\_set\_cts@{sp\_set\_cts}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_cts()}{sp\_set\_cts()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+cts (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+cts}]{cts }\end{DoxyParamCaption})}
+
+Set the CTS pin behaviour for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em cts} & CTS pin mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga37267f17ec095ac9684936b57dd4c78b}\label{group___configuration_ga37267f17ec095ac9684936b57dd4c78b} 
+\index{Configuration@{Configuration}!sp\_set\_dsr@{sp\_set\_dsr}}
+\index{sp\_set\_dsr@{sp\_set\_dsr}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_dsr()}{sp\_set\_dsr()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+dsr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+dsr}]{dsr }\end{DoxyParamCaption})}
+
+Set the DSR pin behaviour for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsr} & DSR pin mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga2c15d91bf93e7892e31ddfa1fcf14341}\label{group___configuration_ga2c15d91bf93e7892e31ddfa1fcf14341} 
+\index{Configuration@{Configuration}!sp\_set\_dtr@{sp\_set\_dtr}}
+\index{sp\_set\_dtr@{sp\_set\_dtr}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_dtr()}{sp\_set\_dtr()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+dtr (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+dtr}]{dtr }\end{DoxyParamCaption})}
+
+Set the DTR pin behaviour for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em dtr} & DTR pin mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gad055bc163037becad06b32fcad7f4c84}\label{group___configuration_gad055bc163037becad06b32fcad7f4c84} 
+\index{Configuration@{Configuration}!sp\_set\_flowcontrol@{sp\_set\_flowcontrol}}
+\index{sp\_set\_flowcontrol@{sp\_set\_flowcontrol}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_flowcontrol()}{sp\_set\_flowcontrol()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+flowcontrol (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+flowcontrol}]{flowcontrol }\end{DoxyParamCaption})}
+
+Set the flow control type for the specified serial port.
+
+This function is a wrapper that sets the RTS, CTS, DTR, DSR and XON/\+XOFF settings as necessary for the specified flow control type. For more fine-\/grained control of these settings, use their individual configuration functions.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em flowcontrol} & Flow control setting to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga82a73f4dd935c3ccb314c1a83157e33c}\label{group___configuration_ga82a73f4dd935c3ccb314c1a83157e33c} 
+\index{Configuration@{Configuration}!sp\_set\_parity@{sp\_set\_parity}}
+\index{sp\_set\_parity@{sp\_set\_parity}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_parity()}{sp\_set\_parity()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+parity (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+parity}]{parity }\end{DoxyParamCaption})}
+
+Set the parity setting for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em parity} & Parity setting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga0be875e539892e4df50d0e76fc200215}\label{group___configuration_ga0be875e539892e4df50d0e76fc200215} 
+\index{Configuration@{Configuration}!sp\_set\_rts@{sp\_set\_rts}}
+\index{sp\_set\_rts@{sp\_set\_rts}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_rts()}{sp\_set\_rts()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+rts (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+rts}]{rts }\end{DoxyParamCaption})}
+
+Set the RTS pin behaviour for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em rts} & RTS pin mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_gaafececaac933d45c22bc7601bb292207}\label{group___configuration_gaafececaac933d45c22bc7601bb292207} 
+\index{Configuration@{Configuration}!sp\_set\_stopbits@{sp\_set\_stopbits}}
+\index{sp\_set\_stopbits@{sp\_set\_stopbits}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_stopbits()}{sp\_set\_stopbits()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+stopbits (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{int}]{stopbits }\end{DoxyParamCaption})}
+
+Set the stop bits for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em stopbits} & Number of stop bits.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___configuration_ga6fc8baa415c388b5563ff135d54dc8c2}\label{group___configuration_ga6fc8baa415c388b5563ff135d54dc8c2} 
+\index{Configuration@{Configuration}!sp\_set\_xon\_xoff@{sp\_set\_xon\_xoff}}
+\index{sp\_set\_xon\_xoff@{sp\_set\_xon\_xoff}!Configuration@{Configuration}}
+\doxysubsubsection{\texorpdfstring{sp\_set\_xon\_xoff()}{sp\_set\_xon\_xoff()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+set\+\_\+xon\+\_\+xoff (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+xonxoff}]{xon\+\_\+xoff }\end{DoxyParamCaption})}
+
+Set the XON/\+XOFF configuration for the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em xon\+\_\+xoff} & XON/\+XOFF mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}

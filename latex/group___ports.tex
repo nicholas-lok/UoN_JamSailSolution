@@ -1,0 +1,288 @@
+\doxysection{Port handling}
+\hypertarget{group___ports}{}\label{group___ports}\index{Port handling@{Port handling}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___ports_gadb3ea39f22c05a919c6ece2c14361bcb}{sp\+\_\+open}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+mode flags)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___ports_gae6caa8f30b07feb3f818f8ec1e7d2917}{sp\+\_\+close}} (struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___ports_gaf93942bb482d67627fc3b195944ac4a9}{sp\+\_\+get\+\_\+port\+\_\+name}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___ports_ga84c44b645d29f4b1f911b86ed08383ef}{sp\+\_\+get\+\_\+port\+\_\+description}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API enum sp\+\_\+transport \mbox{\hyperlink{group___ports_ga7874c655291af68967a720a4ddecde63}{sp\+\_\+get\+\_\+port\+\_\+transport}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___ports_ga271dca71774022e30456aabe6481546d}{sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+bus\+\_\+address}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, int \texorpdfstring{$\ast$}{*}usb\+\_\+bus, int \texorpdfstring{$\ast$}{*}usb\+\_\+address)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___ports_ga240a9a3f8db4d1d84185d00501ecd782}{sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+vid\+\_\+pid}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, int \texorpdfstring{$\ast$}{*}usb\+\_\+vid, int \texorpdfstring{$\ast$}{*}usb\+\_\+pid)
+\item 
+SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___ports_gaf965ec39fdab9da37e3e611d1e10c5e9}{sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+manufacturer}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___ports_ga0941ba1e86a4437b894e770beb70fba4}{sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+product}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___ports_ga10f27baf6c5d8efdcac15e3089d05458}{sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+serial}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___ports_ga9826fc4560d53b2bd01fc939fedd9195}{sp\+\_\+get\+\_\+port\+\_\+bluetooth\+\_\+address}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___ports_ga61f37e33bc469f1307e35c4c5269b62f}{sp\+\_\+get\+\_\+port\+\_\+handle}} (const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, void \texorpdfstring{$\ast$}{*}result\+\_\+ptr)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Opening, closing and querying ports.
+
+See \doxylink{port_info_8c-example}{port\+\_\+info.\+c} for a working example of getting port information. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___ports_gae6caa8f30b07feb3f818f8ec1e7d2917}\label{group___ports_gae6caa8f30b07feb3f818f8ec1e7d2917} 
+\index{Port handling@{Port handling}!sp\_close@{sp\_close}}
+\index{sp\_close@{sp\_close}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_close()}{sp\_close()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+close (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Close the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___ports_ga9826fc4560d53b2bd01fc939fedd9195}\label{group___ports_ga9826fc4560d53b2bd01fc939fedd9195} 
+\index{Port handling@{Port handling}!sp\_get\_port\_bluetooth\_address@{sp\_get\_port\_bluetooth\_address}}
+\index{sp\_get\_port\_bluetooth\_address@{sp\_get\_port\_bluetooth\_address}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_bluetooth\_address()}{sp\_get\_port\_bluetooth\_address()}}
+{\footnotesize\ttfamily SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} sp\+\_\+get\+\_\+port\+\_\+bluetooth\+\_\+address (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get the MAC address of a Bluetooth serial adapter port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port MAC address, or NULL if an invalid port is passed. The MAC address string is part of the port structure and may not be used after the port structure has been freed.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_ga84c44b645d29f4b1f911b86ed08383ef}\label{group___ports_ga84c44b645d29f4b1f911b86ed08383ef} 
+\index{Port handling@{Port handling}!sp\_get\_port\_description@{sp\_get\_port\_description}}
+\index{sp\_get\_port\_description@{sp\_get\_port\_description}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_description()}{sp\_get\_port\_description()}}
+{\footnotesize\ttfamily SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} sp\+\_\+get\+\_\+port\+\_\+description (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get a description for a port, to present to end user.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port description, or NULL if an invalid port is passed. The description string is part of the port structure and may not be used after the port structure has been freed.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_ga61f37e33bc469f1307e35c4c5269b62f}\label{group___ports_ga61f37e33bc469f1307e35c4c5269b62f} 
+\index{Port handling@{Port handling}!sp\_get\_port\_handle@{sp\_get\_port\_handle}}
+\index{sp\_get\_port\_handle@{sp\_get\_port\_handle}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_handle()}{sp\_get\_port\_handle()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+port\+\_\+handle (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{void \texorpdfstring{$\ast$}{*}}]{result\+\_\+ptr }\end{DoxyParamCaption})}
+
+Get the operating system handle for a port.
+
+The type of the handle depends on the operating system. On Unix based systems, the handle is a file descriptor of type "{}int"{}. On Windows, the handle is of type "{}\+HANDLE"{}. The user should allocate a variable of the appropriate type and pass a pointer to this to receive the result.
+
+To obtain a valid handle, the port must first be opened by calling \doxylink{group___ports_gadb3ea39f22c05a919c6ece2c14361bcb}{sp\+\_\+open()} using the same port structure.
+
+After the port is closed or the port structure freed, the handle may no longer be valid.
+
+\begin{DoxyWarning}{Warning}
+This feature is provided so that programs may make use of OS-\/specific functionality where desired. Doing so obviously comes at a cost in portability. It also cannot be guaranteed that direct usage of the OS handle will not conflict with the library\textquotesingle{}s own usage of the port. Be careful.
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em result\+\_\+ptr} & If any error is returned, the variable pointed to by result\+\_\+ptr will have unknown contents and should not be used. Otherwise, it will be set to point to the OS handle. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___ports_gaf93942bb482d67627fc3b195944ac4a9}\label{group___ports_gaf93942bb482d67627fc3b195944ac4a9} 
+\index{Port handling@{Port handling}!sp\_get\_port\_name@{sp\_get\_port\_name}}
+\index{sp\_get\_port\_name@{sp\_get\_port\_name}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_name()}{sp\_get\_port\_name()}}
+{\footnotesize\ttfamily SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} sp\+\_\+get\+\_\+port\+\_\+name (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get the name of a port.
+
+The name returned is whatever is normally used to refer to a port on the current operating system; e.\+g. for Windows it will usually be a "{}\+COMn"{} device name, and for Unix it will be a device path beginning with "{}/dev/"{}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port name, or NULL if an invalid port is passed. The name string is part of the port structure and may not be used after the port structure has been freed.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___ports_ga7874c655291af68967a720a4ddecde63}\label{group___ports_ga7874c655291af68967a720a4ddecde63} 
+\index{Port handling@{Port handling}!sp\_get\_port\_transport@{sp\_get\_port\_transport}}
+\index{sp\_get\_port\_transport@{sp\_get\_port\_transport}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_transport()}{sp\_get\_port\_transport()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+transport sp\+\_\+get\+\_\+port\+\_\+transport (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get the transport type used by a port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port transport type.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_ga271dca71774022e30456aabe6481546d}\label{group___ports_ga271dca71774022e30456aabe6481546d} 
+\index{Port handling@{Port handling}!sp\_get\_port\_usb\_bus\_address@{sp\_get\_port\_usb\_bus\_address}}
+\index{sp\_get\_port\_usb\_bus\_address@{sp\_get\_port\_usb\_bus\_address}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_usb\_bus\_address()}{sp\_get\_port\_usb\_bus\_address()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+bus\+\_\+address (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{int \texorpdfstring{$\ast$}{*}}]{usb\+\_\+bus,  }\item[{int \texorpdfstring{$\ast$}{*}}]{usb\+\_\+address }\end{DoxyParamCaption})}
+
+Get the USB bus number and address on bus of a USB serial adapter port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em usb\+\_\+bus} & Pointer to a variable to store the USB bus. Can be NULL (in that case it will be ignored). \\
+\hline
+\mbox{\texttt{ out}}  & {\em usb\+\_\+address} & Pointer to a variable to store the USB address. Can be NULL (in that case it will be ignored).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_gaf965ec39fdab9da37e3e611d1e10c5e9}\label{group___ports_gaf965ec39fdab9da37e3e611d1e10c5e9} 
+\index{Port handling@{Port handling}!sp\_get\_port\_usb\_manufacturer@{sp\_get\_port\_usb\_manufacturer}}
+\index{sp\_get\_port\_usb\_manufacturer@{sp\_get\_port\_usb\_manufacturer}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_usb\_manufacturer()}{sp\_get\_port\_usb\_manufacturer()}}
+{\footnotesize\ttfamily SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+manufacturer (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get the USB manufacturer string of a USB serial adapter port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port manufacturer string, or NULL if an invalid port is passed. The manufacturer string is part of the port structure and may not be used after the port structure has been freed.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_ga0941ba1e86a4437b894e770beb70fba4}\label{group___ports_ga0941ba1e86a4437b894e770beb70fba4} 
+\index{Port handling@{Port handling}!sp\_get\_port\_usb\_product@{sp\_get\_port\_usb\_product}}
+\index{sp\_get\_port\_usb\_product@{sp\_get\_port\_usb\_product}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_usb\_product()}{sp\_get\_port\_usb\_product()}}
+{\footnotesize\ttfamily SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+product (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get the USB product string of a USB serial adapter port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port product string, or NULL if an invalid port is passed. The product string is part of the port structure and may not be used after the port structure has been freed.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_ga10f27baf6c5d8efdcac15e3089d05458}\label{group___ports_ga10f27baf6c5d8efdcac15e3089d05458} 
+\index{Port handling@{Port handling}!sp\_get\_port\_usb\_serial@{sp\_get\_port\_usb\_serial}}
+\index{sp\_get\_port\_usb\_serial@{sp\_get\_port\_usb\_serial}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_usb\_serial()}{sp\_get\_port\_usb\_serial()}}
+{\footnotesize\ttfamily SP\+\_\+\+API char \texorpdfstring{$\ast$}{*} sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+serial (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port }\end{DoxyParamCaption})}
+
+Get the USB serial number string of a USB serial adapter port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The port serial number, or NULL if an invalid port is passed. The serial number string is part of the port structure and may not be used after the port structure has been freed.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_ga240a9a3f8db4d1d84185d00501ecd782}\label{group___ports_ga240a9a3f8db4d1d84185d00501ecd782} 
+\index{Port handling@{Port handling}!sp\_get\_port\_usb\_vid\_pid@{sp\_get\_port\_usb\_vid\_pid}}
+\index{sp\_get\_port\_usb\_vid\_pid@{sp\_get\_port\_usb\_vid\_pid}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_get\_port\_usb\_vid\_pid()}{sp\_get\_port\_usb\_vid\_pid()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+get\+\_\+port\+\_\+usb\+\_\+vid\+\_\+pid (\begin{DoxyParamCaption}\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{int \texorpdfstring{$\ast$}{*}}]{usb\+\_\+vid,  }\item[{int \texorpdfstring{$\ast$}{*}}]{usb\+\_\+pid }\end{DoxyParamCaption})}
+
+Get the USB Vendor ID and Product ID of a USB serial adapter port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ out}}  & {\em usb\+\_\+vid} & Pointer to a variable to store the USB VID. Can be NULL (in that case it will be ignored). \\
+\hline
+\mbox{\texttt{ out}}  & {\em usb\+\_\+pid} & Pointer to a variable to store the USB PID. Can be NULL (in that case it will be ignored).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+1 
+\end{DoxySince}
+\Hypertarget{group___ports_gadb3ea39f22c05a919c6ece2c14361bcb}\label{group___ports_gadb3ea39f22c05a919c6ece2c14361bcb} 
+\index{Port handling@{Port handling}!sp\_open@{sp\_open}}
+\index{sp\_open@{sp\_open}!Port handling@{Port handling}}
+\doxysubsubsection{\texorpdfstring{sp\_open()}{sp\_open()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+open (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+mode}]{flags }\end{DoxyParamCaption})}
+
+Open the specified serial port.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em flags} & Flags to use when opening the serial port.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}

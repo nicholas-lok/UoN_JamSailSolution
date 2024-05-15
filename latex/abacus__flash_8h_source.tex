@@ -1,0 +1,98 @@
+\doxysection{abacus\+\_\+flash.\+h}
+\hypertarget{abacus__flash_8h_source}{}\label{abacus__flash_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/memory/abacus\_flash.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/memory/abacus\_flash.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ abacus\_flash.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_FLASH\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ ABACUS\_FLASH\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}msp430x54xa.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{abacus_8h}{../abacus.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ FLASH\_WREN\ 0x06}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ FLASH\_WRDI\ 0x04}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ FLASH\_RDID\ 0x9F}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ FLASH\_RDSR\ 0x05}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ FLASH\_WRSR\ 0x01}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ FLASH\_READ\ 0x03}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ FLASH\_FAST\_READ\ 0x0B}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ FLASH\_PP\ 0x02}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ FLASH\_SE\ 0xD8}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ FLASH\_BE\ 0xC7}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_flash_memory}{FlashMemory}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ flash\_name;}
+\DoxyCodeLine{00028\ \ \ \ \ uint8\_t\ flash\_identification[3];}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ uint8\_t\ lastAddress;}
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ isOnError;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_flash_memory}{FlashMemory}}\ memoryFlashMCU;}
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_flash_memory}{FlashMemory}}\ memoryFlashFPGA;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ abacus\_flashMCU\_init();}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ abacus\_flashFPGA\_init();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ int8\_t\ abacus\_flash\_write\_instruction(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ uint8\_t\ instruction);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ int8\_t\ abacus\_flash\_write\_read\_instruction(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ uint8\_t\ *instruction,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ uint16\_t\ instructionLenght,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ uint8\_t\ *data,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ uint16\_t\ dataLenght);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ int8\_t\ abacus\_flash\_isWorkInProgress(uint8\_t\ memorySelect);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ int8\_t\ abacus\_flash\_unprotectMemory(uint8\_t\ memorySelect);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ int8\_t\ abacus\_flash\_write\_data(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ uint32\_t\ address,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ uint8\_t\ *data,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ uint32\_t\ lenght);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ int8\_t\ abacus\_flash\_write\_dataEasy(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ uint32\_t\ address,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ uint8\_t\ *data,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ uint32\_t\ lenght);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ int8\_t\ abacus\_flash\_wait\_while\_busy(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ uint16\_t\ cycles,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ int8\_t\ toInfinity);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ int8\_t\ abacus\_flash\_read\_data(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ uint32\_t\ address,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ uint8\_t\ *data,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ uint32\_t\ lenght);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ uint16\_t\ abacus\_flash\_crc(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ uint32\_t\ startAddress,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ uint32\_t\ lenght);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ uint16\_t\ abacus\_flash\_crc\_kickwdt(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ uint32\_t\ startAddress,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ uint32\_t\ lenght,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ uint16\_t\ wdt\_command);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ int8\_t\ abacus\_flash\_dump\_memory(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ uint8\_t\ uart,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ uint32\_t\ startAddress,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ uint32\_t\ lenght);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ int8\_t\ abacus\_flash\_sector\_erase(uint8\_t\ memorySelect,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ uint32\_t\ address);}
+\DoxyCodeLine{00089\ int8\_t\ abacus\_flash\_bulk\_erase(uint8\_t\ memorySelect);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_FLASH\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

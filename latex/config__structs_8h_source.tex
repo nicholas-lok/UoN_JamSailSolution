@@ -1,0 +1,35 @@
+\doxysection{config\+\_\+structs.\+h}
+\hypertarget{config__structs_8h_source}{}\label{config__structs_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/config/config\_structs.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/config/config\_structs.h}}
+\mbox{\hyperlink{config__structs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CONFIG\_STRUCTS\_H\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CONFIG\_STRUCTS\_H\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ debugFlag;}
+\DoxyCodeLine{00022\ \ \ \ \ \}\ General;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ uint8\_t\ segment\ :\ 1;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ uint8\_t\ groundID\ :\ 3;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ uint32\_t\ wait\_timeout;}
+\DoxyCodeLine{00027\ \ \ \ \ \}\ \mbox{\hyperlink{namespace_t_w_s_g}{TWSG}};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ uint32\_t\ baudRate;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *serialPort;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ buffDebugFlag;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ beaconStatus;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ uint8\_t\ beaconInterval;}
+\DoxyCodeLine{00034\ \ \ \ \ \}\ \mbox{\hyperlink{namespace_li2}{Li2}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ uint32\_t\ size;}
+\DoxyCodeLine{00037\ \ \ \ \ \}\ TransferBuff;}
+\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{struct_config}{Config}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONFIG\_STRUCTS\_H\_INCLUDED}}
+
+\end{DoxyCode}

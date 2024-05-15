@@ -1,0 +1,106 @@
+\doxysection{E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/obc/scheduler/scheduler.c File Reference}
+\hypertarget{scheduler_8c}{}\label{scheduler_8c}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/scheduler/scheduler.c@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/scheduler/scheduler.c}}
+{\ttfamily \#include "{}scheduler.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{scheduler_8c_abc674601c38810d5e5f2f03b01e4a0a7}\label{scheduler_8c_abc674601c38810d5e5f2f03b01e4a0a7} 
+SCHEDULER\+\_\+\+RTNS {\bfseries Scheduler\+\_\+\+Init} (void)
+\item 
+void \mbox{\hyperlink{scheduler_8c_a2c2e498c775215590824ee65dc262388}{Scheduler\+\_\+\+Tick}} (void)
+\item 
+void \mbox{\hyperlink{scheduler_8c_aabb59a7cfd11cb63ab1ac4c125ae965f}{Scheduler\+\_\+\+Get\+Tasks}} (bool \texorpdfstring{$\ast$}{*}\+\_\+statuses, uint32\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+times)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{scheduler_8c_a000b79de6003b51f30350c3f7d5c7c06}{Scheduler\+\_\+\+Rtn\+Check}} (SCHEDULER\+\_\+\+RTNS \+\_\+return\+Code, const char \texorpdfstring{$\ast$}{*}\+\_\+func, const char \texorpdfstring{$\ast$}{*}\+\_\+caller)
+\item 
+SCHEDULER\+\_\+\+RTNS \mbox{\hyperlink{scheduler_8c_a181fdc9a7c75d02c261a5eed3e86d645}{Scheduler\+\_\+\+Add\+Task}} (int8\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+task\+ID, void(\texorpdfstring{$\ast$}{*}\+\_\+callback)(void), uint32\+\_\+t \+\_\+seconds)
+\item 
+SCHEDULER\+\_\+\+RTNS \mbox{\hyperlink{scheduler_8c_a47a252b48821bbe6a02773c17b3b50a5}{Scheduler\+\_\+\+Add\+Cyclic\+Task}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+task\+ID, void(\texorpdfstring{$\ast$}{*}\+\_\+callback)(void), uint32\+\_\+t \+\_\+seconds)
+\item 
+SCHEDULER\+\_\+\+RTNS \mbox{\hyperlink{scheduler_8c_afa3b12c2101bc1633a5f4295e2fc9dda}{Scheduler\+\_\+\+Remove\+Task}} (uint8\+\_\+t \+\_\+task\+ID)
+\item 
+SCHEDULER\+\_\+\+RTNS \mbox{\hyperlink{scheduler_8c_ae44417ddb28b7bd45c8c50672ffd4211}{Scheduler\+\_\+\+Remove\+All\+Task}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+N. Lok 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/\+March/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{scheduler_8c_a47a252b48821bbe6a02773c17b3b50a5}\label{scheduler_8c_a47a252b48821bbe6a02773c17b3b50a5} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_AddCyclicTask@{Scheduler\_AddCyclicTask}}
+\index{Scheduler\_AddCyclicTask@{Scheduler\_AddCyclicTask}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_AddCyclicTask()}{Scheduler\_AddCyclicTask()}}
+{\footnotesize\ttfamily SCHEDULER\+\_\+\+RTNS Scheduler\+\_\+\+Add\+Cyclic\+Task (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+task\+ID,  }\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{\+\_\+callback,  }\item[{uint32\+\_\+t}]{\+\_\+seconds }\end{DoxyParamCaption})}
+
+Initialise task object with cycle time
+
+Call add task helper\Hypertarget{scheduler_8c_a181fdc9a7c75d02c261a5eed3e86d645}\label{scheduler_8c_a181fdc9a7c75d02c261a5eed3e86d645} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_AddTask@{Scheduler\_AddTask}}
+\index{Scheduler\_AddTask@{Scheduler\_AddTask}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_AddTask()}{Scheduler\_AddTask()}}
+{\footnotesize\ttfamily SCHEDULER\+\_\+\+RTNS Scheduler\+\_\+\+Add\+Task (\begin{DoxyParamCaption}\item[{int8\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+task\+ID,  }\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{\+\_\+callback,  }\item[{uint32\+\_\+t}]{\+\_\+seconds }\end{DoxyParamCaption})}
+
+Initialise task object
+
+Call add task helper\Hypertarget{scheduler_8c_aabb59a7cfd11cb63ab1ac4c125ae965f}\label{scheduler_8c_aabb59a7cfd11cb63ab1ac4c125ae965f} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_GetTasks@{Scheduler\_GetTasks}}
+\index{Scheduler\_GetTasks@{Scheduler\_GetTasks}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_GetTasks()}{Scheduler\_GetTasks()}}
+{\footnotesize\ttfamily void Scheduler\+\_\+\+Get\+Tasks (\begin{DoxyParamCaption}\item[{bool \texorpdfstring{$\ast$}{*}}]{\+\_\+statuses,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+times }\end{DoxyParamCaption})}
+
+Loop through all tasks
+
+Store status and remaining times\Hypertarget{scheduler_8c_ae44417ddb28b7bd45c8c50672ffd4211}\label{scheduler_8c_ae44417ddb28b7bd45c8c50672ffd4211} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_RemoveAllTask@{Scheduler\_RemoveAllTask}}
+\index{Scheduler\_RemoveAllTask@{Scheduler\_RemoveAllTask}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_RemoveAllTask()}{Scheduler\_RemoveAllTask()}}
+{\footnotesize\ttfamily SCHEDULER\+\_\+\+RTNS Scheduler\+\_\+\+Remove\+All\+Task (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialise var
+
+Loop through all tasks
+
+Checks if task has been triggered
+
+Deactivate task
+
+If no tasks triggered while removing, all ok, else not fully clean remove\Hypertarget{scheduler_8c_afa3b12c2101bc1633a5f4295e2fc9dda}\label{scheduler_8c_afa3b12c2101bc1633a5f4295e2fc9dda} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_RemoveTask@{Scheduler\_RemoveTask}}
+\index{Scheduler\_RemoveTask@{Scheduler\_RemoveTask}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_RemoveTask()}{Scheduler\_RemoveTask()}}
+{\footnotesize\ttfamily SCHEDULER\+\_\+\+RTNS Scheduler\+\_\+\+Remove\+Task (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\+\_\+task\+ID }\end{DoxyParamCaption})}
+
+Initialise var
+
+Checks if task has been triggered
+
+Deactivate task
+
+If task didn\textquotesingle{}t triggered while removing, all ok, else not fully clean remove\Hypertarget{scheduler_8c_a000b79de6003b51f30350c3f7d5c7c06}\label{scheduler_8c_a000b79de6003b51f30350c3f7d5c7c06} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_RtnCheck@{Scheduler\_RtnCheck}}
+\index{Scheduler\_RtnCheck@{Scheduler\_RtnCheck}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_RtnCheck()}{Scheduler\_RtnCheck()}}
+{\footnotesize\ttfamily uint8\+\_\+t Scheduler\+\_\+\+Rtn\+Check (\begin{DoxyParamCaption}\item[{SCHEDULER\+\_\+\+RTNS}]{\+\_\+return\+Code,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+func,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+caller }\end{DoxyParamCaption})}
+
+Check return code
+
+Print Error Message\Hypertarget{scheduler_8c_a2c2e498c775215590824ee65dc262388}\label{scheduler_8c_a2c2e498c775215590824ee65dc262388} 
+\index{scheduler.c@{scheduler.c}!Scheduler\_Tick@{Scheduler\_Tick}}
+\index{Scheduler\_Tick@{Scheduler\_Tick}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{Scheduler\_Tick()}{Scheduler\_Tick()}}
+{\footnotesize\ttfamily void Scheduler\+\_\+\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Loop through all tasks
+
+Decrement task timer and check if task timer elapsed
+
+Call function for scheduled task
+
+Reset task timer, if task is cyclic, else deactivate task

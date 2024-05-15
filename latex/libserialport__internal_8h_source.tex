@@ -1,0 +1,320 @@
+\doxysection{libserialport\+\_\+internal.\+h}
+\hypertarget{libserialport__internal_8h_source}{}\label{libserialport__internal_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/libserialport/libserialport\_internal.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/libserialport/libserialport\_internal.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ the\ libserialport\ project.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2014\ Martin\ Ling\ <martin-\/libserialport@earth.li>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2014\ Aurelien\ Jacobs\ <aurel@gnuage.org>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ Lesser\ General\ Public\ License\ as}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ published\ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ License,\ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ Lesser\ General\ Public\ License}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ along\ with\ this\ program.\ \ If\ not,\ see\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ LIBSERIALPORT\_LIBSERIALPORT\_INTERNAL\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ LIBSERIALPORT\_LIBSERIALPORT\_INTERNAL\_H}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*\ These\ MSVC-\/specific\ defines\ must\ appear\ before\ other\ headers.*/}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ \_CRT\_NONSTDC\_NO\_DEPRECATE}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ \_CRT\_SECURE\_NO\_WARNINGS}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{/*\ These\ feature\ test\ macros\ must\ appear\ before\ other\ headers.*/}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#if\ defined(\_\_linux\_\_)\ ||\ defined(\_\_CYGWIN\_\_)}}
+\DoxyCodeLine{00032\ \textcolor{comment}{/*\ For\ timeradd,\ timersub,\ timercmp,\ realpath.\ */}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ \_BSD\_SOURCE\ 1\ }\textcolor{comment}{/*\ for\ glibc\ <\ 2.19\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ \_DEFAULT\_SOURCE\ 1\ }\textcolor{comment}{/*\ for\ glibc\ >=\ 2.20\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00035\ \textcolor{comment}{/*\ For\ clock\_gettime\ and\ associated\ types.\ */}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ \_POSIX\_C\_SOURCE\ 199309L}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#ifdef\ LIBSERIALPORT\_ATBUILD}}
+\DoxyCodeLine{00040\ \textcolor{comment}{/*\ If\ building\ with\ autoconf,\ include\ the\ generated\ config.h.\ */}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <config.h>}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifdef\ LIBSERIALPORT\_MSBUILD}}
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ If\ building\ with\ MS\ tools,\ define\ necessary\ things\ that}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ would\ otherwise\ appear\ in\ config.h.\ */}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ SP\_PRIV}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}libserialport.h"{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ <sys/types.h>}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <sys/stat.h>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ <fcntl.h>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ <stdarg.h>}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#include\ <tchar.h>}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#include\ <setupapi.h>}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#include\ <cfgmgr32.h>}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#undef\ DEFINE\_GUID}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ DEFINE\_GUID(name,l,w1,w2,b1,b2,b3,b4,b5,b6,b7,b8)\ \(\backslash\)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\ \ \ \ static\ const\ GUID\ name\ =\ \{\ l,w1,w2,\{\ b1,b2,b3,b4,b5,b6,b7,b8\ \}\ \}}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#include\ <usbioctl.h>}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#include\ <usbiodef.h>}}
+\DoxyCodeLine{00072\ \textcolor{comment}{/*\ The\ largest\ size\ that\ can\ be\ passed\ to\ WriteFile()\ safely}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ *\ on\ any\ architecture.\ This\ arises\ from\ the\ expression:}}
+\DoxyCodeLine{00074\ \textcolor{comment}{\ *\ PAGE\_SIZE\ *\ (65535\ -\/\ sizeof(MDL))\ /\ sizeof(ULONG\_PTR)}}
+\DoxyCodeLine{00075\ \textcolor{comment}{\ *\ and\ this\ worst-\/case\ value\ is\ found\ on\ x64.\ */}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ WRITEFILE\_MAX\_SIZE\ 33525760}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#include\ <termios.h>}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#include\ <sys/ioctl.h>}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#include\ <sys/time.h>}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#include\ <poll.h>}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#ifdef\ HAVE\_SYS\_FILE\_H}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#include\ <sys/file.h>}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#ifdef\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#include\ <CoreFoundation/CoreFoundation.h>}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#include\ <IOKit/IOKitLib.h>}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#include\ <IOKit/serial/IOSerialKeys.h>}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#include\ <IOKit/serial/ioss.h>}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#include\ <sys/syslimits.h>}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#include\ <mach/mach\_time.h>}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#if\ MAC\_OS\_X\_VERSION\_MAX\_ALLOWED\ <\ 120000\ }\textcolor{comment}{/*\ Before\ macOS\ 12\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ kIOMainPortDefault\ kIOMasterPortDefault}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#ifdef\ \_\_linux\_\_}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#include\ <dirent.h>}}
+\DoxyCodeLine{00102\ \textcolor{comment}{/*\ Android\ only\ has\ linux/serial.h\ from\ platform\ 21\ onwards.\ */}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#if\ !(defined(\_\_ANDROID\_\_)\ \&\&\ (\_\_ANDROID\_API\_\_\ <\ 21))}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#include\ <linux/serial.h>}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#include\ "{}linux\_termios.h"{}}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{comment}{/*\ TCGETX/TCSETX\ is\ not\ available\ everywhere.\ */}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#if\ defined(TCGETX)\ \&\&\ defined(TCSETX)\ \&\&\ defined(HAVE\_STRUCT\_TERMIOX)}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ USE\_TERMIOX}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{/*\ TIOCINQ/TIOCOUTQ\ is\ not\ available\ everywhere.\ */}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#if\ !defined(TIOCINQ)\ \&\&\ defined(FIONREAD)}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ TIOCINQ\ FIONREAD}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#if\ !defined(TIOCOUTQ)\ \&\&\ defined(FIONWRITE)}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ TIOCOUTQ\ FIONWRITE}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00123\ \textcolor{comment}{\ *\ O\_CLOEXEC\ is\ not\ available\ everywhere,\ fallback\ to\ not\ setting\ the}}
+\DoxyCodeLine{00124\ \textcolor{comment}{\ *\ flag\ on\ those\ systems.}}
+\DoxyCodeLine{00125\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#ifndef\ \_WIN32}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#ifndef\ O\_CLOEXEC}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ O\_CLOEXEC\ 0}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{comment}{/*\ Non-\/standard\ baudrates\ are\ not\ available\ everywhere.\ */}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#if\ (defined(HAVE\_TERMIOS\_SPEED)\ ||\ defined(HAVE\_TERMIOS2\_SPEED))\ \&\&\ HAVE\_DECL\_BOTHER}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ USE\_TERMIOS\_SPEED}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsp__port}{sp\_port}}\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{char}\ *name;}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{char}\ *description;}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_transport\ transport;}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ usb\_bus;}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{int}\ usb\_address;}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{int}\ usb\_vid;}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{int}\ usb\_pid;}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{char}\ *usb\_manufacturer;}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{char}\ *usb\_product;}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{char}\ *usb\_serial;}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{char}\ *bluetooth\_address;}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{char}\ *usb\_path;}
+\DoxyCodeLine{00151\ \ \ \ \ HANDLE\ hdl;}
+\DoxyCodeLine{00152\ \ \ \ \ COMMTIMEOUTS\ timeouts;}
+\DoxyCodeLine{00153\ \ \ \ \ OVERLAPPED\ write\_ovl;}
+\DoxyCodeLine{00154\ \ \ \ \ OVERLAPPED\ read\_ovl;}
+\DoxyCodeLine{00155\ \ \ \ \ OVERLAPPED\ wait\_ovl;}
+\DoxyCodeLine{00156\ \ \ \ \ DWORD\ events;}
+\DoxyCodeLine{00157\ \ \ \ \ BYTE\ *write\_buf;}
+\DoxyCodeLine{00158\ \ \ \ \ DWORD\ write\_buf\_size;}
+\DoxyCodeLine{00159\ \ \ \ \ BOOL\ writing;}
+\DoxyCodeLine{00160\ \ \ \ \ BOOL\ wait\_running;}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{int}\ fd;}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00164\ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsp__port__config}{sp\_port\_config}}\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{int}\ baudrate;}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{int}\ bits;}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_parity\ parity;}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{int}\ stopbits;}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_rts\ rts;}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_cts\ cts;}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_dtr\ dtr;}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_dsr\ dsr;}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{enum}\ sp\_xonxoff\ xon\_xoff;}
+\DoxyCodeLine{00176\ \};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structport__data}{port\_data}}\ \{}
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00180\ \ \ \ \ DCB\ dcb;}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keyword}{struct\ }termios\ term;}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{int}\ controlbits;}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{int}\ termiox\_supported;}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{int}\ rts\_flow;}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{int}\ cts\_flow;}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{int}\ dtr\_flow;}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{int}\ dsr\_flow;}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00190\ \};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00193\ \textcolor{keyword}{typedef}\ HANDLE\ event\_handle;}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00195\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ event\_handle;}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \textcolor{comment}{/*\ Standard\ baud\ rates.\ */}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#define\ BAUD\_TYPE\ DWORD}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#define\ BAUD(n)\ \{CBR\_\#\#n,\ n\}}}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ BAUD\_TYPE\ speed\_t}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#define\ BAUD(n)\ \{B\#\#n,\ n\}}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structstd__baudrate}{std\_baudrate}}\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ BAUD\_TYPE\ index;}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{int}\ value;}
+\DoxyCodeLine{00210\ \};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#define\ ARRAY\_SIZE(x)\ (sizeof(x)\ /\ sizeof(x[0]))}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{extern}\ void\ (*sp\_debug\_handler)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,\ ...);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{comment}{/*\ Debug\ output\ macros.\ */}}
+\DoxyCodeLine{00217\ \textcolor{preprocessor}{\#define\ DEBUG\_FMT(fmt,\ ...)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00218\ \textcolor{preprocessor}{\ \ \ \ if\ (sp\_debug\_handler)\ \(\backslash\)}}
+\DoxyCodeLine{00219\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ sp\_debug\_handler(fmt\ "{}.\(\backslash\)n"{},\ \_\_VA\_ARGS\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#define\ DEBUG(msg)\ DEBUG\_FMT(msg,\ NULL)}}
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#define\ DEBUG\_ERROR(err,\ msg)\ DEBUG\_FMT("{}\%s\ returning\ "{}\ \#err\ "{}:\ "{}\ msg,\ \_\_func\_\_)}}
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ DEBUG\_FAIL(msg)\ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\ \ \ \ char\ *errmsg\ =\ sp\_last\_error\_message();\ \(\backslash\)}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FMT("{}\%s\ returning\ SP\_ERR\_FAIL:\ "{}\ msg\ "{}:\ \%s"{},\ \_\_func\_\_,\ errmsg);\ \(\backslash\)}}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\ \ \ \ sp\_free\_error\_message(errmsg);\ \(\backslash\)}}
+\DoxyCodeLine{00227\ \textcolor{preprocessor}{\}\ while\ (0);}}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#define\ RETURN()\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FMT("{}\%s\ returning"{},\ \_\_func\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\ \ \ \ return;\ \(\backslash\)}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00232\ \textcolor{preprocessor}{\#define\ RETURN\_CODE(x)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FMT("{}\%s\ returning\ "{}\ \#x,\ \_\_func\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\ \ \ \ return\ x;\ \(\backslash\)}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00236\ \textcolor{preprocessor}{\#define\ RETURN\_CODEVAL(x)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\ \ \ \ switch\ (x)\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\ \ \ \ case\ SP\_OK:\ RETURN\_CODE(SP\_OK);\ \(\backslash\)}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\ \ \ \ case\ SP\_ERR\_ARG:\ RETURN\_CODE(SP\_ERR\_ARG);\ \(\backslash\)}}
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\ \ \ \ case\ SP\_ERR\_FAIL:\ RETURN\_CODE(SP\_ERR\_FAIL);\ \(\backslash\)}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\ \ \ \ case\ SP\_ERR\_MEM:\ RETURN\_CODE(SP\_ERR\_MEM);\ \(\backslash\)}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\ \ \ \ case\ SP\_ERR\_SUPP:\ RETURN\_CODE(SP\_ERR\_SUPP);\ \(\backslash\)}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\ \ \ \ default:\ RETURN\_CODE(SP\_ERR\_FAIL);\ \(\backslash\)}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#define\ RETURN\_OK()\ RETURN\_CODE(SP\_OK);}}
+\DoxyCodeLine{00247\ \textcolor{preprocessor}{\#define\ RETURN\_ERROR(err,\ msg)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_ERROR(err,\ msg);\ \(\backslash\)}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\ \ \ \ return\ err;\ \(\backslash\)}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#define\ RETURN\_FAIL(msg)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FAIL(msg);\ \(\backslash\)}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\ \ \ \ return\ SP\_ERR\_FAIL;\ \(\backslash\)}}
+\DoxyCodeLine{00254\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#define\ RETURN\_INT(x)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00256\ \textcolor{preprocessor}{\ \ \ \ int\ \_x\ =\ x;\ \(\backslash\)}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FMT("{}\%s\ returning\ \%d"{},\ \_\_func\_\_,\ \_x);\ \(\backslash\)}}
+\DoxyCodeLine{00258\ \textcolor{preprocessor}{\ \ \ \ return\ \_x;\ \(\backslash\)}}
+\DoxyCodeLine{00259\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00260\ \textcolor{preprocessor}{\#define\ RETURN\_STRING(x)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\ \ \ \ char\ *\_x\ =\ x;\ \(\backslash\)}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FMT("{}\%s\ returning\ \%s"{},\ \_\_func\_\_,\ \_x);\ \(\backslash\)}}
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\ \ \ \ return\ \_x;\ \(\backslash\)}}
+\DoxyCodeLine{00264\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00265\ \textcolor{preprocessor}{\#define\ RETURN\_POINTER(x)\ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00266\ \textcolor{preprocessor}{\ \ \ \ void\ *\_x\ =\ x;\ \(\backslash\)}}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\ \ \ \ DEBUG\_FMT("{}\%s\ returning\ \%p"{},\ \_\_func\_\_,\ \_x);\ \(\backslash\)}}
+\DoxyCodeLine{00268\ \textcolor{preprocessor}{\ \ \ \ return\ \_x;\ \(\backslash\)}}
+\DoxyCodeLine{00269\ \textcolor{preprocessor}{\}\ while\ (0)}}
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ SET\_ERROR(val,\ err,\ msg)\ do\ \{\ DEBUG\_ERROR(err,\ msg);\ val\ =\ err;\ \}\ while\ (0)}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\#define\ SET\_FAIL(val,\ msg)\ do\ \{\ DEBUG\_FAIL(msg);\ val\ =\ SP\_ERR\_FAIL;\ \}\ while\ (0)}}
+\DoxyCodeLine{00272\ \textcolor{preprocessor}{\#define\ TRACE(fmt,\ ...)\ DEBUG\_FMT("{}\%s("{}\ fmt\ "{})\ called"{},\ \_\_func\_\_,\ \_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\#define\ TRACE\_VOID()\ DEBUG\_FMT("{}\%s()\ called"{},\ \_\_func\_\_)}}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \textcolor{preprocessor}{\#define\ TRY(x)\ do\ \{\ int\ retval\ =\ x;\ if\ (retval\ !=\ SP\_OK)\ RETURN\_CODEVAL(retval);\ \}\ while\ (0)}}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ SP\_PRIV\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsp__port}{sp\_port}}\ **list\_append(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structsp__port}{sp\_port}}\ **list,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *portname);}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \textcolor{comment}{/*\ OS-\/specific\ Helper\ functions.\ */}}
+\DoxyCodeLine{00280\ SP\_PRIV\ \textcolor{keyword}{enum}\ sp\_return\ get\_port\_details(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structsp__port}{sp\_port}}\ *port);}
+\DoxyCodeLine{00281\ SP\_PRIV\ \textcolor{keyword}{enum}\ sp\_return\ list\_ports(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structsp__port}{sp\_port}}\ ***list);}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \textcolor{comment}{/*\ Timing\ abstraction\ */}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtime}{time}}\ \{}
+\DoxyCodeLine{00286\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00287\ \ \ \ \ int64\_t\ ticks;}
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keyword}{struct\ }timeval\ tv;}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00291\ \};}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtimeout}{timeout}}\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ms,\ limit\_ms;}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtime}{time}}\ start,\ now,\ end,\ delta,\ delta\_max;}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keyword}{struct\ }timeval\ delta\_tv;}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{bool}\ calls\_started,\ overflow;}
+\DoxyCodeLine{00298\ \};}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ SP\_PRIV\ \textcolor{keywordtype}{void}\ time\_get(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *\mbox{\hyperlink{structtime}{time}});}
+\DoxyCodeLine{00301\ SP\_PRIV\ \textcolor{keywordtype}{void}\ time\_set\_ms(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *\mbox{\hyperlink{structtime}{time}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ms);}
+\DoxyCodeLine{00302\ SP\_PRIV\ \textcolor{keywordtype}{void}\ time\_add(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *b,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *result);}
+\DoxyCodeLine{00303\ SP\_PRIV\ \textcolor{keywordtype}{void}\ time\_sub(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *b,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *result);}
+\DoxyCodeLine{00304\ SP\_PRIV\ \textcolor{keywordtype}{bool}\ time\_greater(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *b);}
+\DoxyCodeLine{00305\ SP\_PRIV\ \textcolor{keywordtype}{void}\ time\_as\_timeval(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *\mbox{\hyperlink{structtime}{time}},\ \textcolor{keyword}{struct}\ timeval\ *tv);}
+\DoxyCodeLine{00306\ SP\_PRIV\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ time\_as\_ms(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtime}{time}}\ *\mbox{\hyperlink{structtime}{time}});}
+\DoxyCodeLine{00307\ SP\_PRIV\ \textcolor{keywordtype}{void}\ timeout\_start(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtimeout}{timeout}}\ *\mbox{\hyperlink{structtimeout}{timeout}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ timeout\_ms);}
+\DoxyCodeLine{00308\ SP\_PRIV\ \textcolor{keywordtype}{void}\ timeout\_limit(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtimeout}{timeout}}\ *\mbox{\hyperlink{structtimeout}{timeout}},\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ limit\_ms);}
+\DoxyCodeLine{00309\ SP\_PRIV\ \textcolor{keywordtype}{bool}\ timeout\_check(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtimeout}{timeout}}\ *\mbox{\hyperlink{structtimeout}{timeout}});}
+\DoxyCodeLine{00310\ SP\_PRIV\ \textcolor{keywordtype}{void}\ timeout\_update(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtimeout}{timeout}}\ *\mbox{\hyperlink{structtimeout}{timeout}});}
+\DoxyCodeLine{00311\ SP\_PRIV\ \textcolor{keyword}{struct\ }timeval\ *timeout\_timeval(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtimeout}{timeout}}\ *\mbox{\hyperlink{structtimeout}{timeout}});}
+\DoxyCodeLine{00312\ SP\_PRIV\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ timeout\_remaining\_ms(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtimeout}{timeout}}\ *\mbox{\hyperlink{structtimeout}{timeout}});}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
