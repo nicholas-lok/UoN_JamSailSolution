@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\x64\Debug\TWSG_Config_Ground.ini">
+    <None Include="..\..\config\Config_Ground.ini">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

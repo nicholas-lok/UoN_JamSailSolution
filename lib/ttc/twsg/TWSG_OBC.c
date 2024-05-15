@@ -119,8 +119,6 @@ int8_t TWSG_SendBuffer( TWSG_Comms_System *_Comms, TWSG_OBC_Buff_Down_Payload *_
                 seqSegFlag = TWSG_CONTINUE_FLAG;
             }
 
-            
-
             /** */
             TWSG_SetPriHeader( _Comms, buffer, TWSG_OBC_ID, 
                                TWSG_TELEMETRY, TWSG_SEC_HDR, 
@@ -132,7 +130,7 @@ int8_t TWSG_SendBuffer( TWSG_Comms_System *_Comms, TWSG_OBC_Buff_Down_Payload *_
             buffer[4] = ( uint8_t )dataPacketCounter;
 
             /** Copy data to transfer */
-            memcpy( &( buffer[5] ), &( _Comms->transferBuffer[dataPacketCounter * TWSG_MAX_PAYLOAD_SEC_LEN] ), payloadLen );
+            memcpy( &( buffer[5] ), &( _Comms->transferBuff->buff[dataPacketCounter * TWSG_MAX_PAYLOAD_SEC_LEN] ), payloadLen );
 
             if ( _Comms->config.General.debugFlag ) {
                 printf( "\nPayload len: %d\n", payloadLen );

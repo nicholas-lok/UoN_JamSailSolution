@@ -109,7 +109,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(OutDir)inih.lib;$(OutDir)ImageReader.lib;$(OutDir)TWSG_Ground.lib;$(OutDir)Li2_Ground.lib;$(OutDir)libserialport.lib;$(OutDir)timer.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(OutDir)inih.lib;$(OutDir)img_reader.lib;$(OutDir)config.lib;$(OutDir)transfer_buff.lib;$(OutDir)TWSG_Ground.lib;$(OutDir)Li2_Ground.lib;$(OutDir)libserialport.lib;$(OutDir)timer.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
     </Link>
@@ -137,7 +137,7 @@
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\x64\Debug\TWSG_Config_Ground.ini" />
+    <None Include="..\..\config\Config_Ground.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

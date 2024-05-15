@@ -7,17 +7,24 @@
  *********************************************************************/
 /** */
 
+
 /** */
+#include "../../lib/obc/config/config.h"
+#include "../../lib/obc/transfer_buff/transfer_buff.h"
 #include "../../lib/ttc/twsg/TWSG_Ground.h"
 #include "../../lib/utils/win/img_reader/img_reader.h"
 
 /** */
+Config Config_Ground;
+Transfer_Buff TransferBuff_Ground;
 TWSG_Comms_System TWSG_Ground;
 
 /** */
 int main() {
     /** */
-    if ( TWSG_Init( &TWSG_Ground, "TWSG_Config_Ground.ini" ) != 0 ) abort();
+    if ( Config_Init( &Config_Ground, "../../config/Config_Ground.ini" ) != 0 ) abort();
+    if ( TransferBuff_Init( &TransferBuff_Ground, Config_Ground.TransferBuff.size ) != 0 ) abort();
+    if ( TWSG_Init( &TWSG_Ground, Config_Ground, &TransferBuff_Ground ) != 0 ) abort();
 
     /** */
     if ( TWSG_WaitForPacket( &TWSG_Ground, TWSG_OBC_BEACON ) != 0 ) abort();
@@ -25,7 +32,9 @@ int main() {
     TWSG_OBC_Buff_Down_Payload payload;
     TWSG_ReceiveBuffDown( &TWSG_Ground, &payload );
 
-    uint8_t test = IR_Write( "../../../TestingData/logo-annotated_CPY.jpg", TWSG_Ground.transferBuffer, TWSG_Ground.dataInBufferSize );
+    uint8_t test = IR_Write( "../../../TestingData/OUT.jpg", TransferBuff_Ground.buff, TWSG_Ground.transferBuff->dataInBuffSize );
+
+
 
     //// Handshake Test
     //TWSG_OBC_Handshake_Payload payload1;

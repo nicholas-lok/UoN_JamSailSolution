@@ -17,7 +17,8 @@
 
 /** Additional Libs */
 #include "../../ttc/li2/Li2.h"
-#include "../../utils/win/inih/ini.h"
+#include "../../obc/transfer_buff/transfer_buff.h"
+#include "../../obc/config/config_structs.h"
 
 /** */
 #define TWSG_MAX_PACKET_LEN             255
@@ -63,8 +64,8 @@ typedef enum {
 
 /** Segement Enum */
 typedef enum {
-    TWSG_SEG_SPACE,
-    TWSG_SEG_GROUND
+    TWSG_SEG_GROUND,
+    TWSG_SEG_SPACE
 } TWSG_SEG;
 
 /** */
@@ -121,38 +122,13 @@ typedef struct {
  *
  */
 typedef struct {
-    struct {
-        bool debugFlag;
-        const char *test;
-    } General;
-    struct {
-        uint8_t segment                 : 1;
-        uint8_t groundID                : 3;
-        uint32_t transferBufferSize;
-        uint32_t wait_timeout;
-    } TWSG;
-    struct {
-        uint32_t baudRate;
-        const char *serialPort;
-        bool buffDebugFlag;
-        bool beaconStatus;
-        uint8_t beaconInterval;
-    } Li2;
-} TWSG_Config;
-
-/**
- * @struct
- *
- */
-typedef struct {
     Li2_Radio Li2;
-    uint8_t *transferBuffer;
-    uint32_t dataInBufferSize;
-    TWSG_Config config;
+    Config config;
+    Transfer_Buff *transferBuff;
 } TWSG_Comms_System;
 
 /** */
-int8_t TWSG_Init( TWSG_Comms_System *_Comms, const char *configDir );
+int8_t TWSG_Init( TWSG_Comms_System *Comms, Config Config, Transfer_Buff *TransferBuff );
 int8_t TWSG_WaitForPacket( TWSG_Comms_System *_Comms, uint8_t _filterPacket );
 
 void TWSG_SetPriHeader( TWSG_Comms_System *_Comms, uint8_t *_buffer, TWSG_SUB_SYS_ID _subSysID,
@@ -160,7 +136,5 @@ void TWSG_SetPriHeader( TWSG_Comms_System *_Comms, uint8_t *_buffer, TWSG_SUB_SY
                         uint8_t _packetName, uint8_t _packetSubName );
 int8_t TWSG_ReadPriHeader( TWSG_Comms_System *_Comms, uint8_t *_buffer, TWSG_Pri_Header *_PriHeader );
 int8_t TWSG_ReadSecHeader( TWSG_Comms_System *_Comms, uint8_t *_buffer, TWSG_Sec_Header *_SecHeader );
-
-static int TWSG_INIHandler( void *user, const char *section, const char *name, const char *value );
 
 #endif // TWSG_H_INCLUDED

@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="config_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\config\Config_Space.ini">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClCompile Include="config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

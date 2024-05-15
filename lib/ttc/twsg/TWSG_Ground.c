@@ -55,15 +55,15 @@ int8_t TWSG_ReceiveBuffDown( TWSG_Comms_System *_Comms, TWSG_OBC_Buff_Down_Paylo
     /** */
     if ( TWSG_WaitForPacket( _Comms, TWSG_OBC_BUFF_DOWN ) != 0 ) return 1;
 
-    memcpy( &_Comms->dataInBufferSize, &_Comms->Li2.bufferIn[LI2_CDI_HEADER_LEN + TWSG_PRI_HDR_LEN + LI2_AX25_HDR_STRUCT_LEN + 2], 4 );
+    memcpy( &_Comms->transferBuff->dataInBuffSize, &_Comms->Li2.bufferIn[LI2_CDI_HEADER_LEN + TWSG_PRI_HDR_LEN + LI2_AX25_HDR_STRUCT_LEN + 2], 4 );
 
     uint32_t dataCount = 0;
     uint32_t packetCount = 1;
-    uint32_t totalPacketCount = ( uint32_t )ceil( _Comms->dataInBufferSize / TWSG_MAX_PAYLOAD_SEC_LEN );
+    uint32_t totalPacketCount = ( uint32_t )ceil( _Comms->transferBuff->dataInBuffSize / TWSG_MAX_PAYLOAD_SEC_LEN );
     totalPacketCount += totalPacketCount / 10;
 
     if ( _Comms->config.General.debugFlag ) {
-        printf( "\nNo. of Bytes: %d", _Comms->dataInBufferSize );
+        printf( "\nNo. of Bytes: %d", _Comms->transferBuff->dataInBuffSize );
         printf( "\nTotal Packets: %d", totalPacketCount );
     }
 
@@ -80,7 +80,7 @@ int8_t TWSG_ReceiveBuffDown( TWSG_Comms_System *_Comms, TWSG_OBC_Buff_Down_Paylo
             uint16_t payloadLen = ( ( ( uint16_t )( _Comms->Li2.bufferIn[4] ) << 8 ) | _Comms->Li2.bufferIn[5] );
             printf( "\nlen: %d\n", payloadLen - 16 - 5 );
             printf( "\nstart: %02x\n", _Comms->Li2.bufferIn[8 + 16 + 5] );
-            memcpy( &_Comms->transferBuffer[dataCount++ * TWSG_MAX_PAYLOAD_SEC_LEN], &_Comms->Li2.bufferIn[8 + 16 + 5], payloadLen - 16 - 5);
+            memcpy( &_Comms->transferBuff->buff[dataCount++ * TWSG_MAX_PAYLOAD_SEC_LEN], &_Comms->Li2.bufferIn[8 + 16 + 5], payloadLen - 16 - 5);
         }
     } while ( ( _Comms->Li2.bufferIn[8 + 16 + 2] >> 6 ) != TWSG_END_FLAG );
 
