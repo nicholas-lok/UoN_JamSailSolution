@@ -12,6 +12,9 @@
 abacus_lib/
 *.ini
 !Config_Template.ini
+docs/html/*
+docs/latex/*
+!docs/html/test.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
