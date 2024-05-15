@@ -1,5 +1,6 @@
 var NAVTREEINDEX0 =
 {
+"@ref docs/html/README.md":[0],
 "GroundSegment_2main_8c.html":[4,0,1,0,0],
 "GroundSegment_2main_8c.html#a0a5849d6efc0e0978e7a1fa7a46ab4d0":[4,0,1,0,0,1],
 "GroundSegment_2main_8c.html#a25062bbec8389b739817b75dabd074ca":[4,0,1,0,0,2],
@@ -238,7 +239,6 @@ var NAVTREEINDEX0 =
 "dir_e7c608ee7a349a990cecd74a7d13d4b1.html":[4,0,2],
 "dir_f93c8fbd3d2c9fe0b30480841d3389c5.html":[4,0,0,1,1],
 "dir_fe553f10f9e25eb501d15460c320ae6c.html":[4,0,0,0,2],
-"docs/html/README.md":[0],
 "files.html":[4,0],
 "functions.html":[3,3,0],
 "functions_vars.html":[3,3,1],

@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "University of Nottingham JamSail Misson", "index.html", [
-    [ "Overview", "docs/html/README.md", null ],
+    [ "Overview", "@ref docs/html/README.md", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
@@ -55,7 +55,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"GroundSegment_2main_8c.html",
+"@ref docs/html/README.md",
 "group__Li2FuncConfig.html#ga240589723e443316d01de4cd1aaf5544",
 "structTWSG__OBC__Beacon.html#aa56d076300b59fe0ae58b8ebca4f1d9a"
 ];
