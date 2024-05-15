@@ -1,0 +1,26 @@
+var structTWSG__OBC__Beacon =
+[
+    [ "callSign", "structTWSG__OBC__Beacon.html#a25b9674cef22fbc4ca4a52d203c77593", null ],
+    [ "checksum", "structTWSG__OBC__Beacon.html#a6796c847bbd16253ce2538754c250bd6", null ],
+    [ "cpuCurrent", "structTWSG__OBC__Beacon.html#af517ab732fb680be0873e45917e0e6b4", null ],
+    [ "epsBatTemp", "structTWSG__OBC__Beacon.html#a2b4ca0624572d4c70b56aeda58a67269", null ],
+    [ "epsCurrent01", "structTWSG__OBC__Beacon.html#aa6a1d62dad0449ef3b70e3802f083bf6", null ],
+    [ "epsCurrent02", "structTWSG__OBC__Beacon.html#a259f6013a302e2de736c7d1e23a6d331", null ],
+    [ "epsCurrent03", "structTWSG__OBC__Beacon.html#aa56d076300b59fe0ae58b8ebca4f1d9a", null ],
+    [ "epsCurrentConsum", "structTWSG__OBC__Beacon.html#ab9a62c35f2897def701b0c5740f79fd8", null ],
+    [ "epsCurrentSolar", "structTWSG__OBC__Beacon.html#a283bf117c194e45cf80ca2d362193188", null ],
+    [ "epsVBat", "structTWSG__OBC__Beacon.html#a6c4bc83153f1d11d0edcb9d3aae03327", null ],
+    [ "epsVpanel01", "structTWSG__OBC__Beacon.html#a18ffb16c79519daab7f1beeadf307197", null ],
+    [ "epsVpanel02", "structTWSG__OBC__Beacon.html#a831649e8cbaad35b5b204640c2228c1a", null ],
+    [ "epsVpanel03", "structTWSG__OBC__Beacon.html#a8bdbb3f6754d52debc9cd4f4cd2de4ff", null ],
+    [ "FPGATemp", "structTWSG__OBC__Beacon.html#a6f0b3b316bad48a8094e08ce8a87b111", null ],
+    [ "gyroscope", "structTWSG__OBC__Beacon.html#aa02d0eccca54e225631c7514e2f308dc", null ],
+    [ "magnetometer", "structTWSG__OBC__Beacon.html#a20d076c4294eb91832ae36ead3b0348d", null ],
+    [ "MCUTemp", "structTWSG__OBC__Beacon.html#a2bbda196c79a07a12940e1f0016b385d", null ],
+    [ "radioTemp", "structTWSG__OBC__Beacon.html#a2fc3ff62438aa7e8ab1b25fc65d3a4aa", null ],
+    [ "rebootCounter", "structTWSG__OBC__Beacon.html#a4e3724bca4890a9e7c35a8e49591d9ab", null ],
+    [ "satelliteErrorFlags", "structTWSG__OBC__Beacon.html#a8b76d870f38be851887ec321f4b5cf72", null ],
+    [ "satelliteOperationStatus", "structTWSG__OBC__Beacon.html#a0e1c5b62ef70cd2cf0b3ab832efde968", null ],
+    [ "timestamp", "structTWSG__OBC__Beacon.html#ab20b0c7772544cf5d318507f34231fbe", null ],
+    [ "uptime", "structTWSG__OBC__Beacon.html#a1b779ab5fbfacabc8e27077f21c46100", null ]
+];
