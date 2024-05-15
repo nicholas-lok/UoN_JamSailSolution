@@ -13,6 +13,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Move README.md
+      run: sudo mv README.md docs/html/
+      shell: bash
+      
     - name: Install Doxygen
       run: sudo apt-get install doxygen graphviz -y
       shell: bash
@@ -23,10 +27,6 @@ jobs:
       
     - name: Create .nojekyll (ensures pages with underscores work on gh pages)
       run: touch docs/html/.nojekyll
-      shell: bash
-
-    - name: Move README.md
-      run: sudo mv README.md docs/html/
       shell: bash
 
     - name: Deploy to GitHub Pages
