@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['scheduler_2ec_100',['scheduler.c',['../scheduler_8c.html',1,'']]],
+  ['scheduler_2eh_101',['scheduler.h',['../scheduler_8h.html',1,'']]],
+  ['scheduler_5faddcyclictask_102',['Scheduler_AddCyclicTask',['../scheduler_8c.html#a47a252b48821bbe6a02773c17b3b50a5',1,'Scheduler_AddCyclicTask(uint8_t *_taskID, void(*_callback)(void), uint32_t _seconds):&#160;scheduler.c'],['../scheduler_8h.html#afab88b4a2186727cc4068678c4321ac9',1,'Scheduler_AddCyclicTask(uint8_t *taskID, void(*callback)(void), uint32_t seconds):&#160;scheduler.c']]],
+  ['scheduler_5faddtask_103',['Scheduler_AddTask',['../scheduler_8c.html#a181fdc9a7c75d02c261a5eed3e86d645',1,'scheduler.c']]],
+  ['scheduler_5fgettasks_104',['Scheduler_GetTasks',['../scheduler_8c.html#aabb59a7cfd11cb63ab1ac4c125ae965f',1,'Scheduler_GetTasks(bool *_statuses, uint32_t *_times):&#160;scheduler.c'],['../scheduler_8h.html#aabb59a7cfd11cb63ab1ac4c125ae965f',1,'Scheduler_GetTasks(bool *_statuses, uint32_t *_times):&#160;scheduler.c']]],
+  ['scheduler_5fmax_5ftasks_105',['SCHEDULER_MAX_TASKS',['../scheduler_8h.html#af12cab9399b7b23dbe9fe6037e633cc8',1,'scheduler.h']]],
+  ['scheduler_5fremovealltask_106',['Scheduler_RemoveAllTask',['../scheduler_8h.html#ae44417ddb28b7bd45c8c50672ffd4211',1,'Scheduler_RemoveAllTask(void):&#160;scheduler.c'],['../scheduler_8c.html#ae44417ddb28b7bd45c8c50672ffd4211',1,'Scheduler_RemoveAllTask(void):&#160;scheduler.c']]],
+  ['scheduler_5fremovetask_107',['Scheduler_RemoveTask',['../scheduler_8h.html#a84a6889906d14db9d44a45f35c4bf9fb',1,'Scheduler_RemoveTask(uint8_t taskID):&#160;scheduler.c'],['../scheduler_8c.html#afa3b12c2101bc1633a5f4295e2fc9dda',1,'Scheduler_RemoveTask(uint8_t _taskID):&#160;scheduler.c']]],
+  ['scheduler_5frtncheck_108',['Scheduler_RtnCheck',['../scheduler_8h.html#a05218ede79e5adaaf6e840546b8bbf51',1,'Scheduler_RtnCheck(SCHEDULER_RTNS returnCode, const char *func, const char *caller):&#160;scheduler.c'],['../scheduler_8c.html#a000b79de6003b51f30350c3f7d5c7c06',1,'Scheduler_RtnCheck(SCHEDULER_RTNS _returnCode, const char *_func, const char *_caller):&#160;scheduler.c']]],
+  ['scheduler_5ftask_109',['Scheduler_Task',['../structScheduler__Task.html',1,'']]],
+  ['scheduler_5ftick_110',['Scheduler_Tick',['../scheduler_8c.html#a2c2e498c775215590824ee65dc262388',1,'Scheduler_Tick(void):&#160;scheduler.c'],['../scheduler_8h.html#a2c2e498c775215590824ee65dc262388',1,'Scheduler_Tick(void):&#160;scheduler.c']]],
+  ['sec_111',['sec',['../structLi2__RTC__Packet.html#a82015813ad639914dc140eb7eb2dd475',1,'Li2_RTC_Packet']]],
+  ['secondary_112',['Secondary',['../structSecondary.html',1,'']]],
+  ['serial_5faddevent_113',['Serial_AddEvent',['../Li2__Serial__Space_8h.html#ae6da694edd59c9042f4084ee1c828e4d',1,'Li2_Serial_Space.c']]],
+  ['serial_5fbaudrate_114',['SERIAL_BAUDRATE',['../Li2__Serial__Space_8h.html#a89f82a9d44beaa52b00c7245a50a105c',1,'Li2_Serial_Space.h']]],
+  ['serial_5fevent_115',['Serial_Event',['../Li2__Serial__Space_8h.html#ad6d06778966a004f6ad3bde3ee23f5c5',1,'Li2_Serial_Space.h']]],
+  ['serial_5fevent_5ftype_116',['SERIAL_EVENT_TYPE',['../Li2__Serial__Space_8h.html#a9b88ebea4d98b6ab07859526ce8c6e9c',1,'Li2_Serial_Space.h']]],
+  ['serial_5finit_117',['Serial_Init',['../Li2__Serial__Space_8h.html#a9fd789d22fd441917da326668c37e611',1,'Li2_Serial_Ground.c']]],
+  ['serial_5fport_118',['Serial_Port',['../Li2__Serial__Space_8h.html#a9b003ed7acf4c6028cccc44075e9c820',1,'Li2_Serial_Space.h']]],
+  ['serial_5fread_5ftimeout_119',['SERIAL_READ_TIMEOUT',['../Li2__Serial__Space_8h.html#a2aae5e93611c4cd856fbeaa11ae3062a',1,'Li2_Serial_Space.h']]],
+  ['serial_5frtn_120',['Serial_Rtn',['../Li2__Serial__Space_8h.html#a2a7b263d2e39377dd6359181505d2eb6',1,'Li2_Serial_Ground.c']]],
+  ['serial_5frtns_121',['SERIAL_RTNS',['../Li2__Serial__Space_8h.html#ae636fba26ef36534fbcca502e98ea416',1,'Li2_Serial_Space.h']]],
+  ['serial_5fwrite_5ftimeout_122',['SERIAL_WRITE_TIMEOUT',['../Li2__Serial__Space_8h.html#a6ba4cad371592c5bf3e03d3a17833dac',1,'Li2_Serial_Space.h']]],
+  ['serialport_123',['SerialPort',['../structLi2__Radio.html#a62d12b41a365c377c9434dc9bdb9ade2',1,'Li2_Radio']]],
+  ['source_124',['source',['../structLi2__TXRX__Config.html#a50498b32b0ced8b6dd3db95c71a121c3',1,'Li2_TXRX_Config']]]
+];
