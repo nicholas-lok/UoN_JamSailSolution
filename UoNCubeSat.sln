@@ -73,6 +73,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A15B088-EA49-4831-BC86-E5F210CBC17E}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Doxyfile = Doxyfile
+		DoxygenLayout.xml = DoxygenLayout.xml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "config", "lib\obc\config\config.vcxproj", "{571E1390-4578-41C3-9B6D-4FAC18CFD70B}"
