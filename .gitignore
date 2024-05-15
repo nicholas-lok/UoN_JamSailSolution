@@ -13,8 +13,9 @@ abacus_lib/
 *.ini
 !Config_Template.ini
 docs/html/*
-docs/latex/*
-!docs/html/test.txt
+docs/latex
+!docs/html/Doxyfile
+!docs/html/DoxygenLayout.xml
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
