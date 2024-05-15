@@ -1,0 +1,54 @@
+\doxysection{E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/utils/win/img\+\_\+reader/img\+\_\+reader.c File Reference}
+\hypertarget{img__reader_8c}{}\label{img__reader_8c}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/img\_reader/img\_reader.c@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/img\_reader/img\_reader.c}}
+
+
+Source code for Image Reader Lib.  
+
+
+{\ttfamily \#include "{}img\+\_\+reader.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} \mbox{\hyperlink{img__reader_8c_a2ebbb67ab47500e2b1e566aaaf76d460}{IR\+\_\+\+Read}} (const char \texorpdfstring{$\ast$}{*}\+\_\+image\+Location, uint8\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+buffer, uint32\+\_\+t \+\_\+buffer\+Len, uint32\+\_\+t \texorpdfstring{$\ast$}{*}image\+Size)
+\item 
+\mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} \mbox{\hyperlink{img__reader_8c_a60809934c4da1dee84dd7a2d777321c5}{IR\+\_\+\+Write}} (const char \texorpdfstring{$\ast$}{*}\+\_\+image\+Location, uint8\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+buffer, uint32\+\_\+t image\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Source code for Image Reader Lib. 
+
+\begin{DoxyAuthor}{Author}
+N. Lok 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/05/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{img__reader_8c_a2ebbb67ab47500e2b1e566aaaf76d460}\label{img__reader_8c_a2ebbb67ab47500e2b1e566aaaf76d460} 
+\index{img\_reader.c@{img\_reader.c}!IR\_Read@{IR\_Read}}
+\index{IR\_Read@{IR\_Read}!img\_reader.c@{img\_reader.c}}
+\doxysubsubsection{\texorpdfstring{IR\_Read()}{IR\_Read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} IR\+\_\+\+Read (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+image\+Location,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+buffer,  }\item[{uint32\+\_\+t}]{\+\_\+buffer\+Len,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{image\+Size }\end{DoxyParamCaption})}
+
+Attempt to open image for reading
+
+Read bytes from image
+
+Close image and return image size
+
+All good\Hypertarget{img__reader_8c_a60809934c4da1dee84dd7a2d777321c5}\label{img__reader_8c_a60809934c4da1dee84dd7a2d777321c5} 
+\index{img\_reader.c@{img\_reader.c}!IR\_Write@{IR\_Write}}
+\index{IR\_Write@{IR\_Write}!img\_reader.c@{img\_reader.c}}
+\doxysubsubsection{\texorpdfstring{IR\_Write()}{IR\_Write()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} IR\+\_\+\+Write (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+image\+Location,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+buffer,  }\item[{uint32\+\_\+t}]{image\+Size }\end{DoxyParamCaption})}
+
+Attempt to open image for writting
+
+Write bytes to image
+
+Close image
+
+All good

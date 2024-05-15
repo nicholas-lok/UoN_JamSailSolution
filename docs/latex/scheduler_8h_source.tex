@@ -1,0 +1,52 @@
+\doxysection{scheduler.\+h}
+\hypertarget{scheduler_8h_source}{}\label{scheduler_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/scheduler/scheduler.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/scheduler/scheduler.h}}
+\mbox{\hyperlink{scheduler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SCHEDULER\_H\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SCHEDULER\_H\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdiO.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{timer_8h}{../../utils/win/timer/timer.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SCHEDULER\_MAX\_TASKS\ \ \ \ \ 16}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ SCHEDULER\_NO\_ID\ \ \ \ \ \ \ \ \ -\/1}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ void\ (\ *Scheduler\_Callback\ )(\ void\ );}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ SCHEDULER\_OK,}
+\DoxyCodeLine{00029\ \ \ \ \ SCHEDULER\_INIT\_FAIL,}
+\DoxyCodeLine{00030\ \ \ \ \ SCHEDULER\_SLOT\_NOT\_FREE,}
+\DoxyCodeLine{00031\ \ \ \ \ SCHEDULER\_FULL,}
+\DoxyCodeLine{00032\ \ \ \ \ SCHEDULER\_TASK\_DONE}
+\DoxyCodeLine{00033\ \}\ SCHEDULER\_RTNS;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ active;}
+\DoxyCodeLine{00038\ \ \ \ \ uint32\_t\ timeRemaining;}
+\DoxyCodeLine{00039\ \ \ \ \ uint32\_t\ cycleTime;}
+\DoxyCodeLine{00040\ \ \ \ \ Scheduler\_Callback\ callback;}
+\DoxyCodeLine{00041\ \}\ \mbox{\hyperlink{struct_scheduler___task}{Scheduler\_Task}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_scheduler___task}{Scheduler\_Task}}\ Scheduler\_Tasks[\mbox{\hyperlink{scheduler_8h_af12cab9399b7b23dbe9fe6037e633cc8}{SCHEDULER\_MAX\_TASKS}}];}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ SCHEDULER\_RTNS\ Scheduler\_Init(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{scheduler_8h_a2c2e498c775215590824ee65dc262388}{Scheduler\_Tick}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{scheduler_8h_aabb59a7cfd11cb63ab1ac4c125ae965f}{Scheduler\_GetTasks}}(\ \textcolor{keywordtype}{bool}\ *\_statuses,\ uint32\_t\ *\_times\ );}
+\DoxyCodeLine{00051\ uint8\_t\ \mbox{\hyperlink{scheduler_8h_a05218ede79e5adaaf6e840546b8bbf51}{Scheduler\_RtnCheck}}(\ SCHEDULER\_RTNS\ returnCode,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *func,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *caller\ );}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{static}\ SCHEDULER\_RTNS\ Scheduler\_AddTaskObj(\ int8\_t\ \_taskID,\ \mbox{\hyperlink{struct_scheduler___task}{Scheduler\_Task}}\ *task\ );}
+\DoxyCodeLine{00054\ SCHEDULER\_RTNS\ \mbox{\hyperlink{scheduler_8c_a181fdc9a7c75d02c261a5eed3e86d645}{Scheduler\_AddTask}}(\ uint8\_t\ *taskID,\ \textcolor{keywordtype}{void}\ (\ *callback\ )(\ \textcolor{keywordtype}{void}\ ),\ uint32\_t\ seconds\ );}
+\DoxyCodeLine{00055\ SCHEDULER\_RTNS\ \mbox{\hyperlink{scheduler_8h_afab88b4a2186727cc4068678c4321ac9}{Scheduler\_AddCyclicTask}}(\ uint8\_t\ *taskID,\ \textcolor{keywordtype}{void}\ (\ *callback\ )(\ \textcolor{keywordtype}{void}\ ),\ uint32\_t\ seconds\ );}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ SCHEDULER\_RTNS\ \mbox{\hyperlink{scheduler_8h_a84a6889906d14db9d44a45f35c4bf9fb}{Scheduler\_RemoveTask}}(\ uint8\_t\ taskID\ );}
+\DoxyCodeLine{00058\ SCHEDULER\_RTNS\ \mbox{\hyperlink{scheduler_8h_ae44417ddb28b7bd45c8c50672ffd4211}{Scheduler\_RemoveAllTask}}(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SCHEDULER\_H\_INCLUDED}}
+
+\end{DoxyCode}

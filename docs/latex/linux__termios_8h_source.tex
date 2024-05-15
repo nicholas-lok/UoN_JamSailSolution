@@ -1,0 +1,40 @@
+\doxysection{linux\+\_\+termios.\+h}
+\hypertarget{linux__termios_8h_source}{}\label{linux__termios_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/libserialport/linux\_termios.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/libserialport/linux\_termios.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ This\ file\ is\ part\ of\ the\ libserialport\ project.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2013\ Martin\ Ling\ <martin-\/libserialport@earth.li>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ program\ is\ free\ software:\ you\ can\ redistribute\ it\ and/or\ modify}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ it\ under\ the\ terms\ of\ the\ GNU\ Lesser\ General\ Public\ License\ as}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ published\ by\ the\ Free\ Software\ Foundation,\ either\ version\ 3\ of\ the}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ License,\ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ This\ program\ is\ distributed\ in\ the\ hope\ that\ it\ will\ be\ useful,}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ but\ WITHOUT\ ANY\ WARRANTY;\ without\ even\ the\ implied\ warranty\ of}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ MERCHANTABILITY\ or\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE.\ \ See\ the}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ GNU\ General\ Public\ License\ for\ more\ details.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ You\ should\ have\ received\ a\ copy\ of\ the\ GNU\ Lesser\ General\ Public\ License}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ along\ with\ this\ program.\ \ If\ not,\ see\ <http://www.gnu.org/licenses/>.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ LIBSERIALPORT\_LINUX\_TERMIOS\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ LIBSERIALPORT\_LINUX\_TERMIOS\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ SP\_PRIV\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ get\_termios\_get\_ioctl(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00026\ SP\_PRIV\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ get\_termios\_set\_ioctl(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00027\ SP\_PRIV\ \textcolor{keywordtype}{size\_t}\ get\_termios\_size(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00028\ SP\_PRIV\ \textcolor{keywordtype}{int}\ get\_termios\_speed(\textcolor{keywordtype}{void}\ *data);}
+\DoxyCodeLine{00029\ SP\_PRIV\ \textcolor{keywordtype}{void}\ set\_termios\_speed(\textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{int}\ speed);}
+\DoxyCodeLine{00030\ SP\_PRIV\ \textcolor{keywordtype}{size\_t}\ get\_termiox\_size(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00031\ SP\_PRIV\ \textcolor{keywordtype}{int}\ get\_termiox\_flow(\textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{int}\ *rts,\ \textcolor{keywordtype}{int}\ *cts,\ \textcolor{keywordtype}{int}\ *dtr,\ \textcolor{keywordtype}{int}\ *dsr);}
+\DoxyCodeLine{00032\ SP\_PRIV\ \textcolor{keywordtype}{void}\ set\_termiox\_flow(\textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{int}\ rts,\ \textcolor{keywordtype}{int}\ cts,\ \textcolor{keywordtype}{int}\ dtr,\ \textcolor{keywordtype}{int}\ dsr);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

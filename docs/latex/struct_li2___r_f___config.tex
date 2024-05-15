@@ -1,0 +1,84 @@
+\doxysection{Li2\+\_\+\+RF\+\_\+\+Config Struct Reference}
+\hypertarget{struct_li2___r_f___config}{}\label{struct_li2___r_f___config}\index{Li2\_RF\_Config@{Li2\_RF\_Config}}
+
+
+{\ttfamily \#include $<$Li2\+\_\+\+Structs.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_a86e8fe0a6b6c91c43cb10f4d82e6065f}{front\+\_\+end\+\_\+level}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_aa4c2597058684282d18a67eeb8d6dbc4}{tx\+\_\+power\+\_\+amp\+\_\+level}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_a2f8f1b389660f895a2e2bf784352a814}{tx\+\_\+frequency\+\_\+offset}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_a1007db77333dce460866ac035f8b68cf}{rx\+\_\+frequency\+\_\+offset}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_aa5467b5bc1a28e17f316889440a46acd}{tx\+\_\+frequency\+\_\+deviation}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_a9afef8ce985416f0667a5d536f3bf502}{rx\+\_\+frequency\+\_\+deviation}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_afb3deaea1788300da006e07290989b0d}{pre\+\_\+transmit\+\_\+delay}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___r_f___config_af6e98ebd90363e5a3719a549eecd368c}{post\+\_\+transmit\+\_\+delay}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Low Level RF \doxylink{struct_config}{Config} Structure 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_li2___r_f___config_a86e8fe0a6b6c91c43cb10f4d82e6065f}\label{struct_li2___r_f___config_a86e8fe0a6b6c91c43cb10f4d82e6065f} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!front\_end\_level@{front\_end\_level}}
+\index{front\_end\_level@{front\_end\_level}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{front\_end\_level}{front\_end\_level}}
+{\footnotesize\ttfamily uint8\+\_\+t front\+\_\+end\+\_\+level}
+
+0 to 63 Value \Hypertarget{struct_li2___r_f___config_af6e98ebd90363e5a3719a549eecd368c}\label{struct_li2___r_f___config_af6e98ebd90363e5a3719a549eecd368c} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!post\_transmit\_delay@{post\_transmit\_delay}}
+\index{post\_transmit\_delay@{post\_transmit\_delay}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{post\_transmit\_delay}{post\_transmit\_delay}}
+{\footnotesize\ttfamily uint8\+\_\+t post\+\_\+transmit\+\_\+delay}
+
+Delay in tens of milliseconds. Default 0 (NOT IMPLEMENTED \Hypertarget{struct_li2___r_f___config_afb3deaea1788300da006e07290989b0d}\label{struct_li2___r_f___config_afb3deaea1788300da006e07290989b0d} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!pre\_transmit\_delay@{pre\_transmit\_delay}}
+\index{pre\_transmit\_delay@{pre\_transmit\_delay}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{pre\_transmit\_delay}{pre\_transmit\_delay}}
+{\footnotesize\ttfamily uint8\+\_\+t pre\+\_\+transmit\+\_\+delay}
+
+Delay in tens of milliseconds. Default 1 second = 100 \Hypertarget{struct_li2___r_f___config_a9afef8ce985416f0667a5d536f3bf502}\label{struct_li2___r_f___config_a9afef8ce985416f0667a5d536f3bf502} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!rx\_frequency\_deviation@{rx\_frequency\_deviation}}
+\index{rx\_frequency\_deviation@{rx\_frequency\_deviation}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{rx\_frequency\_deviation}{rx\_frequency\_deviation}}
+{\footnotesize\ttfamily uint8\+\_\+t rx\+\_\+frequency\+\_\+deviation}
+
+N/A for release 3.\+10 \Hypertarget{struct_li2___r_f___config_a1007db77333dce460866ac035f8b68cf}\label{struct_li2___r_f___config_a1007db77333dce460866ac035f8b68cf} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!rx\_frequency\_offset@{rx\_frequency\_offset}}
+\index{rx\_frequency\_offset@{rx\_frequency\_offset}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{rx\_frequency\_offset}{rx\_frequency\_offset}}
+{\footnotesize\ttfamily uint32\+\_\+t rx\+\_\+frequency\+\_\+offset}
+
+Up to 20 k\+Hz \Hypertarget{struct_li2___r_f___config_aa5467b5bc1a28e17f316889440a46acd}\label{struct_li2___r_f___config_aa5467b5bc1a28e17f316889440a46acd} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!tx\_frequency\_deviation@{tx\_frequency\_deviation}}
+\index{tx\_frequency\_deviation@{tx\_frequency\_deviation}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_frequency\_deviation}{tx\_frequency\_deviation}}
+{\footnotesize\ttfamily uint8\+\_\+t tx\+\_\+frequency\+\_\+deviation}
+
+Set for your baud rate options\+: 0 (2.\+7 k\+Hz),1 (5.\+4 k\+Hz),2( 10.\+8 k\+Hz ), 3 ( 21.\+6 k\+Hz ), 4 ( 43.\+2 k\+Hz ) CAUTION \Hypertarget{struct_li2___r_f___config_a2f8f1b389660f895a2e2bf784352a814}\label{struct_li2___r_f___config_a2f8f1b389660f895a2e2bf784352a814} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!tx\_frequency\_offset@{tx\_frequency\_offset}}
+\index{tx\_frequency\_offset@{tx\_frequency\_offset}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_frequency\_offset}{tx\_frequency\_offset}}
+{\footnotesize\ttfamily uint32\+\_\+t tx\+\_\+frequency\+\_\+offset}
+
+Up to 20 k\+Hz \Hypertarget{struct_li2___r_f___config_aa4c2597058684282d18a67eeb8d6dbc4}\label{struct_li2___r_f___config_aa4c2597058684282d18a67eeb8d6dbc4} 
+\index{Li2\_RF\_Config@{Li2\_RF\_Config}!tx\_power\_amp\_level@{tx\_power\_amp\_level}}
+\index{tx\_power\_amp\_level@{tx\_power\_amp\_level}!Li2\_RF\_Config@{Li2\_RF\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_power\_amp\_level}{tx\_power\_amp\_level}}
+{\footnotesize\ttfamily uint8\+\_\+t tx\+\_\+power\+\_\+amp\+\_\+level}
+
+0 to 255 value, non-\/linear 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/ttc/li2/\mbox{\hyperlink{_li2___structs_8h}{Li2\+\_\+\+Structs.\+h}}\end{DoxyCompactItemize}

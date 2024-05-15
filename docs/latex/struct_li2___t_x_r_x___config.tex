@@ -1,0 +1,132 @@
+\doxysection{Li2\+\_\+\+TXRX\+\_\+\+Config Struct Reference}
+\hypertarget{struct_li2___t_x_r_x___config}{}\label{struct_li2___t_x_r_x___config}\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+
+
+{\ttfamily \#include $<$Li2\+\_\+\+Structs.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_li2___structs_8h_a164c24d1237720c0e20583dccb9267a4}{LI2\+\_\+\+UART\+\_\+\+BAUD\+\_\+\+RATE}} \mbox{\hyperlink{struct_li2___t_x_r_x___config_a3a8b6506465ea5a2037eee7ee515d30b}{interface\+\_\+baud\+\_\+rate}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_aa4c2597058684282d18a67eeb8d6dbc4}{tx\+\_\+power\+\_\+amp\+\_\+level}}
+\item 
+\mbox{\hyperlink{_li2___structs_8h_a3a0175542e5ba3523f40751b72928559}{LI2\+\_\+\+RF\+\_\+\+BAUD\+\_\+\+RATE}} \mbox{\hyperlink{struct_li2___t_x_r_x___config_a9db46ed798e3b320e3a137f22ef67043}{rx\+\_\+rf\+\_\+baud\+\_\+rate}}
+\item 
+\mbox{\hyperlink{_li2___structs_8h_a3a0175542e5ba3523f40751b72928559}{LI2\+\_\+\+RF\+\_\+\+BAUD\+\_\+\+RATE}} \mbox{\hyperlink{struct_li2___t_x_r_x___config_ae545fd16f6d11bf0b5dbe6122e20f7e7}{tx\+\_\+rf\+\_\+baud\+\_\+rate}}
+\item 
+\mbox{\hyperlink{_li2___structs_8h_a9d148c7881a7f5514257aa6301e5eaeb}{LI2\+\_\+\+RF\+\_\+\+MODULATION}} \mbox{\hyperlink{struct_li2___t_x_r_x___config_a1a269c36bbf68695d18a63dc47ae2864}{rx\+\_\+modulation}}
+\item 
+\mbox{\hyperlink{_li2___structs_8h_a9d148c7881a7f5514257aa6301e5eaeb}{LI2\+\_\+\+RF\+\_\+\+MODULATION}} \mbox{\hyperlink{struct_li2___t_x_r_x___config_a866e5265b8a161cfcfa07d6a9c6a4a60}{tx\+\_\+modulation}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_a67ccc7309411947d95d964349303429f}{rx\+\_\+freq}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_a4f77755612ba4fe1f604449f5fb5c6d3}{tx\+\_\+freq}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___t_x_r_x___config_a50498b32b0ced8b6dd3db95c71a121c3}{source}} \mbox{[}6\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___t_x_r_x___config_a07b35041489edbf3821eb01f16f4967f}{destination}} \mbox{[}6\mbox{]}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_a61c876c5c9a31e4927fcf02272c61c33}{tx\+\_\+preamble}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_afcb13fc947dad85616c71d0bfe1dc50b}{tx\+\_\+postamble}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_a502715d2a7f4f5184a40ae001c43dcdf}{function\+\_\+config}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_li2___t_x_r_x___config_a2a89403057d51b836328d2b1a9b11039}{function\+\_\+config2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tranceiver \doxylink{struct_config}{Config} Structure 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_li2___t_x_r_x___config_a07b35041489edbf3821eb01f16f4967f}\label{struct_li2___t_x_r_x___config_a07b35041489edbf3821eb01f16f4967f} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!destination@{destination}}
+\index{destination@{destination}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{destination}{destination}}
+{\footnotesize\ttfamily unsigned char destination\mbox{[}6\mbox{]}}
+
+AX25 Mode Destination Call Sign (default CQ) \Hypertarget{struct_li2___t_x_r_x___config_a502715d2a7f4f5184a40ae001c43dcdf}\label{struct_li2___t_x_r_x___config_a502715d2a7f4f5184a40ae001c43dcdf} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!function\_config@{function\_config}}
+\index{function\_config@{function\_config}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{function\_config}{function\_config}}
+{\footnotesize\ttfamily uint16\+\_\+t function\+\_\+config}
+
+Radio Configuration Discrete Behaviors \Hypertarget{struct_li2___t_x_r_x___config_a2a89403057d51b836328d2b1a9b11039}\label{struct_li2___t_x_r_x___config_a2a89403057d51b836328d2b1a9b11039} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!function\_config2@{function\_config2}}
+\index{function\_config2@{function\_config2}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{function\_config2}{function\_config2}}
+{\footnotesize\ttfamily uint16\+\_\+t function\+\_\+config2}
+
+Radio Configuration Discrete Behaviors \#2 \Hypertarget{struct_li2___t_x_r_x___config_a3a8b6506465ea5a2037eee7ee515d30b}\label{struct_li2___t_x_r_x___config_a3a8b6506465ea5a2037eee7ee515d30b} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!interface\_baud\_rate@{interface\_baud\_rate}}
+\index{interface\_baud\_rate@{interface\_baud\_rate}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{interface\_baud\_rate}{interface\_baud\_rate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_li2___structs_8h_a164c24d1237720c0e20583dccb9267a4}{LI2\+\_\+\+UART\+\_\+\+BAUD\+\_\+\+RATE}} interface\+\_\+baud\+\_\+rate}
+
+Radio Interface Baud Rate (9600=0x00) \Hypertarget{struct_li2___t_x_r_x___config_a67ccc7309411947d95d964349303429f}\label{struct_li2___t_x_r_x___config_a67ccc7309411947d95d964349303429f} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!rx\_freq@{rx\_freq}}
+\index{rx\_freq@{rx\_freq}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{rx\_freq}{rx\_freq}}
+{\footnotesize\ttfamily uint32\+\_\+t rx\+\_\+freq}
+
+Channel Rx Frequency (ex\+: 45000000) \Hypertarget{struct_li2___t_x_r_x___config_a1a269c36bbf68695d18a63dc47ae2864}\label{struct_li2___t_x_r_x___config_a1a269c36bbf68695d18a63dc47ae2864} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!rx\_modulation@{rx\_modulation}}
+\index{rx\_modulation@{rx\_modulation}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{rx\_modulation}{rx\_modulation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_li2___structs_8h_a9d148c7881a7f5514257aa6301e5eaeb}{LI2\+\_\+\+RF\+\_\+\+MODULATION}} rx\+\_\+modulation}
+
+(0x00 = GFSK) \Hypertarget{struct_li2___t_x_r_x___config_a9db46ed798e3b320e3a137f22ef67043}\label{struct_li2___t_x_r_x___config_a9db46ed798e3b320e3a137f22ef67043} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!rx\_rf\_baud\_rate@{rx\_rf\_baud\_rate}}
+\index{rx\_rf\_baud\_rate@{rx\_rf\_baud\_rate}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{rx\_rf\_baud\_rate}{rx\_rf\_baud\_rate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_li2___structs_8h_a3a0175542e5ba3523f40751b72928559}{LI2\+\_\+\+RF\+\_\+\+BAUD\+\_\+\+RATE}} rx\+\_\+rf\+\_\+baud\+\_\+rate}
+
+Radio RX RF Baud Rate (9600=0x00) \Hypertarget{struct_li2___t_x_r_x___config_a50498b32b0ced8b6dd3db95c71a121c3}\label{struct_li2___t_x_r_x___config_a50498b32b0ced8b6dd3db95c71a121c3} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!source@{source}}
+\index{source@{source}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily unsigned char source\mbox{[}6\mbox{]}}
+
+AX25 Mode Source Call Sign (default NOCALL) \Hypertarget{struct_li2___t_x_r_x___config_a4f77755612ba4fe1f604449f5fb5c6d3}\label{struct_li2___t_x_r_x___config_a4f77755612ba4fe1f604449f5fb5c6d3} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!tx\_freq@{tx\_freq}}
+\index{tx\_freq@{tx\_freq}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_freq}{tx\_freq}}
+{\footnotesize\ttfamily uint32\+\_\+t tx\+\_\+freq}
+
+Channel Tx Frequency (ex\+: 45000000) \Hypertarget{struct_li2___t_x_r_x___config_a866e5265b8a161cfcfa07d6a9c6a4a60}\label{struct_li2___t_x_r_x___config_a866e5265b8a161cfcfa07d6a9c6a4a60} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!tx\_modulation@{tx\_modulation}}
+\index{tx\_modulation@{tx\_modulation}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_modulation}{tx\_modulation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_li2___structs_8h_a9d148c7881a7f5514257aa6301e5eaeb}{LI2\+\_\+\+RF\+\_\+\+MODULATION}} tx\+\_\+modulation}
+
+(0x00 = GFSK) \Hypertarget{struct_li2___t_x_r_x___config_afcb13fc947dad85616c71d0bfe1dc50b}\label{struct_li2___t_x_r_x___config_afcb13fc947dad85616c71d0bfe1dc50b} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!tx\_postamble@{tx\_postamble}}
+\index{tx\_postamble@{tx\_postamble}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_postamble}{tx\_postamble}}
+{\footnotesize\ttfamily uint16\+\_\+t tx\+\_\+postamble}
+
+AX25 Mode Tx Postamble Byte Length (0x00 = 20 flags) \Hypertarget{struct_li2___t_x_r_x___config_aa4c2597058684282d18a67eeb8d6dbc4}\label{struct_li2___t_x_r_x___config_aa4c2597058684282d18a67eeb8d6dbc4} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!tx\_power\_amp\_level@{tx\_power\_amp\_level}}
+\index{tx\_power\_amp\_level@{tx\_power\_amp\_level}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_power\_amp\_level}{tx\_power\_amp\_level}}
+{\footnotesize\ttfamily uint8\+\_\+t tx\+\_\+power\+\_\+amp\+\_\+level}
+
+Tx Power Amp level (min = 0x00 max = 0x\+FF) \Hypertarget{struct_li2___t_x_r_x___config_a61c876c5c9a31e4927fcf02272c61c33}\label{struct_li2___t_x_r_x___config_a61c876c5c9a31e4927fcf02272c61c33} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!tx\_preamble@{tx\_preamble}}
+\index{tx\_preamble@{tx\_preamble}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_preamble}{tx\_preamble}}
+{\footnotesize\ttfamily uint16\+\_\+t tx\+\_\+preamble}
+
+AX25 Mode Tx Preamble Byte Length (0x00 = 20 flags) \Hypertarget{struct_li2___t_x_r_x___config_ae545fd16f6d11bf0b5dbe6122e20f7e7}\label{struct_li2___t_x_r_x___config_ae545fd16f6d11bf0b5dbe6122e20f7e7} 
+\index{Li2\_TXRX\_Config@{Li2\_TXRX\_Config}!tx\_rf\_baud\_rate@{tx\_rf\_baud\_rate}}
+\index{tx\_rf\_baud\_rate@{tx\_rf\_baud\_rate}!Li2\_TXRX\_Config@{Li2\_TXRX\_Config}}
+\doxysubsubsection{\texorpdfstring{tx\_rf\_baud\_rate}{tx\_rf\_baud\_rate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_li2___structs_8h_a3a0175542e5ba3523f40751b72928559}{LI2\+\_\+\+RF\+\_\+\+BAUD\+\_\+\+RATE}} tx\+\_\+rf\+\_\+baud\+\_\+rate}
+
+Radio TX RF Baud Rate (9600=0x00) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/ttc/li2/\mbox{\hyperlink{_li2___structs_8h}{Li2\+\_\+\+Structs.\+h}}\end{DoxyCompactItemize}

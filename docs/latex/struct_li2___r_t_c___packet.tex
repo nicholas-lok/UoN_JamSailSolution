@@ -1,0 +1,108 @@
+\doxysection{Li2\+\_\+\+RTC\+\_\+\+Packet Struct Reference}
+\hypertarget{struct_li2___r_t_c___packet}{}\label{struct_li2___r_t_c___packet}\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+
+
+{\ttfamily \#include $<$Li2\+\_\+\+Structs.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short int \mbox{\hyperlink{struct_li2___r_t_c___packet_a9da58c4c3f433650254d85db9c7a695f}{year}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a56aeb9fb7f34fe66aea79f97f6d945fa}{mon}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_ab9ba6d415537c392fea1a330751865f9}{day}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a75aeb148620066973ea11791d72dc7cc}{dow}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_accdfe3c33766c9d6b3dc8996bb828dff}{hour}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a9b6e0d1177f74dafd99583456cdd53c4}{min}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a82015813ad639914dc140eb7eb2dd475}{sec}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a1755d1af94d0cd3c7abad5c55b0ac9c3}{alarm\+\_\+dow}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a64df23ad80c5c0923f5ca49f3b8f909e}{alarm\+\_\+day}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a1751afdca377b1e7626778e46ac89d32}{alarm\+\_\+hour}}
+\item 
+unsigned char \mbox{\hyperlink{struct_li2___r_t_c___packet_a7c98803c6ac3c66ae98d5d3bd107c5ae}{alarm\+\_\+min}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RTC Packet Struct 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{struct_li2___r_t_c___packet_a64df23ad80c5c0923f5ca49f3b8f909e}\label{struct_li2___r_t_c___packet_a64df23ad80c5c0923f5ca49f3b8f909e} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!alarm\_day@{alarm\_day}}
+\index{alarm\_day@{alarm\_day}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{alarm\_day}{alarm\_day}}
+{\footnotesize\ttfamily unsigned char alarm\+\_\+day}
+
+RTC Day Alarm = 0x20 \Hypertarget{struct_li2___r_t_c___packet_a1755d1af94d0cd3c7abad5c55b0ac9c3}\label{struct_li2___r_t_c___packet_a1755d1af94d0cd3c7abad5c55b0ac9c3} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!alarm\_dow@{alarm\_dow}}
+\index{alarm\_dow@{alarm\_dow}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{alarm\_dow}{alarm\_dow}}
+{\footnotesize\ttfamily unsigned char alarm\+\_\+dow}
+
+RTC Day of week alarm = 0x2 \Hypertarget{struct_li2___r_t_c___packet_a1751afdca377b1e7626778e46ac89d32}\label{struct_li2___r_t_c___packet_a1751afdca377b1e7626778e46ac89d32} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!alarm\_hour@{alarm\_hour}}
+\index{alarm\_hour@{alarm\_hour}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{alarm\_hour}{alarm\_hour}}
+{\footnotesize\ttfamily unsigned char alarm\+\_\+hour}
+
+RTC Hour Alarm \Hypertarget{struct_li2___r_t_c___packet_a7c98803c6ac3c66ae98d5d3bd107c5ae}\label{struct_li2___r_t_c___packet_a7c98803c6ac3c66ae98d5d3bd107c5ae} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!alarm\_min@{alarm\_min}}
+\index{alarm\_min@{alarm\_min}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{alarm\_min}{alarm\_min}}
+{\footnotesize\ttfamily unsigned char alarm\+\_\+min}
+
+RTC Minute Alarm \Hypertarget{struct_li2___r_t_c___packet_ab9ba6d415537c392fea1a330751865f9}\label{struct_li2___r_t_c___packet_ab9ba6d415537c392fea1a330751865f9} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!day@{day}}
+\index{day@{day}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily unsigned char day}
+
+Day = 0x07 = 7th \Hypertarget{struct_li2___r_t_c___packet_a75aeb148620066973ea11791d72dc7cc}\label{struct_li2___r_t_c___packet_a75aeb148620066973ea11791d72dc7cc} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!dow@{dow}}
+\index{dow@{dow}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{dow}{dow}}
+{\footnotesize\ttfamily unsigned char dow}
+
+Day of week = 0x05 = Friday \Hypertarget{struct_li2___r_t_c___packet_accdfe3c33766c9d6b3dc8996bb828dff}\label{struct_li2___r_t_c___packet_accdfe3c33766c9d6b3dc8996bb828dff} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!hour@{hour}}
+\index{hour@{hour}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily unsigned char hour}
+
+Hour = 0x11 \Hypertarget{struct_li2___r_t_c___packet_a9b6e0d1177f74dafd99583456cdd53c4}\label{struct_li2___r_t_c___packet_a9b6e0d1177f74dafd99583456cdd53c4} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!min@{min}}
+\index{min@{min}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily unsigned char min}
+
+Minute = 0x59 \Hypertarget{struct_li2___r_t_c___packet_a56aeb9fb7f34fe66aea79f97f6d945fa}\label{struct_li2___r_t_c___packet_a56aeb9fb7f34fe66aea79f97f6d945fa} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!mon@{mon}}
+\index{mon@{mon}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{mon}{mon}}
+{\footnotesize\ttfamily unsigned char mon}
+
+Month = 0x10 = October \Hypertarget{struct_li2___r_t_c___packet_a82015813ad639914dc140eb7eb2dd475}\label{struct_li2___r_t_c___packet_a82015813ad639914dc140eb7eb2dd475} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!sec@{sec}}
+\index{sec@{sec}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{sec}{sec}}
+{\footnotesize\ttfamily unsigned char sec}
+
+Seconds = 0x30 \Hypertarget{struct_li2___r_t_c___packet_a9da58c4c3f433650254d85db9c7a695f}\label{struct_li2___r_t_c___packet_a9da58c4c3f433650254d85db9c7a695f} 
+\index{Li2\_RTC\_Packet@{Li2\_RTC\_Packet}!year@{year}}
+\index{year@{year}!Li2\_RTC\_Packet@{Li2\_RTC\_Packet}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily unsigned short int year}
+
+Year = 0x2021 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/ttc/li2/\mbox{\hyperlink{_li2___structs_8h}{Li2\+\_\+\+Structs.\+h}}\end{DoxyCompactItemize}

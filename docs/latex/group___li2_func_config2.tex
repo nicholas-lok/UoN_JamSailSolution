@@ -1,0 +1,51 @@
+\doxysection{Radio Configuration Discrete Behaviours 2}
+\hypertarget{group___li2_func_config2}{}\label{group___li2_func_config2}\index{Radio Configuration Discrete Behaviours 2@{Radio Configuration Discrete Behaviours 2}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___li2_func_config2_ga49133abb650cf210d4363d75d4eeb253}{LI2\+\_\+\+CFG2\+\_\+\+BIT\+\_\+\+POS}}~0
+\item 
+\Hypertarget{group___li2_func_config2_ga8817efa968b9f41034d371cc32cc28b2}\label{group___li2_func_config2_ga8817efa968b9f41034d371cc32cc28b2} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+AFC\+\_\+\+ENABLE\+\_\+\+MSK}~0b0001
+\item 
+\Hypertarget{group___li2_func_config2_ga431e86a75860ae88878f041a85adaa44}\label{group___li2_func_config2_ga431e86a75860ae88878f041a85adaa44} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+RX\+\_\+\+CW\+\_\+\+MSK}~0b0010
+\item 
+\Hypertarget{group___li2_func_config2_ga53887cff8a21ee24ad317a719ca5b664}\label{group___li2_func_config2_ga53887cff8a21ee24ad317a719ca5b664} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+TX\+\_\+\+CW\+\_\+\+MSK}~0b0100
+\item 
+\Hypertarget{group___li2_func_config2_ga5b6922b49932b7f13c3d6fe46e38bc4e}\label{group___li2_func_config2_ga5b6922b49932b7f13c3d6fe46e38bc4e} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+RADIO\+\_\+\+ALARM\+\_\+\+ENABLE}~\+\_\+\+MSK 0b1000
+\item 
+\Hypertarget{group___li2_func_config2_ga80c59c7cf8147f6abd8b6b07c27f6219}\label{group___li2_func_config2_ga80c59c7cf8147f6abd8b6b07c27f6219} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+BIT\+\_\+\+POS2}~4
+\item 
+\Hypertarget{group___li2_func_config2_gababe2d69ba7c3c3c9678efeb29af5806}\label{group___li2_func_config2_gababe2d69ba7c3c3c9678efeb29af5806} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+ENCRYPT\+\_\+\+A\+\_\+\+MSK}~0b0001
+\item 
+\Hypertarget{group___li2_func_config2_gac3bd4af2f62afe71df5cd82043a40d31}\label{group___li2_func_config2_gac3bd4af2f62afe71df5cd82043a40d31} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+ENCRYPT\+\_\+\+B\+\_\+\+MSK}~0b0010
+\item 
+\Hypertarget{group___li2_func_config2_ga3ef7bcbede4bf959b80fadf5b5d73335}\label{group___li2_func_config2_ga3ef7bcbede4bf959b80fadf5b5d73335} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+CFG\+\_\+\+DUR\+\_\+\+MSK}~0b0100
+\item 
+\Hypertarget{group___li2_func_config2_ga07b0e79ebe8707ff329359867fa6f0da}\label{group___li2_func_config2_ga07b0e79ebe8707ff329359867fa6f0da} 
+\#define {\bfseries LI2\+\_\+\+CFG2\+\_\+\+NO\+\_\+\+AX25\+\_\+\+HDR\+\_\+\+MSK}~0b1000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains compiler definitions for 1st config struct options and settings 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group___li2_func_config2_ga49133abb650cf210d4363d75d4eeb253}\label{group___li2_func_config2_ga49133abb650cf210d4363d75d4eeb253} 
+\index{Radio Configuration Discrete Behaviours 2@{Radio Configuration Discrete Behaviours 2}!LI2\_CFG2\_BIT\_POS@{LI2\_CFG2\_BIT\_POS}}
+\index{LI2\_CFG2\_BIT\_POS@{LI2\_CFG2\_BIT\_POS}!Radio Configuration Discrete Behaviours 2@{Radio Configuration Discrete Behaviours 2}}
+\doxysubsubsection{\texorpdfstring{LI2\_CFG2\_BIT\_POS}{LI2\_CFG2\_BIT\_POS}}
+{\footnotesize\ttfamily \#define LI2\+\_\+\+CFG2\+\_\+\+BIT\+\_\+\+POS~0}
+
+\doxylink{struct_config}{Config} Functions 2
+
+0000 0000 0000 xxx1 Automatic Frequency Control(\+AFC) -\/ Enable \mbox{[}1\mbox{]}/\+Disable \mbox{[}0\mbox{]} 0000 0000 0000 xx0x RX CW 0000 0000 0000 x0xx TX CW 0000 0000 0000 0xxx Radio Alarm Transmit -\/ Enable \mbox{[}1\mbox{]}/\+Disable \mbox{[}0\mbox{]}
+
+0000 0000 xxx1 xxxx Encryption A Enabled 0000 0000 xx1x xxxx Encryption B Enabled 0000 0000 x1xx xxxx Radio Configration Duration Enabled 0000 0000 1xxx xxxx No AX25 Header but has 16 bit CRC 

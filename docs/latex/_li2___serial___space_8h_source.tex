@@ -1,0 +1,32 @@
+\doxysection{Li2\+\_\+\+Serial\+\_\+\+Space.\+h}
+\hypertarget{_li2___serial___space_8h_source}{}\label{_li2___serial___space_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/li2/Li2\_Serial\_Space.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/li2/Li2\_Serial\_Space.h}}
+\mbox{\hyperlink{_li2___serial___space_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ LI2\_SERIAL\_SPACE\_H\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LI2\_SERIAL\_SPACE\_H\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../../utils/win/libserialport/libserialport.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{timer_8h}{../../utils/win/timer/timer.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ SERIAL\_BAUDRATE\ \ \ \ \ \ \ \ \ 9600}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ SERIAL\_READ\_TIMEOUT\ \ \ \ \ 10000\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SERIAL\_WRITE\_TIMEOUT\ \ \ \ 10000\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsp__port}{sp\_port}}\ \mbox{\hyperlink{structsp__port}{Serial\_Port}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsp__event__set}{sp\_event\_set}}\ \mbox{\hyperlink{structsp__event__set}{Serial\_Event}};\ \ \ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ sp\_return\ \mbox{\hyperlink{_li2___serial___space_8h_ae636fba26ef36534fbcca502e98ea416}{SERIAL\_RTNS}};\ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ sp\_event\ \mbox{\hyperlink{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}{SERIAL\_EVENT\_TYPE}};\ \ \ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{extern}\ sp\_wait(\ \ );}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00049\ SERIAL\_RTNS\ \mbox{\hyperlink{_li2___serial___space_8h_a9fd789d22fd441917da326668c37e611}{Serial\_Init}}(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ **\mbox{\hyperlink{struct_port}{Port}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *portName,\ uint32\_t\ baudRate\ );}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00058\ SERIAL\_RTNS\ \mbox{\hyperlink{_li2___serial___space_8h_ae6da694edd59c9042f4084ee1c828e4d}{Serial\_AddEvent}}(\ \mbox{\hyperlink{structsp__port}{Serial\_Port}}\ *\mbox{\hyperlink{struct_port}{Port}},\ \mbox{\hyperlink{structsp__event__set}{Serial\_Event}}\ **event,\ \mbox{\hyperlink{_li2___serial___space_8h_a9b88ebea4d98b6ab07859526ce8c6e9c}{SERIAL\_EVENT\_TYPE}}\ eventType\ );}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00067\ uint8\_t\ \mbox{\hyperlink{_li2___serial___space_8h_a2a7b263d2e39377dd6359181505d2eb6}{Serial\_Rtn}}(\ SERIAL\_RTNS\ returnCode,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *func,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *caller\ );}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LI2\_SERIAL\_SPACE\_H\_INCLUDED}}
+
+\end{DoxyCode}

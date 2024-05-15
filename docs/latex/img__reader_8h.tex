@@ -1,0 +1,79 @@
+\doxysection{E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/utils/win/img\+\_\+reader/img\+\_\+reader.h File Reference}
+\hypertarget{img__reader_8h}{}\label{img__reader_8h}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/img\_reader/img\_reader.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/img\_reader/img\_reader.h}}
+
+
+Windows specific image reader that opens images and reads them byte by byte and puts it in a buffer. Also writes an to an image using bytes given to by a specified buffer.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} \{ \newline
+{\bfseries IM\+\_\+\+OK}
+, {\bfseries IM\+\_\+\+OPEN\+\_\+\+FAIL}
+, {\bfseries IM\+\_\+\+CLOSE\+\_\+\+FAIL}
+, {\bfseries IM\+\_\+\+READ\+\_\+\+FAIL}
+, \newline
+{\bfseries IM\+\_\+\+WRITE\+\_\+\+FAIL}
+, {\bfseries IM\+\_\+\+BUFF\+\_\+\+FULL}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} \mbox{\hyperlink{img__reader_8h_a4a73ca8036bb910cdfe9f6114da9f5b7}{IR\+\_\+\+Read}} (const char \texorpdfstring{$\ast$}{*}\+\_\+image\+Location, uint8\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+buffer, uint32\+\_\+t buffer\+Len, uint32\+\_\+t \texorpdfstring{$\ast$}{*}image\+Size)
+\item 
+\mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} \mbox{\hyperlink{img__reader_8h_a2b442570bf76325494f6f117d9f49b15}{IR\+\_\+\+Write}} (const char \texorpdfstring{$\ast$}{*}image, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer, uint32\+\_\+t image\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Windows specific image reader that opens images and reads them byte by byte and puts it in a buffer. Also writes an to an image using bytes given to by a specified buffer. 
+
+\begin{DoxyAuthor}{Author}
+N. Lok 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/\+March/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}\label{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd} 
+\index{img\_reader.h@{img\_reader.h}!IM\_RTNS@{IM\_RTNS}}
+\index{IM\_RTNS@{IM\_RTNS}!img\_reader.h@{img\_reader.h}}
+\doxysubsubsection{\texorpdfstring{IM\_RTNS}{IM\_RTNS}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}}}
+
+Standard Libs 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{img__reader_8h_a4a73ca8036bb910cdfe9f6114da9f5b7}\label{img__reader_8h_a4a73ca8036bb910cdfe9f6114da9f5b7} 
+\index{img\_reader.h@{img\_reader.h}!IR\_Read@{IR\_Read}}
+\index{IR\_Read@{IR\_Read}!img\_reader.h@{img\_reader.h}}
+\doxysubsubsection{\texorpdfstring{IR\_Read()}{IR\_Read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} IR\+\_\+\+Read (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+image\+Location,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+buffer,  }\item[{uint32\+\_\+t}]{buffer\+Len,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{image\+Size }\end{DoxyParamCaption})}
+
+Attempt to open image for reading
+
+Read bytes from image
+
+Close image and return image size
+
+All good\Hypertarget{img__reader_8h_a2b442570bf76325494f6f117d9f49b15}\label{img__reader_8h_a2b442570bf76325494f6f117d9f49b15} 
+\index{img\_reader.h@{img\_reader.h}!IR\_Write@{IR\_Write}}
+\index{IR\_Write@{IR\_Write}!img\_reader.h@{img\_reader.h}}
+\doxysubsubsection{\texorpdfstring{IR\_Write()}{IR\_Write()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\+\_\+\+RTNS}} IR\+\_\+\+Write (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{image,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{uint32\+\_\+t}]{image\+Size }\end{DoxyParamCaption})}
+
+Attempt to open image for writting
+
+Write bytes to image
+
+Close image
+
+All good

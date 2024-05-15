@@ -1,0 +1,28 @@
+\doxysection{img\+\_\+reader.\+h}
+\hypertarget{img__reader_8h_source}{}\label{img__reader_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/img\_reader/img\_reader.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/utils/win/img\_reader/img\_reader.h}}
+\mbox{\hyperlink{img__reader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ IMG\_READER\_H\_INCLUDED}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ IMG\_READER\_H\_INCLUDED}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ IM\_OK,}
+\DoxyCodeLine{00022\ \ \ \ \ IM\_OPEN\_FAIL,}
+\DoxyCodeLine{00023\ \ \ \ \ IM\_CLOSE\_FAIL,}
+\DoxyCodeLine{00024\ \ \ \ \ IM\_READ\_FAIL,}
+\DoxyCodeLine{00025\ \ \ \ \ IM\_WRITE\_FAIL,}
+\DoxyCodeLine{00026\ \ \ \ \ IM\_BUFF\_FULL}
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\_RTNS}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\_RTNS}}\ \mbox{\hyperlink{img__reader_8h_a4a73ca8036bb910cdfe9f6114da9f5b7}{IR\_Read}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\_imageLocation,\ uint8\_t\ *\_buffer,\ uint32\_t\ bufferLen,\ uint32\_t\ *imageSize\ );}
+\DoxyCodeLine{00031\ \mbox{\hyperlink{img__reader_8h_ab5f837c4d6f65529ebd04e5d60b8f8dd}{IM\_RTNS}}\ \mbox{\hyperlink{img__reader_8h_a2b442570bf76325494f6f117d9f49b15}{IR\_Write}}(\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *image,\ uint8\_t\ *buffer,\ uint32\_t\ imageSize\ );}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ IMG\_READER\_H\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\doxysection{Waiting}
+\hypertarget{group___waiting}{}\label{group___waiting}\index{Waiting@{Waiting}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___waiting_gac3c36fe72460f10ef003747da62253e4}{sp\+\_\+new\+\_\+event\+\_\+set}} (struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}result\+\_\+ptr)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___waiting_gab7cd36bc6207c7bc142f00753a1d8c24}{sp\+\_\+add\+\_\+port\+\_\+events}} (struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}event\+\_\+set, const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}port, enum sp\+\_\+event mask)
+\item 
+SP\+\_\+\+API enum sp\+\_\+return \mbox{\hyperlink{group___waiting_ga79f92a0583e0ef49a34a94aa009bbd26}{sp\+\_\+wait}} (struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}event\+\_\+set, unsigned int timeout\+\_\+ms)
+\item 
+SP\+\_\+\+API void \mbox{\hyperlink{group___waiting_gadcdea3d7d6da65f1597e878fadd214b2}{sp\+\_\+free\+\_\+event\+\_\+set}} (struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}event\+\_\+set)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Waiting for events and timeout handling.
+
+See \doxylink{await_events_8c-example}{await\+\_\+events.\+c} for an example of awaiting events on multiple ports. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group___waiting_gab7cd36bc6207c7bc142f00753a1d8c24}\label{group___waiting_gab7cd36bc6207c7bc142f00753a1d8c24} 
+\index{Waiting@{Waiting}!sp\_add\_port\_events@{sp\_add\_port\_events}}
+\index{sp\_add\_port\_events@{sp\_add\_port\_events}!Waiting@{Waiting}}
+\doxysubsubsection{\texorpdfstring{sp\_add\_port\_events()}{sp\_add\_port\_events()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+add\+\_\+port\+\_\+events (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}}]{event\+\_\+set,  }\item[{const struct \mbox{\hyperlink{structsp__port}{sp\+\_\+port}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{enum sp\+\_\+event}]{mask }\end{DoxyParamCaption})}
+
+Add events to a struct \doxylink{structsp__event__set}{sp\+\_\+event\+\_\+set} for a given port.
+
+The port must first be opened by calling \doxylink{group___ports_gadb3ea39f22c05a919c6ece2c14361bcb}{sp\+\_\+open()} using the same port structure.
+
+After the port is closed or the port structure freed, the results may no longer be valid.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em event\+\_\+set} & Event set to update. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & Pointer to a port structure. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em mask} & Bitmask of events to be waited for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___waiting_gadcdea3d7d6da65f1597e878fadd214b2}\label{group___waiting_gadcdea3d7d6da65f1597e878fadd214b2} 
+\index{Waiting@{Waiting}!sp\_free\_event\_set@{sp\_free\_event\_set}}
+\index{sp\_free\_event\_set@{sp\_free\_event\_set}!Waiting@{Waiting}}
+\doxysubsubsection{\texorpdfstring{sp\_free\_event\_set()}{sp\_free\_event\_set()}}
+{\footnotesize\ttfamily SP\+\_\+\+API void sp\+\_\+free\+\_\+event\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}}]{event\+\_\+set }\end{DoxyParamCaption})}
+
+Free a structure allocated by \doxylink{group___waiting_gac3c36fe72460f10ef003747da62253e4}{sp\+\_\+new\+\_\+event\+\_\+set()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em event\+\_\+set} & Event set to free. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___waiting_gac3c36fe72460f10ef003747da62253e4}\label{group___waiting_gac3c36fe72460f10ef003747da62253e4} 
+\index{Waiting@{Waiting}!sp\_new\_event\_set@{sp\_new\_event\_set}}
+\index{sp\_new\_event\_set@{sp\_new\_event\_set}!Waiting@{Waiting}}
+\doxysubsubsection{\texorpdfstring{sp\_new\_event\_set()}{sp\_new\_event\_set()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+new\+\_\+event\+\_\+set (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{result\+\_\+ptr }\end{DoxyParamCaption})}
+
+Allocate storage for a set of events.
+
+The user should allocate a variable of type struct \doxylink{structsp__event__set}{sp\+\_\+event\+\_\+set} \texorpdfstring{$\ast$}{*}, then pass a pointer to this variable to receive the result.
+
+The result should be freed after use by calling \doxylink{group___waiting_gadcdea3d7d6da65f1597e878fadd214b2}{sp\+\_\+free\+\_\+event\+\_\+set()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em result\+\_\+ptr} & If any error is returned, the variable pointed to by result\+\_\+ptr will be set to NULL. Otherwise, it will be set to point to the event set. Must not be NULL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
+\Hypertarget{group___waiting_ga79f92a0583e0ef49a34a94aa009bbd26}\label{group___waiting_ga79f92a0583e0ef49a34a94aa009bbd26} 
+\index{Waiting@{Waiting}!sp\_wait@{sp\_wait}}
+\index{sp\_wait@{sp\_wait}!Waiting@{Waiting}}
+\doxysubsubsection{\texorpdfstring{sp\_wait()}{sp\_wait()}}
+{\footnotesize\ttfamily SP\+\_\+\+API enum sp\+\_\+return sp\+\_\+wait (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsp__event__set}{sp\+\_\+event\+\_\+set}} \texorpdfstring{$\ast$}{*}}]{event\+\_\+set,  }\item[{unsigned int}]{timeout\+\_\+ms }\end{DoxyParamCaption})}
+
+Wait for any of a set of events to occur.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em event\+\_\+set} & Event set to wait on. Must not be NULL. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timeout\+\_\+ms} & Timeout in milliseconds, or zero to wait indefinitely.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SP\+\_\+\+OK upon success, a negative error code otherwise.
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+0.\+1.\+0 
+\end{DoxySince}
