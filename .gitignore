@@ -14,8 +14,7 @@ abacus_lib/
 !Config_Template.ini
 docs/html/*
 docs/latex
-!docs/html/Doxyfile
-!docs/html/DoxygenLayout.xml
+!docs/html/.nojekyll
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

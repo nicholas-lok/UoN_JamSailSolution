@@ -17,7 +17,7 @@ namespace Li2 {
         void SetUp() override {}
 
 		Li2_Radio Li2;
-		const char *serialPortName = "COM12";
+		const char *serialPortName = "COM3";
 		const uint32_t serialBaudRate = 9600;
 		LI2_SETUP setup = { false, false, false, false, 0 };
     };
