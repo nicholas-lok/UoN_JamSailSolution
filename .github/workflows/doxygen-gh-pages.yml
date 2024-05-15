@@ -25,6 +25,10 @@ jobs:
       run: touch docs/html/.nojekyll
       shell: bash
 
+    - name: Move Readme.md
+      run: sudo README.md docs/html/
+      shell: bash
+
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
