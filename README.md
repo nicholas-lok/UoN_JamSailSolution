@@ -6,5 +6,8 @@ The contents of this repositry contains the libraries developed for these CubeSa
 * **ABACUS Operating System**
 
 External Libraries Repos:
-https://github.com/sigrokproject/libserialport/tree/master
-https://github.com/benhoyt/inih
+*https://github.com/sigrokproject/libserialport/tree/master
+*https://github.com/benhoyt/inih
+
+=======
+[![Doxygen GitHub Pages Deploy Action](https://github.com/nicholas-lok/UoN_JamSailSolution/actions/workflows/doxygen-gh-pages.yml/badge.svg)](https://github.com/nicholas-lok/UoN_JamSailSolution/actions/workflows/doxygen-gh-pages.yml)
