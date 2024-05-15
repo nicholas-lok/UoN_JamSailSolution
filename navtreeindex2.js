@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"structTWSG__OBC__Beacon.html#aa56d076300b59fe0ae58b8ebca4f1d9a":[3,0,19,6],
+"structTWSG__OBC__Beacon.html#aa6a1d62dad0449ef3b70e3802f083bf6":[3,0,19,4],
+"structTWSG__OBC__Beacon.html#ab20b0c7772544cf5d318507f34231fbe":[3,0,19,21],
 "structTWSG__OBC__Beacon.html#ab9a62c35f2897def701b0c5740f79fd8":[3,0,19,7],
 "structTWSG__OBC__Beacon.html#af517ab732fb680be0873e45917e0e6b4":[3,0,19,2],
 "structTWSG__OBC__Buff__Cpy__Payload.html":[3,0,20],

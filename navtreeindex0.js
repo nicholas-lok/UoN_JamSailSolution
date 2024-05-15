@@ -221,6 +221,7 @@ var NAVTREEINDEX0 =
 "config_8h_source.html":[4,0,0,0,0,1],
 "config__structs_8h.html":[4,0,0,0,0,2],
 "config__structs_8h_source.html":[4,0,0,0,0,2],
+"dir_092927cfc323945d547ec8908a496a08.html":[4,0,2,0],
 "dir_20d27893dab3efc98710d6b136ffb779.html":[4,0,0,0],
 "dir_2138957732867bcdf75a5e212e5ba570.html":[4,0,0,1],
 "dir_25b905fd893938119f252b7a1573326c.html":[4,0,0,1,0],
@@ -235,6 +236,7 @@ var NAVTREEINDEX0 =
 "dir_97aefd0d527b934f1d99a682da8fe6a9.html":[4,0,0],
 "dir_a390426afdecba0599cb27dbb5c3b30a.html":[4,0,0,2,0,1],
 "dir_de6a94a68dc551a02a598620f6982838.html":[4,0,0,0,0],
+"dir_e7c608ee7a349a990cecd74a7d13d4b1.html":[4,0,2],
 "dir_f93c8fbd3d2c9fe0b30480841d3389c5.html":[4,0,0,1,1],
 "dir_fe553f10f9e25eb501d15460c320ae6c.html":[4,0,0,0,2],
 "files.html":[4,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "globals_func.html":[4,1,1],
 "globals_type.html":[4,1,2],
 "group__Li2FuncConfig.html":[1,0],
-"group__Li2FuncConfig.html#ga23637873703a8ba9ed56ba68b3a3aa6b":[4,0,0,1,0,4,35],
-"group__Li2FuncConfig.html#ga240589723e443316d01de4cd1aaf5544":[4,0,0,1,0,4,48],
-"group__Li2FuncConfig.html#ga25c27aede95b4de92c12b4e649583339":[4,0,0,1,0,4,47]
+"group__Li2FuncConfig.html#ga23637873703a8ba9ed56ba68b3a3aa6b":[4,0,0,1,0,4,35]
 };
