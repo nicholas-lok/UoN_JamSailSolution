@@ -25,7 +25,7 @@ jobs:
       run: touch docs/html/.nojekyll
       shell: bash
 
-    - name: Move Readme.md
+    - name: Move README.md
       run: sudo README.md docs/html/
       shell: bash
 
