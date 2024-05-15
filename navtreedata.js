@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "University of Nottingham JamSail Misson", "index.html", [
-    [ "libserialport API", "index.html", null ],
     [ "Overview", "\ref README.md", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", "namespaces.html", [
@@ -56,9 +55,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"",
-"dir_76f0f93eac8e023d43e840bf3d72c4f4.html",
-"structLI2__SETUP.html"
+"GroundSegment_2main_8c.html",
+"group__Li2FuncConfig.html#ga343ed522314c1591ed2c268315e6cf0e",
+"structTWSG__OBC__Beacon.html#ab9a62c35f2897def701b0c5740f79fd8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

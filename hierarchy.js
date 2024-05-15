@@ -1,10 +1,6 @@
 var hierarchy =
 [
     [ "Config", "structConfig.html", null ],
-    [ "config", "structconfig.html", null ],
-    [ "configuration", "structconfiguration.html", null ],
-    [ "ini_parse_string_ctx", "structini__parse__string__ctx.html", null ],
-    [ "INIReader", "classINIReader.html", null ],
     [ "Li2_AX25_Header", "structLi2__AX25__Header.html", null ],
     [ "Li2_Beacon_Config", "structLi2__Beacon__Config.html", null ],
     [ "Li2_Radio", "structLi2__Radio.html", null ],
@@ -14,20 +10,13 @@ var hierarchy =
     [ "Li2_Telemetry_Packet", "structLi2__Telemetry__Packet.html", null ],
     [ "Li2_TXRX_Config", "structLi2__TXRX__Config.html", null ],
     [ "Li2_UART_Status_Bits", "structLi2__UART__Status__Bits.html", null ],
-    [ "port_data", "structport__data.html", null ],
     [ "Primary", "structPrimary.html", null ],
     [ "Raw", "structRaw.html", null ],
     [ "Scheduler_Task", "structScheduler__Task.html", null ],
     [ "Secondary", "structSecondary.html", null ],
-    [ "sp_event_set", "structsp__event__set.html", null ],
-    [ "sp_port", "structsp__port.html", null ],
-    [ "sp_port_config", "structsp__port__config.html", null ],
-    [ "std_baudrate", "structstd__baudrate.html", null ],
     [ "Test", null, [
       [ "GroundTest", "classLi2_1_1GroundTest.html", null ]
     ] ],
-    [ "time", "structtime.html", null ],
-    [ "timeout", "structtimeout.html", null ],
     [ "Transfer_Buff", "structTransfer__Buff.html", null ],
     [ "TWSG_APID", "structTWSG__APID.html", null ],
     [ "TWSG_Comms_System", "structTWSG__Comms__System.html", null ],

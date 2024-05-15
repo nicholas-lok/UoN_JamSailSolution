@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('Li2_8h_source.html',''); initResizable
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    uint8_t functionConfig2;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="structLI2__SETUP.html">LI2_SETUP</a> setup;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structLi2__Radio.html#a62d12b41a365c377c9434dc9bdb9ade2">   82</a></span>&#160;    <a class="code" href="structsp__port.html">Serial_Port</a> *<a class="code" href="structLi2__Radio.html#a62d12b41a365c377c9434dc9bdb9ade2">SerialPort</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structLi2__Radio.html#a62d12b41a365c377c9434dc9bdb9ade2">   82</a></span>&#160;    Serial_Port *<a class="code" href="structLi2__Radio.html#a62d12b41a365c377c9434dc9bdb9ade2">SerialPort</a>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    uint8_t bufferIn[LI2_CDI_MAX_FULL_TX_LEN];</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    uint8_t bufferOut[LI2_CDI_MAX_FULL_TX_LEN];</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
@@ -202,8 +202,8 @@ $(document).ready(function(){initNavTree('Li2_8h_source.html',''); initResizable
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#aaab071f071f9d3fb44b3b2b0f58028df">Li2_ReadPayload</a>( <a class="code" href="structLi2__Radio.html">Li2_Radio</a> *<a class="code" href="namespaceLi2.html">Li2</a>, uint8_t *bufferRX, uint16_t payloadLen );</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#af36e2a550fcd23cdbd7d2a65fa71319f">Li2_CheckPayloadSize</a>( <a class="code" href="structLi2__Radio.html">Li2_Radio</a> *<a class="code" href="namespaceLi2.html">Li2</a>, uint8_t dir, <a class="code" href="Li2__Structs_8h.html#a4ea2346b8b3d19900d819b40e58a9572">LI2_CDI_CMDS</a> cmd, uint16_t payloadSize );</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#a5809a00c174811dbe6ba421da63ea829">Li2_RawWrite</a>( <a class="code" href="structsp__port.html">Serial_Port</a> *SerialPort, <span class="keyword">const</span> uint8_t *dataTX, uint16_t len );</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#a705d571fe73500b1c7a58820048ae155">Li2_RawRead</a>( <a class="code" href="structsp__port.html">Serial_Port</a> *SerialPort, uint8_t *dataRX, uint16_t len );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#a5809a00c174811dbe6ba421da63ea829">Li2_RawWrite</a>( Serial_Port *SerialPort, <span class="keyword">const</span> uint8_t *dataTX, uint16_t len );</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#a705d571fe73500b1c7a58820048ae155">Li2_RawRead</a>( Serial_Port *SerialPort, uint8_t *dataRX, uint16_t len );</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;LI2_RTNS <a class="code" href="Li2_8c.html#abb716478e2a2b07a59ecd9b4376b730d">Li2_SendCDIAck</a>( <a class="code" href="structLi2__Radio.html">Li2_Radio</a> *<a class="code" href="namespaceLi2.html">Li2</a>, <a class="code" href="Li2__Structs_8h.html#a4ea2346b8b3d19900d819b40e58a9572">LI2_CDI_CMDS</a> cmd, uint8_t ackStatus );</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
@@ -256,7 +256,6 @@ $(document).ready(function(){initNavTree('Li2_8h_source.html',''); initResizable
 <div class="ttc" id="astructLi2__TXRX__Config_html"><div class="ttname"><a href="structLi2__TXRX__Config.html">Li2_TXRX_Config</a></div><div class="ttdef"><b>Definition:</b> Li2_Structs.h:207</div></div>
 <div class="ttc" id="astructLi2__Telemetry__Packet_html"><div class="ttname"><a href="structLi2__Telemetry__Packet.html">Li2_Telemetry_Packet</a></div><div class="ttdef"><b>Definition:</b> Li2_Structs.h:244</div></div>
 <div class="ttc" id="astructLi2__UART__Status__Bits_html"><div class="ttname"><a href="structLi2__UART__Status__Bits.html">Li2_UART_Status_Bits</a></div><div class="ttdef"><b>Definition:</b> Li2_Structs.h:279</div></div>
-<div class="ttc" id="astructsp__port_html"><div class="ttname"><a href="structsp__port.html">sp_port</a></div><div class="ttdef"><b>Definition:</b> libserialport_internal.h:137</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

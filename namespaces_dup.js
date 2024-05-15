@@ -1,8 +1,5 @@
 var namespaces_dup =
 [
-    [ "config-header", null, [
-      [ "pattern", "config-header_8py.html#a7eb778c471c5522fe3f4b7ebdc4c0760", null ]
-    ] ],
     [ "Li2", "namespaceLi2.html", "namespaceLi2" ],
     [ "TWSG", "namespaceTWSG.html", [
       [ "receiveBeaconRoutine", "namespaceTWSG.html#aef835dad5ef96a2929e37b396f9ce4a0", null ],

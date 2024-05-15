@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['post_5ftransmit_5fdelay_489',['post_transmit_delay',['../structLi2__RF__Config.html#af6e98ebd90363e5a3719a549eecd368c',1,'Li2_RF_Config']]],
-  ['pre_5ftransmit_5fdelay_490',['pre_transmit_delay',['../structLi2__RF__Config.html#afb3deaea1788300da006e07290989b0d',1,'Li2_RF_Config']]]
+  ['rx_5ffreq_287',['rx_freq',['../structLi2__TXRX__Config.html#a67ccc7309411947d95d964349303429f',1,'Li2_TXRX_Config']]],
+  ['rx_5ffrequency_5fdeviation_288',['rx_frequency_deviation',['../structLi2__RF__Config.html#a9afef8ce985416f0667a5d536f3bf502',1,'Li2_RF_Config']]],
+  ['rx_5ffrequency_5foffset_289',['rx_frequency_offset',['../structLi2__RF__Config.html#a1007db77333dce460866ac035f8b68cf',1,'Li2_RF_Config']]],
+  ['rx_5fmodulation_290',['rx_modulation',['../structLi2__TXRX__Config.html#a1a269c36bbf68695d18a63dc47ae2864',1,'Li2_TXRX_Config']]],
+  ['rx_5frf_5fbaud_5frate_291',['rx_rf_baud_rate',['../structLi2__TXRX__Config.html#a9db46ed798e3b320e3a137f22ef67043',1,'Li2_TXRX_Config']]]
 ];

@@ -111,23 +111,23 @@ $(document).ready(function(){initNavTree('Li2__Serial__Ground_8h_source.html',''
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define SERIAL_WRITE_TIMEOUT    5000        </span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define SP_TIMEOUT              -5</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structsp__port.html">sp_port</a> <a class="code" href="structsp__port.html">Serial_Port</a>;         </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>sp_port Serial_Port;         </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> sp_return <a class="code" href="Li2__Serial__Space_8h.html#ae636fba26ef36534fbcca502e98ea416">SERIAL_RTNS</a>;         </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;SERIAL_RTNS <a class="code" href="Li2__Serial__Space_8h.html#a9fd789d22fd441917da326668c37e611">Serial_Init</a>( <a class="code" href="structsp__port.html">Serial_Port</a> **Port, <span class="keyword">const</span> <span class="keywordtype">char</span> *portName, uint32_t baudRate );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;SERIAL_RTNS <a class="code" href="Li2__Serial__Space_8h.html#a9fd789d22fd441917da326668c37e611">Serial_Init</a>( Serial_Port **Port, <span class="keyword">const</span> <span class="keywordtype">char</span> *portName, uint32_t baudRate );</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;SERIAL_RTNS Serial_WaitTXReady( <a class="code" href="structsp__port.html">Serial_Port</a> *Port );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;SERIAL_RTNS Serial_WaitTXReady( Serial_Port *Port );</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;SERIAL_RTNS Serial_WaitRXReady( <a class="code" href="structsp__port.html">Serial_Port</a> *Port );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;SERIAL_RTNS Serial_WaitRXReady( Serial_Port *Port );</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;SERIAL_RTNS Serial_Write( <a class="code" href="structsp__port.html">Serial_Port</a> *Port, uint8_t *dataTX, uint16_t len );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;SERIAL_RTNS Serial_Write( Serial_Port *Port, uint8_t *dataTX, uint16_t len );</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;SERIAL_RTNS Serial_Read( <a class="code" href="structsp__port.html">Serial_Port</a> *Port, uint8_t *dataRX, uint16_t len );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;SERIAL_RTNS Serial_Read( Serial_Port *Port, uint8_t *dataRX, uint16_t len );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;SERIAL_RTNS Serial_Drain( <a class="code" href="structsp__port.html">Serial_Port</a> *Port );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;SERIAL_RTNS Serial_Drain( Serial_Port *Port );</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;SERIAL_RTNS Serial_TXWaiting( <a class="code" href="structsp__port.html">Serial_Port</a> *Port );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;SERIAL_RTNS Serial_TXWaiting( Serial_Port *Port );</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;SERIAL_RTNS Serial_RXWaiting( <a class="code" href="structsp__port.html">Serial_Port</a> *Port );</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;SERIAL_RTNS Serial_RXWaiting( Serial_Port *Port );</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;uint8_t <a class="code" href="Li2__Serial__Space_8h.html#a2a7b263d2e39377dd6359181505d2eb6">Serial_Rtn</a>( SERIAL_RTNS returnCode, <span class="keyword">const</span> <span class="keywordtype">char</span> *func, <span class="keyword">const</span> <span class="keywordtype">char</span> *caller );</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
@@ -135,7 +135,6 @@ $(document).ready(function(){initNavTree('Li2__Serial__Ground_8h_source.html',''
 <div class="ttc" id="aLi2__Serial__Space_8h_html_a2a7b263d2e39377dd6359181505d2eb6"><div class="ttname"><a href="Li2__Serial__Space_8h.html#a2a7b263d2e39377dd6359181505d2eb6">Serial_Rtn</a></div><div class="ttdeci">uint8_t Serial_Rtn(SERIAL_RTNS returnCode, const char *func, const char *caller)</div><div class="ttdoc">Helper function for error handling.</div><div class="ttdef"><b>Definition:</b> Li2_Serial_Ground.c:103</div></div>
 <div class="ttc" id="aLi2__Serial__Space_8h_html_a9fd789d22fd441917da326668c37e611"><div class="ttname"><a href="Li2__Serial__Space_8h.html#a9fd789d22fd441917da326668c37e611">Serial_Init</a></div><div class="ttdeci">SERIAL_RTNS Serial_Init(Serial_Port **Port, const char *portName, uint32_t baudRate)</div><div class="ttdoc">Initiates the serial port.</div><div class="ttdef"><b>Definition:</b> Li2_Serial_Ground.c:10</div></div>
 <div class="ttc" id="aLi2__Serial__Space_8h_html_ae636fba26ef36534fbcca502e98ea416"><div class="ttname"><a href="Li2__Serial__Space_8h.html#ae636fba26ef36534fbcca502e98ea416">SERIAL_RTNS</a></div><div class="ttdeci">enum sp_return SERIAL_RTNS</div><div class="ttdef"><b>Definition:</b> Li2_Serial_Space.h:34</div></div>
-<div class="ttc" id="astructsp__port_html"><div class="ttname"><a href="structsp__port.html">sp_port</a></div><div class="ttdef"><b>Definition:</b> libserialport_internal.h:137</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

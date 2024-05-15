@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['handles_483',['handles',['../structsp__event__set.html#a9e3950a10643b3ebd44b7627888b7d34',1,'sp_event_set']]],
-  ['hour_484',['hour',['../structLi2__RTC__Packet.html#accdfe3c33766c9d6b3dc8996bb828dff',1,'Li2_RTC_Packet']]]
+  ['interface_5fbaud_5frate_282',['interface_baud_rate',['../structLi2__TXRX__Config.html#a3a8b6506465ea5a2037eee7ee515d30b',1,'Li2_TXRX_Config']]]
 ];
