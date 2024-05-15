@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "University of Nottingham JamSail Misson", "index.html", [
-    [ "Overview", "\ref docs/html/README.md", null ],
+    [ "Overview", "docs/html/README.md", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
