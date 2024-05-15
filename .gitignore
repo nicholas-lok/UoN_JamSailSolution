@@ -12,7 +12,8 @@
 abacus_lib/
 *.ini
 !Config_Template.ini
-docs
+docs/html/*
+docs/latex
 !docs/html/.nojekyll
 
 # User-specific files (MonoDevelop/Xamarin Studio)
