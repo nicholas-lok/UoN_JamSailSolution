@@ -1,5 +1,6 @@
 var NAVTREEINDEX0 =
 {
+"":[3,0,0],
 "GroundSegment_2main_8c.html":[5,0,1,0,0],
 "GroundSegment_2main_8c.html#a0a5849d6efc0e0978e7a1fa7a46ab4d0":[5,0,1,0,0,1],
 "GroundSegment_2main_8c.html#a25062bbec8389b739817b75dabd074ca":[5,0,1,0,0,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "dir_3469ada9d903ee86563528d8888842c7.html":[5,0,1,1],
 "dir_3851d99b00f61c0f5d16ac0ef34ecd73.html":[5,0,0,2,0],
 "dir_4ce02b87227cef1244bdd1fa3b12a08b.html":[5,0,0,2],
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[5,0,1],
-"dir_76f0f93eac8e023d43e840bf3d72c4f4.html":[5,0,1,2]
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[5,0,1]
 };
