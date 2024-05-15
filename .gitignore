@@ -10,6 +10,10 @@
 *.userosscache
 *.sln.docstates
 abacus_lib/
+*.ini
+!Config_Template.ini
+docs/html
+docs/latex
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

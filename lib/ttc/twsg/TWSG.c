@@ -7,11 +7,12 @@
  *********************************************************************/
 #include "TWSG.h"
 
-int8_t TWSG_Init( TWSG_Comms_System *_Comms, const char *configDir ) {
+int8_t TWSG_Init( TWSG_Comms_System *_Comms, Config _Config, Transfer_Buff *_TransferBuff ) {
     if ( _Comms->config.General.debugFlag ) printf( "->Starting Segment ...\n" ); /** Debug */
 
     /** */
-    if ( ini_parse( configDir, TWSG_INIHandler, &_Comms->config ) < 0 ) return 1;
+    _Comms->config = _Config;
+    _Comms->transferBuff = _TransferBuff;
 
     /** */
     LI2_SETUP setup = { _Comms->config.General.debugFlag, _Comms->config.Li2.buffDebugFlag, false, 
@@ -24,7 +25,7 @@ int8_t TWSG_Init( TWSG_Comms_System *_Comms, const char *configDir ) {
                               setup ), "Li2_Init", "TWSG_Init" ) != LI2_OK ) return 2;
     
     /** */
-    _Comms->transferBuffer = ( uint8_t * )malloc( _Comms->config.TWSG.transferBufferSize );
+    //_Comms->transferBuffer = ( uint8_t * )malloc( _Comms->config.TWSG.transferBufferSize );
 
     /** All good */
     if ( _Comms->config.General.debugFlag ) printf( "\n->Segment Initiated Successfully\n" );
@@ -101,36 +102,4 @@ int8_t TWSG_ReadSecHeader( TWSG_Comms_System *_Comms, uint8_t *_buffer, TWSG_Sec
 
     /** All Good */
     return 0;
-}
-
-static int TWSG_INIHandler( void *user, const char *section, const char *name, const char *value ) {
-    TWSG_Config *config = ( TWSG_Config * )user;
-
-#define MATCH(s, n) strcmp(section, s) == 0 && strcmp(name, n) == 0
-    if ( MATCH( "General", "Debug_Flag" ) ) {
-        config->General.debugFlag = ( strcmp( _strdup( value ), "true" ) == 0 ) ? true : false;
-    } else if ( MATCH( "TWSG", "Segment" ) ) {
-        config->TWSG.segment = ( _strdup( value ) == "Ground" ) ? TWSG_SEG_GROUND : TWSG_SEG_SPACE;
-    } else if ( MATCH( "TWSG", "Ground_ID" ) ) {
-        config->TWSG.groundID = atoi( value );
-    } else if ( MATCH( "TWSG", "Transfer_Buffer_Size" ) ) {
-        config->TWSG.transferBufferSize = atoi( value );
-    } else if ( MATCH( "TWSG", "Wait_Timeout" ) ) {
-        config->TWSG.wait_timeout = atoi( value );
-    } else if ( MATCH( "Li2", "Baud_Rate" ) ) {
-        config->Li2.baudRate = atoi( value );
-    } else if ( MATCH( "Li2", "Serial_Port" ) ) {
-        config->Li2.serialPort = _strdup( value );
-    } else if ( MATCH( "Li2", "Buff_Debug_Flag" ) ) {
-        config->Li2.buffDebugFlag = ( strcmp( _strdup( value ), "true" ) == 0 ) ? true : false;
-    } else if ( MATCH( "Li2", "Beacon_Status" ) ) {
-        config->Li2.beaconStatus = ( strcmp( _strdup( value ), "true" ) == 0 ) ? true : false;
-    } else if ( MATCH( "Li2", "Beacon_Interval" ) ) {
-        config->Li2.beaconInterval = atoi( value );
-    } else {
-        return 0;  /* unknown section/name, error */
-    }
-
-    /** All Good */
-    return 1;
 }

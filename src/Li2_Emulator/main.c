@@ -29,7 +29,7 @@ int main() {
 
     /** */
     if ( Li2_Rtn( Li2_Init( &( Li2_Em_Ground ),
-                                  "COM13",
+                                  "COM4",
                                   9600,
                                   setup ), "Li2_Init", "main" ) != LI2_OK ) abort();
 
@@ -38,7 +38,7 @@ int main() {
 
     /** */
     if ( Li2_Rtn( Li2_Init( &( Li2_Em_Space ),
-                                  "COM15",
+                                  "COM5",
                                   9600,
                                   setup ), "Li2_Init", "main" ) != LI2_OK ) abort();
 
