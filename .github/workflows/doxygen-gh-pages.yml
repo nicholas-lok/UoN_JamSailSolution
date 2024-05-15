@@ -26,7 +26,7 @@ jobs:
       shell: bash
 
     - name: Move README.md
-      run: sudo README.md docs/html/
+      run: sudo mv README.md docs/html/
       shell: bash
 
     - name: Deploy to GitHub Pages
