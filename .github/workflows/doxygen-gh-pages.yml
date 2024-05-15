@@ -18,17 +18,16 @@ jobs:
       shell: bash
 
     - name: Generate Doxygen Documentation
-      run: doxygen Doxyfile
+      run: doxygen docs/html/Doxyfile
       shell: bash
       
     - name: Create .nojekyll (ensures pages with underscores work on gh pages)
-      run: touch ${{ inputs.folder }}/.nojekyll
+      run: touch docs/html/.nojekyll
       shell: bash
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         token: ${{ inputs.github_token }}
-        branch: ${{ inputs.branch }}
-        folder: ${{ inputs.folder }}
-        target-folder: ${{ inputs.target_folder }}
+        branch: main
+        folder: docs/html/
