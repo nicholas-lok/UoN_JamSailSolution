@@ -1,0 +1,88 @@
+\doxysection{abacus\+\_\+timer.\+h}
+\hypertarget{abacus__timer_8h_source}{}\label{abacus__timer_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/timer/abacus\_timer.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/timer/abacus\_timer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ abacus\_timer.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ TIMER\ A1\ is\ used\ for\ user\ defined\ functions}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ TIMER\ A0\ is\ used\ for\ accurate\ sleep\ of\ s,\ ms\ and\ us}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ RTC\_A\ is\ used\ for\ counting\ time\ in\ ms\ since\ ABACUS\ boot}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ TIMER\ B0\ is\ not\ currently\ used\ by\ the\ libraries}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_TIMER\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ABACUS\_TIMER\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\#define\ TIMER50MS\_1MHZ\ 52250\ //50ms\ without\ prescalers}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\#define\ TIMER1MS\_1MHZ\ 1045\ //1ms\ without\ prescalers}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\#define\ TIMER100US\_1MHZ\ 104\ //104us\ without\ prescalers}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\#define\ TIMER1S\_1MHZ\ 65313\ //1s\ using\ /8\ and\ /2\ =\ /16}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\#define\ TIMER4S\_1MHZ\ 65313\ //1s\ using\ /8\ and\ /8\ =\ /64}}
+\DoxyCodeLine{00019\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//Do\ not\ forget\ that\ it\ is\ not\ 1MHz\ but\ 1.048576MHz}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ TIMER1MS\_1MHZ\ 1048\ }\textcolor{comment}{//1ms\ without\ prescalers}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ TIMER1MS\_1MHZ\_16\ 65\ }\textcolor{comment}{//1ms\ with\ prescalers\ /16\ prescaler\ (It\ would\ be\ 65.536)...}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ TIMER5MS\_1MHZ\ 5242\ }\textcolor{comment}{//1ms\ without\ prescalers}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ TIMER100US\_1MHZ\ 105\ }\textcolor{comment}{//104us\ without\ prescalers}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ TIMER10US\_1MHZ\ 10\ }\textcolor{comment}{//10us\ without\ prescalers}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TIMER1S\_1MHZ\ 65535UL\ }\textcolor{comment}{//1s\ using\ /8\ and\ /2\ =\ /16\ //Max\ value\ is\ 65535,\ just\ enough}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ TIMER4S\_1MHZ\ 65535UL\ }\textcolor{comment}{//1s\ using\ /8\ and\ /8\ =\ /64\ //Max\ value\ is\ 65535,\ just\ enough}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//For\ exactly\ 8MHz}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ TIMER1MS\_8MHZ\ 8000\ }\textcolor{comment}{//1ms\ without\ prescalers}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ TIMER1MS\_8MHZ\_128\ 62\ }\textcolor{comment}{//1ms\ using\ /8\ and\ /8\ and\ /2\ (It\ would\ be\ 62.5\ in\ reallity}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ TIMER100US\_8MHZ\ 800\ }\textcolor{comment}{//100us\ without\ prescalers}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ TIMER10US\_8MHZ\ 80\ }\textcolor{comment}{//10us\ without\ prescalers}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ TIMER10US\_8MHZ\_8\ 10\ }\textcolor{comment}{//10us\ with\ /8\ prescaler}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ TIMER1S\_8MHZ\ 62500UL\ }\textcolor{comment}{//1s\ using\ /8\ and\ /8\ and\ /2(updown)}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//For\ exactly\ 20MHz}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ TIMER1MS\_20MHZ\ 20000UL\ }\textcolor{comment}{//1ms\ without\ prescalers}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ TIMER1MS\_20MHZ\_128\ 156\ }\textcolor{comment}{//1ms\ using\ /8\ and\ /8\ and\ /2\ (It\ would\ be\ 156.250\ in\ reallity)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ TIMER100US\_20MHZ\ 2000\ }\textcolor{comment}{//100us\ without\ prescalers}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ TIMER10US\_20MHZ\ 200\ }\textcolor{comment}{//10us\ without\ prescalers}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ TIMER10US\_20MHZ\_40\ 5\ }\textcolor{comment}{//10us\ with\ /8\ and\ /5}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ TIMER100MS\_20MHZ\ 15625\ }\textcolor{comment}{//100ms\ using\ /8\ and\ /8\ and\ /2\ =\ /64}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{abacus_8h}{../abacus.h}}"{}}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_sleep_timer}{SleepTimer}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ uint8\_t\ timerMode;\ \ \textcolor{comment}{//0\ =\ sec,\ 1\ =\ msec,\ 2\ =\ usec}}
+\DoxyCodeLine{00053\ \ \ \ \ uint32\_t\ target;}
+\DoxyCodeLine{00054\ \ \ \ \ uint32\_t\ counter;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ uint16\_t\ seconds;}
+\DoxyCodeLine{00057\ \ \ \ \ uint16\_t\ counterInterrupt;}
+\DoxyCodeLine{00058\ \ \ \ \ uint8\_t\ interruptFunctionEnabled;}
+\DoxyCodeLine{00059\ \ \ \ \ void\ (*interruptFunction)(\textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_sleep_timer}{SleepTimer}}\ sleepTimer\_;}
+\DoxyCodeLine{00063\ \textcolor{keyword}{extern}\ \textcolor{keyword}{volatile}\ uint32\_t\ timeSinceBoot\_;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ abacus\_timerA1\_enable(uint16\_t\ sec,\ \textcolor{keywordtype}{void}\ (*interruptFunction)(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ abacus\_timerA1\_enable\_ms(uint16\_t\ msec,\ \textcolor{keywordtype}{void}\ (*interruptFunction)(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ abacus\_timerA1\_enable\_us(uint32\_t\ usec,\ \textcolor{keywordtype}{void}\ (*interruptFunction)(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ abacus\_timerA1\_disable();}
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ abacus\_timerA1\_pause();}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ abacus\_timerA1\_resume();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ abacus\_sleep\_sec(uint32\_t\ sec);}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ abacus\_sleep\_msec(uint32\_t\ msec);}
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ abacus\_sleep\_usec(uint32\_t\ usec);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ abacus\_wait\_sec(uint32\_t\ sec);}
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ abacus\_wait\_msec(uint32\_t\ msec);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ abacus\_millis\_init();}
+\DoxyCodeLine{00080\ uint32\_t\ abacus\_millis();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_TIMER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

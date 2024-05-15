@@ -1,0 +1,43 @@
+\doxysection{abacus\+\_\+gyroscope.\+h}
+\hypertarget{abacus__gyroscope_8h_source}{}\label{abacus__gyroscope_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/sensors/abacus\_gyroscope.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/sensors/abacus\_gyroscope.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ abacus\_gyroscope.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_GYROSCOPE\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ ABACUS\_GYROSCOPE\_H\_}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{abacus_8h}{../abacus.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../abacus\_utils.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}abacus\_imu.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ AB\_ADDRESS\_GYRO2014\ 0x6B\ \ }\textcolor{comment}{//Sensor\ address\ ABACUS2014}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ AB\_ADDRESS\_GYRO2013\ 0x69\ \ \ \ }\textcolor{comment}{//Sensor\ address\ ABACUS2013}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ L3G4200CONFIGREG\ 0X20}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ AB\_GYRO\_RATE\_245DPS\ \ \ \ \ 0}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ AB\_GYRO\_RATE\_500DPS\ \ \ \ \ 1}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ AB\_GYRO\_RATE\_2000DPS\ \ \ \ 2}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ uint8\_t\ addressGyroscope\_;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ int8\_t\ abacus\_sensors\_gyro\_init(uint8\_t\ abacusVersion);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ int8\_t\ abacus\_sensors\_gyro\_isOn();}
+\DoxyCodeLine{00027\ int8\_t\ abacus\_sensors\_gyro\_power\_on();}
+\DoxyCodeLine{00028\ int8\_t\ abacus\_sensors\_gyro\_power\_off();}
+\DoxyCodeLine{00029\ int16\_t\ abacus\_sensors\_gyro\_readTemperature(int8\_t\ *temp);}
+\DoxyCodeLine{00030\ int8\_t\ abacus\_sensors\_gyro\_read(int16\_t\ *x,\ int16\_t\ *y,\ int16\_t\ *z);}
+\DoxyCodeLine{00031\ int8\_t\ abacus\_sensors\_gyro\_setZero(uint8\_t\ axis,\ uint8\_t\ offset);}
+\DoxyCodeLine{00032\ int8\_t\ abacus\_sensors\_gyro\_setPowerMode(uint8\_t\ mode);}
+\DoxyCodeLine{00033\ int8\_t\ abacus\_sensors\_gyro\_setRate(uint8\_t\ rate);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ int8\_t\ abacus\_sensors\_gyro\_readToUint8(uint8\_t\ *pointer);}
+\DoxyCodeLine{00036\ int8\_t\ abacus\_sensors\_gyro\_readTemperatureToUint8(uint8\_t\ *temp);}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_GYROSCOPE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

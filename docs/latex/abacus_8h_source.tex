@@ -1,0 +1,167 @@
+\doxysection{abacus.\+h}
+\hypertarget{abacus_8h_source}{}\label{abacus_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/abacus.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/abacus.h}}
+\mbox{\hyperlink{abacus_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ 2017\ GAUSS\ Srl\ -\/\ https://www.gaussteam.com/}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ This\ code\ implementation\ allows\ you\ to\ access\ all\ the\ ABACUS\ capabilities}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ in\ a\ transparent\ way.\ Use\ this\ library\ toghether\ with\ "{}Abacus\ Example\ Firmware"{}}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ as\ sample\ code\ for\ your\ own\ implementation\ or\ even\ use\ it\ as\ is\ in\ your}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ software.\ These\ libraries\ have\ been\ successfully\ used\ already\ in\ several}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ \ satellites,\ including\ UniSat-\/6\ and\ TigriSat\ that\ are\ still\ regularly}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ contacting\ home\ since\ 2014\ up\ to\ now\ (2017).}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//****************************************************************************/}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_H\_}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ ABACUS\_H\_}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <msp430.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}communications/abacus\_uart.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}communications/abacus\_i2c.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}communications/abacus\_spi.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}sensors/abacus\_temperature.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}sensors/abacus\_accelerometer.h"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}sensors/abacus\_gyroscope.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}sensors/abacus\_magnetometer.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}sensors/abacus\_imu.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}memory/abacus\_flash.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}GPIO/abacus\_gpio\_analog.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}GPIO/abacus\_gpio\_exp.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}GPIO/abacus\_gpio.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}RTC/abacus\_rtc.h"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}RTC/abacus\_rtc\_internal.h"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}FPGA/abacus\_fpga.h"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}timer/abacus\_timer.h"{}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{extern}\ uint8\_t\ abacusLPMStatus;}
+\DoxyCodeLine{00038\ \textcolor{keyword}{extern}\ uint8\_t\ abacusClockSpeed;}
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ uint8\_t\ abacusHardwareVersion;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{abacus_8h_a295dee3968adde946ae810f12dc8423f}{abacus\_init}}(uint8\_t\ abacus\_version,\ uint8\_t\ abacus\_clockSpeed);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ abacus\_init\_quiet();}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{abacus_8h_a1b9445192a516b6f72da0606356dccd8}{abacus\_init\_clock}}(uint8\_t\ abacus\_clockSpeed);}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ abacus\_enter\_LPM(uint8\_t\ lpmSelection);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ abacus\_set\_WDT();}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{abacus_8h_a95ab53de9e72c31ec088b62e2f6e42c4}{abacus\_softReset}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//Definitions\ of\ names\ of\ ABACUS:}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ AB\_ABACUSVERSION2013\ \ \ \ 0}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ AB\_ABACUSVERSION2014\ \ \ \ 1}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ AB\_ABACUSVERSION2017\ \ \ \ 2}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ AB\_UART00\ 0}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ AB\_UART01\ 1}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ AB\_UART02\ 2}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ AB\_UART03\ 4}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//1MHz\ in\ reallity\ it\ is\ the\ standard\ 1.048576MHz}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ AB\_CLOCK1MHZ\ 0}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ AB\_CLOCK8MHZ\ 1}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ AB\_CLOCK20MHZ\ 2}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ AB\_CLOCK25MHZ\ 3}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ AB\_B9600\ \ \ 0}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ AB\_B19200\ \ 1}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ AB\_B38400\ \ 2}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ AB\_B57600\ \ 3}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ AB\_B115200\ 4}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ AB\_B230400\ 5}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ AB\_B460800\ 6}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//BUS01\ is\ the\ one\ to\ external\ cubesat\ standard}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ AB\_I2C\_BUS00\ \ \ \ 0}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ AB\_I2C\_BUS01\ \ \ \ 1}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//BUS00\ is\ the\ MCU\ flash,\ BUS01\ is\ the\ FPGA\ flash}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ AB\_SPI\_BUS00\ \ \ \ 0}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ AB\_SPI\_BUS01\ \ \ \ 1}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{comment}{//Flash\ memories\ for\ MCU\ and\ FPGA}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ AB\_FLASH\_MCU\ \ \ \ 0}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ AB\_FLASH\_FPGA\ \ \ 1}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{//Low\ power\ mode\ configuration}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ AB\_LPM0\ 0}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ AB\_LPM1\ 1}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ AB\_LPM2\ 2}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ AB\_LPM3\ 3}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ AB\_LPM4\ 4}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ AB\_LPM5\ 5}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ AB\_AM\ \ \ 6}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{comment}{//Definitions\ of\ GPIOs\ of\ the\ connector\ H1\ and\ H2}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#define\ AB\_RTC\_VBACKUP\ \ 0}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ AB\_CURRENT\ \ \ \ \ \ 1}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ AB\_H1\_3\ \ \ 3}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ AB\_H1\_4\ \ \ 4}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ AB\_H1\_5\ \ \ 5}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ AB\_H1\_6\ \ \ 6}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ AB\_H1\_7\ \ \ 7\ }\textcolor{comment}{//\ clash\ with\ radio\ reset\ and\ SPI\ (JamSail\ not\ using\ SPI)\ -\/\ added\ 27/04/23\ LC\ HC}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ AB\_H1\_8\ \ \ 8}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ AB\_H1\_10\ 10}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ AB\_H1\_12\ 12}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#define\ AB\_H1\_13\ 13}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ AB\_H1\_14\ 14}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ AB\_H1\_15\ 15}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ AB\_H1\_16\ 16}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ AB\_H1\_18\ 18}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ AB\_H1\_19\ 19}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ AB\_H1\_20\ 20}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ AB\_H1\_22\ 22}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ AB\_H1\_25\ 25}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ AB\_H1\_27\ 27}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ AB\_H1\_28\ 28}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ AB\_H1\_29\ 29}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ AB\_H1\_30\ 30}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ AB\_H1\_31\ 31}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ AB\_H1\_33\ 33}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ AB\_H1\_34\ 34}}
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ AB\_H1\_35\ 35}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ AB\_H1\_36\ 36}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ AB\_H1\_37\ 37}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ AB\_H1\_38\ 38}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ AB\_H1\_39\ 39}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ AB\_H1\_40\ 40}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ AB\_H2\_1\ \ 54}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ AB\_H2\_2\ \ 53}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ AB\_H2\_3\ \ 56}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ AB\_H2\_4\ \ 55}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ AB\_H2\_5\ \ 58}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ AB\_H2\_6\ \ 57}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ AB\_H2\_7\ \ 60}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#define\ AB\_H2\_8\ \ 59}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\#define\ AB\_H2\_9\ \ 62}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ AB\_H2\_10\ 61}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#define\ AB\_H2\_11\ 64}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ AB\_H2\_12\ 63}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#define\ AB\_H2\_13\ 66}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ AB\_H2\_14\ 65}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ AB\_H2\_15\ 68}}
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ AB\_H2\_16\ 67}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#define\ AB\_LOW\ \ \ \ 0}}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#define\ AB\_HIGH\ \ \ 1}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#define\ AB\_INPUT\ \ 0}}
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ AB\_OUTPUT\ 1}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#define\ AB\_PULLDISABLE\ 0}}
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#define\ AB\_PULLDOWN\ \ \ \ 1}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#define\ AB\_PULLUP\ \ \ \ \ \ 2}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ AB\_LOW2HIGH\ \ \ \ 0}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#define\ AB\_HIGH2LOW\ \ \ \ 1}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#define\ AB\_LED\_ON\ \ \ (P11OUT\ |=\ BIT0)}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ AB\_LED\_OFF\ \ (P11OUT\ \&=\ \string~BIT0)}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\#define\ AB\_LED\_TOGGLE\ \ \ (P11OUT\ \string^=\ BIT0)}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

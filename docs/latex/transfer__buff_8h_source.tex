@@ -1,0 +1,25 @@
+\doxysection{transfer\+\_\+buff.\+h}
+\hypertarget{transfer__buff_8h_source}{}\label{transfer__buff_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/transfer\_buff/transfer\_buff.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/transfer\_buff/transfer\_buff.h}}
+\mbox{\hyperlink{transfer__buff_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ TRANSFER\_BUFF\_H\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ TRANSFER\_BUFF\_H\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stdlib.h>}\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ uint8\_t\ *buff;}
+\DoxyCodeLine{00019\ \ \ \ \ uint32\_t\ maxSize;}
+\DoxyCodeLine{00020\ \ \ \ \ uint32\_t\ dataInBuffSize;}
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{struct_transfer___buff}{Transfer\_Buff}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ int8\_t\ TransferBuff\_Init(\ \mbox{\hyperlink{struct_transfer___buff}{Transfer\_Buff}}\ *\_TransferBuff,\ uint32\_t\ \_size\ );}
+\DoxyCodeLine{00025\ int8\_t\ TransferBuff\_Write(\ \mbox{\hyperlink{struct_transfer___buff}{Transfer\_Buff}}\ *\_TransferBuff,\ uint8\_t\ *\_buffer,\ uint32\_t\ \_dataSize\ );}
+\DoxyCodeLine{00026\ int8\_t\ TransferBuff\_Read(\ \mbox{\hyperlink{struct_transfer___buff}{Transfer\_Buff}}\ *\_TransferBuff,\ uint8\_t\ *\_buffer,\ uint32\_t\ \_dataSize\ );}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TRANSFER\_BUFF\_H\_INCLUDED}}
+
+\end{DoxyCode}

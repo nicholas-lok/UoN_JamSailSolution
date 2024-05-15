@@ -1,0 +1,106 @@
+\doxysection{TWSG.\+h}
+\hypertarget{_t_w_s_g_8h_source}{}\label{_t_w_s_g_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/twsg/TWSG.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/twsg/TWSG.h}}
+\mbox{\hyperlink{_t_w_s_g_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ TWSG\_H\_INCLUDED}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ TWSG\_H\_INCLUDED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../../ttc/li2/Li2.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{transfer__buff_8h}{../../obc/transfer\_buff/transfer\_buff.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config__structs_8h}{../../obc/config/config\_structs.h}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ TWSG\_MAX\_PACKET\_LEN\ \ \ \ \ \ \ \ \ \ \ \ \ 255}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ TWSG\_PRI\_HDR\_LEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ TWSG\_SEC\_HDR\_LEN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ TWSG\_MAX\_PAYLOAD\_SEC\_LEN\ \ \ \ \ \ \ \ 250}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ TWSG\_MAX\_PAYLOAD\_NO\_SEC\_LEN\ \ \ \ \ 253}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ TWSG\_WAIT\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 10000}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ TWSG\_NO\_PACKET\_SUB\_NAME\ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\#define\ strdup\ \_strdup}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ TWSG\_TELECMD,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{_t_w_s_g_8h_a72eac75065aff36e48c59c70f4a7e646a9fd77b949e3450b3cb42af4ba975064f}{TWSG\_TELEMETRY}}\ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \}\ \mbox{\hyperlink{_t_w_s_g_8h_a72eac75065aff36e48c59c70f4a7e646}{TWSG\_PACKET\_TYPE}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ TWSG\_NO\_SEC\_HDR,}
+\DoxyCodeLine{00045\ \ \ \ \ TWSG\_SEC\_HDR}
+\DoxyCodeLine{00046\ \}\ TWSG\_SEC\_HDR\_FLAG;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ TWSG\_NACK,}
+\DoxyCodeLine{00051\ \ \ \ \ TWSG\_ACK}
+\DoxyCodeLine{00052\ \}\ TWSG\_ACK\_FLAG;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ TWSG\_OBC\_ID,}
+\DoxyCodeLine{00057\ \ \ \ \ TWSG\_LI2\_ID,}
+\DoxyCodeLine{00058\ \ \ \ \ TWSG\_ADCS\_ID,}
+\DoxyCodeLine{00059\ \ \ \ \ TWSG\_EPS\_ID,}
+\DoxyCodeLine{00060\ \ \ \ \ TWSG\_GNSS\_ID,}
+\DoxyCodeLine{00061\ \ \ \ \ TWSG\_SBAND\_ID,}
+\DoxyCodeLine{00062\ \ \ \ \ TWSG\_SOLAR\_ID}
+\DoxyCodeLine{00063\ \}\ \mbox{\hyperlink{_t_w_s_g_8h_af3991ba896efd3e21957001d2a1a9ab1}{TWSG\_SUB\_SYS\_ID}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ TWSG\_SEG\_GROUND,}
+\DoxyCodeLine{00068\ \ \ \ \ TWSG\_SEG\_SPACE}
+\DoxyCodeLine{00069\ \}\ \mbox{\hyperlink{_t_w_s_g_8h_a8c18ff69a41bd800aa7af1bf7174e027}{TWSG\_SEG}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ TWSG\_CONTINUE\_FLAG,}
+\DoxyCodeLine{00074\ \ \ \ \ TWSG\_START\_FLAG,}
+\DoxyCodeLine{00075\ \ \ \ \ TWSG\_END\_FLAG,}
+\DoxyCodeLine{00076\ \ \ \ \ TWSG\_NO\_SEG\_FLAG}
+\DoxyCodeLine{00077\ \}\ TWSG\_SEQ\_SEG\_FLAG;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00084\ \ \ \ \ uint8\_t\ data[\mbox{\hyperlink{_t_w_s_g_8h_a9262d41374f5a774d1a3bc8d39c694e6}{TWSG\_MAX\_PACKET\_LEN}}];}
+\DoxyCodeLine{00085\ \}\ \mbox{\hyperlink{struct_t_w_s_g___raw___packet}{TWSG\_Raw\_Packet}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00089\ \ \ \ \ uint8\_t\ src\ :\ 3;}
+\DoxyCodeLine{00090\ \ \ \ \ uint8\_t\ des\ :\ 3;}
+\DoxyCodeLine{00091\ \}\ \mbox{\hyperlink{struct_t_w_s_g___a_p_i_d}{TWSG\_APID}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00100\ \ \ \ \ uint8\_t\ packetType\ :\ 1;}
+\DoxyCodeLine{00101\ \ \ \ \ uint8\_t\ SecHdrFlag\ :\ 1;}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{struct_t_w_s_g___a_p_i_d}{TWSG\_APID}}\ APID;}
+\DoxyCodeLine{00103\ \ \ \ \ uint8\_t\ packetName\ :\ 4;}
+\DoxyCodeLine{00104\ \ \ \ \ uint8\_t\ packetSubName\ :\ 4;}
+\DoxyCodeLine{00105\ \}\ \mbox{\hyperlink{struct_t_w_s_g___pri___header}{TWSG\_Pri\_Header}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00116\ \ \ \ \ uint8\_t\ seqFlag\ :\ 2;}
+\DoxyCodeLine{00117\ \ \ \ \ uint32\_t\ packetCount\ :\ 22;}
+\DoxyCodeLine{00118\ \}\ \mbox{\hyperlink{struct_t_w_s_g___sec___header}{TWSG\_Sec\_Header}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{struct_li2___radio}{Li2\_Radio}}\ \mbox{\hyperlink{namespace_li2}{Li2}};}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{struct_config}{Config}}\ \mbox{\hyperlink{structconfig}{config}};}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{struct_transfer___buff}{Transfer\_Buff}}\ *transferBuff;}
+\DoxyCodeLine{00128\ \}\ \mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\_Comms\_System}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00131\ int8\_t\ \mbox{\hyperlink{_t_w_s_g_8h_abb3099ac6967bd2de0e9052105edbf64}{TWSG\_Init}}(\ \mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\_Comms\_System}}\ *Comms,\ \mbox{\hyperlink{struct_config}{Config}}\ \mbox{\hyperlink{struct_config}{Config}},\ \mbox{\hyperlink{struct_transfer___buff}{Transfer\_Buff}}\ *TransferBuff\ );}
+\DoxyCodeLine{00132\ int8\_t\ \mbox{\hyperlink{_t_w_s_g_8h_a0af04684690a3bf7fff4197fc52ec1fe}{TWSG\_WaitForPacket}}(\ \mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\_Comms\_System}}\ *\_Comms,\ uint8\_t\ \_filterPacket\ );}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{keywordtype}{void}\ TWSG\_SetPriHeader(\ \mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\_Comms\_System}}\ *\_Comms,\ uint8\_t\ *\_buffer,\ \mbox{\hyperlink{_t_w_s_g_8h_af3991ba896efd3e21957001d2a1a9ab1}{TWSG\_SUB\_SYS\_ID}}\ \_subSysID,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_t_w_s_g_8h_a72eac75065aff36e48c59c70f4a7e646}{TWSG\_PACKET\_TYPE}}\ \_packetType,\ TWSG\_SEC\_HDR\_FLAG\ \_secFlag,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ \_packetName,\ uint8\_t\ \_packetSubName\ );}
+\DoxyCodeLine{00137\ int8\_t\ \mbox{\hyperlink{_t_w_s_g_8h_aae748e2057ac083e9b35385255274b13}{TWSG\_ReadPriHeader}}(\ \mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\_Comms\_System}}\ *\_Comms,\ uint8\_t\ *\_buffer,\ \mbox{\hyperlink{struct_t_w_s_g___pri___header}{TWSG\_Pri\_Header}}\ *\_PriHeader\ );}
+\DoxyCodeLine{00138\ int8\_t\ \mbox{\hyperlink{_t_w_s_g_8h_aa6b6c1534c6b920f78f5654d4799668f}{TWSG\_ReadSecHeader}}(\ \mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\_Comms\_System}}\ *\_Comms,\ uint8\_t\ *\_buffer,\ \mbox{\hyperlink{struct_t_w_s_g___sec___header}{TWSG\_Sec\_Header}}\ *\_SecHeader\ );}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TWSG\_H\_INCLUDED}}
+
+\end{DoxyCode}

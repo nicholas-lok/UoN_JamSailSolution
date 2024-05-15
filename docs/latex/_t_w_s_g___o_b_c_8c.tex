@@ -1,0 +1,47 @@
+\doxysection{E\+:/\+One\+Drive -\/ The University of Nottingham/\+Year 5 Shared/\+FYP/\+Code/\+Uo\+NCube\+Sat/lib/ttc/twsg/\+TWSG\+\_\+\+OBC.c File Reference}
+\hypertarget{_t_w_s_g___o_b_c_8c}{}\label{_t_w_s_g___o_b_c_8c}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/twsg/TWSG\_OBC.c@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/ttc/twsg/TWSG\_OBC.c}}
+{\ttfamily \#include "{}TWSG\+\_\+\+OBC.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_t_w_s_g___o_b_c_8c_ab5b5b1bb5939d8bd7f0b447e2a702b0d}\label{_t_w_s_g___o_b_c_8c_ab5b5b1bb5939d8bd7f0b447e2a702b0d} 
+int8\+\_\+t {\bfseries TWSG\+\_\+\+Send\+Beacon} (\mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\+\_\+\+Comms\+\_\+\+System}} \texorpdfstring{$\ast$}{*}\+\_\+\+Comms, \mbox{\hyperlink{struct_t_w_s_g___o_b_c___beacon}{TWSG\+\_\+\+OBC\+\_\+\+Beacon}} \texorpdfstring{$\ast$}{*}\+\_\+\+Payload)
+\item 
+\Hypertarget{_t_w_s_g___o_b_c_8c_a67de62fc536aa9391e8239b44151ff5e}\label{_t_w_s_g___o_b_c_8c_a67de62fc536aa9391e8239b44151ff5e} 
+int8\+\_\+t {\bfseries TWSG\+\_\+\+Send\+Handshake} (\mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\+\_\+\+Comms\+\_\+\+System}} \texorpdfstring{$\ast$}{*}\+\_\+\+Comms, \mbox{\hyperlink{struct_t_w_s_g___o_b_c___handshake}{TWSG\+\_\+\+OBC\+\_\+\+Handshake}} \texorpdfstring{$\ast$}{*}\+\_\+\+Payload)
+\item 
+int8\+\_\+t \mbox{\hyperlink{_t_w_s_g___o_b_c_8c_af986743c788be0954dadea5b2458f6a9}{TWSG\+\_\+\+Send\+Housekeeping}} (\mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\+\_\+\+Comms\+\_\+\+System}} \texorpdfstring{$\ast$}{*}\+\_\+\+Comms, \mbox{\hyperlink{struct_t_w_s_g___o_b_c___housekeep___payload}{TWSG\+\_\+\+OBC\+\_\+\+Housekeep\+\_\+\+Payload}} \texorpdfstring{$\ast$}{*}\+\_\+\+Payload)
+\item 
+int8\+\_\+t \mbox{\hyperlink{_t_w_s_g___o_b_c_8c_af4b27fdcb7b6a4d43700f048f759d7e8}{TWSG\+\_\+\+Send\+Buffer}} (\mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\+\_\+\+Comms\+\_\+\+System}} \texorpdfstring{$\ast$}{*}\+\_\+\+Comms, \mbox{\hyperlink{union_t_w_s_g___o_b_c___buff___down___payload}{TWSG\+\_\+\+OBC\+\_\+\+Buff\+\_\+\+Down\+\_\+\+Payload}} \texorpdfstring{$\ast$}{*}\+\_\+\+Payload)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+N. Lok 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+08/\+March/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_t_w_s_g___o_b_c_8c_af4b27fdcb7b6a4d43700f048f759d7e8}\label{_t_w_s_g___o_b_c_8c_af4b27fdcb7b6a4d43700f048f759d7e8} 
+\index{TWSG\_OBC.c@{TWSG\_OBC.c}!TWSG\_SendBuffer@{TWSG\_SendBuffer}}
+\index{TWSG\_SendBuffer@{TWSG\_SendBuffer}!TWSG\_OBC.c@{TWSG\_OBC.c}}
+\doxysubsubsection{\texorpdfstring{TWSG\_SendBuffer()}{TWSG\_SendBuffer()}}
+{\footnotesize\ttfamily int8\+\_\+t TWSG\+\_\+\+Send\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\+\_\+\+Comms\+\_\+\+System}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+Comms,  }\item[{\mbox{\hyperlink{union_t_w_s_g___o_b_c___buff___down___payload}{TWSG\+\_\+\+OBC\+\_\+\+Buff\+\_\+\+Down\+\_\+\+Payload}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+Payload }\end{DoxyParamCaption})}
+
+Send Meta Packet every 10th Packet, else normal data packet
+
+Copy data to transfer
+
+Transmit Data
+
+Increament Packet Counter\Hypertarget{_t_w_s_g___o_b_c_8c_af986743c788be0954dadea5b2458f6a9}\label{_t_w_s_g___o_b_c_8c_af986743c788be0954dadea5b2458f6a9} 
+\index{TWSG\_OBC.c@{TWSG\_OBC.c}!TWSG\_SendHousekeeping@{TWSG\_SendHousekeeping}}
+\index{TWSG\_SendHousekeeping@{TWSG\_SendHousekeeping}!TWSG\_OBC.c@{TWSG\_OBC.c}}
+\doxysubsubsection{\texorpdfstring{TWSG\_SendHousekeeping()}{TWSG\_SendHousekeeping()}}
+{\footnotesize\ttfamily int8\+\_\+t TWSG\+\_\+\+Send\+Housekeeping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_w_s_g___comms___system}{TWSG\+\_\+\+Comms\+\_\+\+System}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+Comms,  }\item[{\mbox{\hyperlink{struct_t_w_s_g___o_b_c___housekeep___payload}{TWSG\+\_\+\+OBC\+\_\+\+Housekeep\+\_\+\+Payload}} \texorpdfstring{$\ast$}{*}}]{\+\_\+\+Payload }\end{DoxyParamCaption})}
+
+TO-\/\+DO

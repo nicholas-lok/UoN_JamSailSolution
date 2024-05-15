@@ -1,0 +1,88 @@
+\doxysection{abacus\+\_\+i2c.\+h}
+\hypertarget{abacus__i2c_8h_source}{}\label{abacus__i2c_8h_source}\index{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/communications/abacus\_i2c.h@{E:/OneDrive -\/ The University of Nottingham/Year 5 Shared/FYP/Code/UoNCubeSat/lib/obc/abacus\_lib/communications/abacus\_i2c.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ abacus\_i2c.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ ABACUS\_I2C\_H\_}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ ABACUS\_I2C\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}msp430x54xa.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{abacus_8h}{../abacus.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ I2CBUFFERLENGHT\ 50}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_i2c_port}{I2cPort}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ uint8\_t\ i2c\_name;}
+\DoxyCodeLine{00017\ \ \ \ \ uint8\_t\ lastAddress;}
+\DoxyCodeLine{00018\ \ \ \ \ uint8\_t\ isOnError;}
+\DoxyCodeLine{00019\ \ \ \ \ uint8\_t\ inRepeatedStartCondition;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Slave\ variables}}
+\DoxyCodeLine{00022\ \ \ \ \ uint8\_t\ isSlave;}
+\DoxyCodeLine{00023\ \ \ \ \ uint8\_t\ addressSlave;}
+\DoxyCodeLine{00024\ \ \ \ \ void\ (*triggerFunctionRequest)(uint8\_t*);}
+\DoxyCodeLine{00025\ \ \ \ \ void\ (*triggerFunctionReceive)(uint8\_t*);}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_i2c_port}{I2cPort}}\ i2c00;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_i2c_port}{I2cPort}}\ i2c01;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ abacus\_i2c\_init();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ abacus\_i2c\_setSpeed(uint8\_t\ busSelect,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ uint8\_t\ highbyte,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ uint8\_t\ lowbyte);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ Master\ functions}}
+\DoxyCodeLine{00040\ int8\_t\ abacus\_i2c\_write(uint8\_t\ busSelect,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ uint8\_t\ address,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ uint8\_t\ *buffer,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ uint16\_t\ lenght,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ uint8\_t\ repeatedStart);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ int8\_t\ abacus\_i2c\_requestFrom(uint8\_t\ busSelect,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ uint8\_t\ address,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ uint8\_t\ *buffer,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ uint16\_t\ lenght,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ uint8\_t\ repeatedStart);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ uint8\_t\ abacus\_i2c\_readRegister(uint8\_t\ busSelect,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ uint8\_t\ address,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ uint8\_t\ reg);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ uint8\_t\ abacus\_i2c\_setRegister(uint8\_t\ busSelect,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ uint8\_t\ address,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ uint8\_t\ reg,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ uint8\_t\ value);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{/*void\ abacus\_i2c\_read16bitRegister(uint8\_t\ busSelect,}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint8\_t\ address,}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint8\_t\ reg,}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ uint8\_t\ *buffer);}}
+\DoxyCodeLine{00065\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{comment}{/*\ Yet\ to\ implement\ the\ slave\ functions\ for\ ABACUS\ i2c}}
+\DoxyCodeLine{00069\ //Slave\ functions:}
+\DoxyCodeLine{00070\ int8\_t\ abacus\_i2c\_slaveInit(uint8\_t\ busSelect,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ uint8\_t\ address,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ void\ (*triggerFunctionRequest)(uint8\_t*),}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ void\ (*triggerFunctionReceive)(uint8\_t*));}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ int16\_t\ abacus\_i2c\_slaveAvailable(uint8\_t\ busSelect);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ uint8\_t\ abacus\_i2c\_slaveRead(uint8\_t\ busSelect);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ int8\_t\ abacus\_i2c\_slaveWrite(uint8\_t\ busSelect,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ uint8\_t\ *buffer,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ uint16\_t\ lenght);}
+\DoxyCodeLine{00082\ */}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ABACUS\_I2C\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
