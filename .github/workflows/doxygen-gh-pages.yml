@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: My first step
-      uses: ./.github/workflow/Deploy
+      uses: workflow/Deploy@v1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         config_file: docs/html/Doxyfile
