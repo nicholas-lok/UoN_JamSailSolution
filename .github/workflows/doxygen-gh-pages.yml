@@ -10,7 +10,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/action_edit.yml
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          config_file: docs/html/Doxyfile
+    - uses: actions/checkout@v1
+    - name: My first step
+      uses: ./.github/actions/deploy
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        config_file: docs/html/Doxyfile
