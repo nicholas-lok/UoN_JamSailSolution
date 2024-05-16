@@ -1,5 +1,5 @@
 /*****************************************************************//**
- *  @file   Li2_Serial_Gound.h
+ *  @file   Li2_Serial_Ground.h
  *  @brief  
  * 
  *  @author N. Lok
