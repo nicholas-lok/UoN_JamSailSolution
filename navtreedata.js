@@ -55,8 +55,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "GroundSegment_2main_8c.html",
-"group__Li2FuncConfig.html#ga25c27aede95b4de92c12b4e649583339",
-"structTWSG__OBC__Beacon.html#aa6a1d62dad0449ef3b70e3802f083bf6"
+"dir_de6a94a68dc551a02a598620f6982838.html",
+"structTWSG__OBC__Beacon.html#a20d076c4294eb91832ae36ead3b0348d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
